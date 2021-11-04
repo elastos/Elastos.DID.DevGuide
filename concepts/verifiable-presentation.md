@@ -1,0 +1,9 @@
+# Verifiable presentation
+
+可验证表达是指包含实体可验证凭证子集及副署签名(countersign)的数据集合，用于对第三方表明自身身份。
+
+一般而言，可验证表达中包含的是针对一个DID身份的凭证，这些凭证可以是不同的第三方实体颁发，用来表达实体的身份信息。
+
+Verifiable presentation可含多个凭证或者无凭证，一次成型，不可修改。
+
+Verifiable presentation只能封装自己的verifiable credential，其holder对最后结果签名。因此Verifiable presentation的holder就是verifiable credential的subject，否则Verifiable presentation无效。
