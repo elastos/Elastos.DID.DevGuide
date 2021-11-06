@@ -64,4 +64,9 @@ force表示Document存在，是否覆盖。若为true，则覆盖；反之不覆
 
 示例中newCustomizedDidWithController方法更多的用于多签，所以具体的介绍放在下一小节。
 
+```typescript
+public isCustomizedDid(): boolean；
+```
+该方法可以用来检查DID Document是否为Customized DID Document。
+
 
