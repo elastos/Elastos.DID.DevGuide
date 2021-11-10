@@ -1,12 +1,15 @@
 ﻿# Deactivate DID
+
 Publish DID方法和Transfer DID方法都是有效上链，Deactivate DID即为失效上链，停用DID。
 
 DID可以由自己或者委托者来停用DID，普通DID有Authentication Key和Authorization Key完成停用，自定义DID有Authentication Key和Controller的Default Key完成停用。
 
 未上链过的DID不可执行Deactivate操作。
 
-# Example
+## Example
+
 Deactivate self use authentication key：
+
 ```typescript
 let rootPath = "root/store";
 let store = await DIDStore.open(rootPath);
@@ -28,7 +31,9 @@ else
 ... ... ... ...
 store.close();
 ```
+
 Deactivate target DID by authorizor's DID：
+
 ```typescript
 let rootPath = "root/store";
 let store = await DIDStore.open(rootPath);
@@ -66,7 +71,9 @@ else
 ... ... ... ...
 store.close();
 ```
-# Usage
+
+## Usage
+
 ```typescript
 public async deactivate(
 	signKey: DIDURL = null,
@@ -74,6 +81,7 @@ public async deactivate(
 	adapter: DIDTransactionAdapter = null
 ): void；
 ```
+
 该方法是有被停用DID自己发起，用自己的Authentication Key完成停用。
 
 signKey是被指定签名Deactivate交易的Authentication Key，signKey为null，则默认使用Default Key。
@@ -88,6 +96,7 @@ public async deactivateTargetDID(
 	adapter: DIDTransactionAdapter = null
 ): void；
 ```
+
 该方法是有委托者发起的停用操作。
 
 target就是等待被停用的DID。

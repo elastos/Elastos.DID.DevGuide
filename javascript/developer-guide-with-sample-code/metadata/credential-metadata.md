@@ -1,4 +1,5 @@
 ﻿# Credential Metadata
+
 Credential Metadata是后台保存了和Credential相关的不能放入Credential的其他信息，比如昵称，链上状态，最新交易记录等。
 
 Credential  Metadata属性分为默认属性和用户自定义属性。
@@ -8,6 +9,7 @@ Credential  Metadata默认属性分为可读写和只读两种：可读写属性
 Credential Metadata自定义属性可通过getExtra*和setExtra*来实现读写功能。具体方法详见API文档。
 
 ## Example
+
 ```typescript
 let resolved =  await VerifiableCredential.resolve(id);
 let metadata = resolved.getMetadata();
@@ -18,4 +20,5 @@ let txId = metadata.getTransactionId();
 let usage = metadata.getExtra("usage");
 ... ... ...
 ```
+
 各属性的其他使用方法详见API文档。

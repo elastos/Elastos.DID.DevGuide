@@ -37,6 +37,7 @@ public static async resolve(
 	force = false
 ): Promise<VerifiableCredential>;
 ```
+
 SDK提供方法用来resolve凭证，只有被declare过的凭证才能被resolve到。
 
 id为需要resolve的凭证id；issuer表明该credential的颁发者，主要用于第三方kyc凭证查询是否存在由issuer撤销的有效交易。如果无该字段，解析结果不包含issuer撤销的交易。
@@ -49,6 +50,7 @@ public static resolveBiography(
 	issuer: DID
 ): Promise<CredentialBiography>;
 ```
+
 SDK提供resolve指定凭证所有交易记录的方法。
 
 id为凭证的id标识；issuer为凭证的颁发者，返回CredentialBiography object，CredentialBiography提供方法获取凭证在链上的状态和所有交易记录。具体方法可查阅API文档。

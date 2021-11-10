@@ -135,6 +135,7 @@ public async authorizeDid(
 	key: DIDURL
 ): Promise<Builder>；
 ```
+
 This method is to add the specified key to be an Authorization key. This specified key is the key of specified controller. Authentication is the mechanism by which the controller(s) of a DID can cryptographically prove that they are associated with that DID. A DID Document must include authentication key.
 
 ```typescript
@@ -142,6 +143,7 @@ public removeAuthorizationKey(
 	inputId: DIDURL | string
 ): Builder；
 ```
+
 该方法移除指定的authorization key。若该key不存在或者非authorization key，则报错。
 
 ```typescript
@@ -149,6 +151,7 @@ public addCredential(
 	vc: VerifiableCredential
 ): Builder；
 ```
+
 该方法用于添加用户提供的Verifiable Credential。若该Credential的Id在DID Document 中已经存在，则报错。
 
 ```typescript
@@ -160,6 +163,7 @@ public async createAndAddCredential(
 	expirationDate: Date = null
 ): Promise<Builder>；
 ```
+
 该方法用于直接添加自声明凭证，无需先创建credential在添加到DID Document中。
 
 subject为凭证的主题，是凭证最主要的内容，以json形式提供。
@@ -173,6 +177,7 @@ public removeCredential(
 	id: DIDURL | string
 ): Builder；
 ```
+
 该方法移除指定的Credential。若不存在则报错。
 
 ```typescript
@@ -183,6 +188,7 @@ public addService(
 	properties?: JSONObject
 ): Builder；
 ```
+
 该方法为添加Service。若指定id已经存在，则报错。
 
 endpoint为Service服务点地址；properties是用户可自定义添加的内容。
@@ -192,6 +198,7 @@ public removeService(
 	id: DIDURL | string
 ):  Builder；
 ```
+
 该方法移除指定的Service，若不存在则报错。
 
 ```typescript
@@ -199,6 +206,7 @@ public setExpires(
 	expires: Date
 ): Builder；
 ```
+
 DID Document的有效期默认为创建之时起后推五年。如果用户也可以通过该方法自行定义有效期。该方法设置的有效期不可超过五年，否则报错。
 
 

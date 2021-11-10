@@ -4,16 +4,18 @@ DID Document提供get方法获取内部对象的数量和个体：Subject，Cont
 
 这小节提一下DID Document提供的获取DID Metadata和Default Key方法。
 
-# Usage
+## Usage
 
 ```typescript
 public getDefaultPublicKeyId(): DIDURL；
 ```
+
 该方法是获取DID Document的主Key。
 
 ```typescript
 public getMetadata(): DIDMetadata；
 ```
+
 该方法获取DIDMetadata，DIDMetadata里包含了DID无法放入DID Document的信息内容。
 
 

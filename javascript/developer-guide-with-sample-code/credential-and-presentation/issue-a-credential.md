@@ -5,6 +5,7 @@ Issuer通过owner提供的subject数据生成并颁发凭证。根据Issuer和ow
 ## Example
 
 自声明凭证示例：
+
 ```typescript
 let rootPath = "root/store";
 let store = await DIDStore.open(rootPath);
@@ -33,7 +34,9 @@ let vc = await cb.id("#myCredential")
 ... ... ... ...
 store.close();
 ```
+
 第三方凭证示例：
+
 ```typescript
 let rootPath = "root/store";
 let store = await DIDStore.open(rootPath);
@@ -76,11 +79,13 @@ export class Issuer {
 	... ... ... ...
 }
 ```
+
 通过构造函数生成Issuer，其中doc作为Issuer的DID Document，signKey为该DID用来签名凭证的Authentication Key，若未指定，则默认使用Default Key。
 
 ```typescript
 public issueFor(did: DID | string): VerifiableCredential.Builder;
 ```
+
 Issuer提供方法来指定为谁颁发凭证，得到VerifiableCredential.Builder object后根据VerifiableCredential.Builder提供的各种方法来设置更多凭证的属性。
 
 did为需要颁发的凭证的owner。
@@ -88,4 +93,5 @@ did为需要颁发的凭证的owner。
 ```typescript
 public async seal(storepass: string): Promise<VerifiableCredential>;
 ```
+
 VerifiableCredential.Builder提供方法用来封装凭证内容，storepass是Issuer所在DID Store的storepass。

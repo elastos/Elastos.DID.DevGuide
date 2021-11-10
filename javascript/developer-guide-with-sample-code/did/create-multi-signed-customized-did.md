@@ -4,7 +4,8 @@
 
 多签（m:n）规则，只要n>1即为多签。m表示签名者个数，即Document 的Proof中signature个数。如果signature个数小于m则表明此时的Document还不是真正可用有效的多签文档，需要剩余未签名的Controller完成签名工作。
 
-# Example
+## Example
+
 ```typescript
 let rootPath = "root/store";
 let store = await DIDStore.open(rootPath);
@@ -55,7 +56,8 @@ await doc.publish(storePass);
 ... ... ... ...
 store.close();
 ```
-# Usage
+
+## Usage
 
 普通DID Document的那些添加和移除元素的方法同样适合Customized DID Document，这里说明的是Customized DID Document特有的内容。
 
@@ -68,11 +70,13 @@ public async newCustomizedDidWithController(
 	force?: boolean
 ): Promise<DIDDocument>；
 ```
+
 该方法提供了生成初始的多签Document，此时得到的Document只有一个Controller对主体数据签名，此时signature个数是否符合多签规则，通过isQualified方法来提供。
 
 ```typescript
 public isQualified(): boolean;
 ```
+
 该方法告知当前的Customized Document中signature个数是否符合多签规则。如若返回false，则未签名的Controller继续完成签名工作，完善Document。
 
 ```typescript
@@ -86,6 +90,7 @@ public removeController(
     controller: DID | string
 ): Builder;
 ```
+
 上面两个方法很明显的是Customized DID Document才有的方法，添加和移除Controller，用于普通DID Document，则报错。
 
 ```typescript
@@ -93,10 +98,12 @@ public setMultiSignature(
     m: number
 ): Builder;
 ```
+
 该方法重新设置了过签规则。
 
 ```typescript
 public setEffectiveController(controller: DID)：void;
 ```
+
 多签的Customised DID Document在签名前需要设置Effective Controller来指定签名是用哪个controller的主key。
 

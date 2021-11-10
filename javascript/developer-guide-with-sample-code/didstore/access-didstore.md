@@ -1,4 +1,4 @@
-# Access DIDStore
+﻿# Access DIDStore
 
 ## 读取DID store中的对象
 
@@ -375,8 +375,6 @@ if (store.containsCredentials(did)) {
 } else {
     console.log("there are no credential in the DID store.");
 }
-
-
 ... ... ... ...
 
 store.close();

@@ -5,6 +5,7 @@ Elastos ID链支持Credential上链，用于需要公开声明的DID凭证信息
 ## Example
 
 声明凭证示例：
+
 ```typescript
 let vc =  await selfIssuer.issueFor(did)
 	.id("#test")
@@ -22,6 +23,7 @@ else
 ```
 
 撤销凭证示例：
+
 ```typescript
 //declare by owner
 await credential.declare(signKey, storePass);
@@ -58,6 +60,7 @@ public async revoke(
 	adapter: DIDTransactionAdapter = null
 ): void;
 ```
+
 Credential提供撤销凭证的方法。这里需要说明的是：凭证无论是否被声明过，都可以被撤销，但是如果已经被凭证所有者或者颁发者撤销的凭证无法再次被撤销。撤销Verifiable Credential需要通过凭证所有者或者凭证颁发者发起交易来实现。
 
 signKey为撤销者即Verifiable Credential所有者或者颁发者的Key；signer为撤销凭证者的DID Document，默认为signKey的所有者。
