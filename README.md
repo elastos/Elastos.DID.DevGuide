@@ -2,8 +2,6 @@
 
 ## Decentralized Identity (DID)
 
-DID (Elastos Decentralized Identity) is a new type of identifier that enables the application of a verifiable, decentralized digital identity. A DID identifies any subject (i.e. a person, organization, thing, data model, or abstract entity) that the owner chooses.
-
 Elastos is keen on revolutionizing the digital identity space through our open-source universal Decentralized Identity (DID) solution. This product serves as a mechanism for securing personal identities and data that are commonly exploited, restoring anonymity and privacy features while also eliminating the need to trust large organizations that house and store their data.
 
 DID runs on the Elastos Identity Chain (EID), allowing any device or person to create their own digital identity on the web - it’s fully compatible with a variety of applications and products within the Elastos ecosystem.
