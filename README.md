@@ -2,6 +2,8 @@
 
 ## Decentralized Identity (DID)
 
+DID (Elastos Decentralized Identity) is a new type of identifier that enables the application of a verifiable, decentralized digital identity. A DID identifies any subject (i.e. a person, organization, thing, data model, or abstract entity) that the owner chooses.
+
 Elastos is keen on revolutionizing the digital identity space through our open-source universal Decentralized Identity (DID) solution. This product serves as a mechanism for securing personal identities and data that are commonly exploited, restoring anonymity and privacy features while also eliminating the need to trust large organizations that house and store their data.
 
 DID runs on the Elastos Identity Chain (EID), allowing any device or person to create their own digital identity on the web - it’s fully compatible with a variety of applications and products within the Elastos ecosystem.
@@ -15,7 +17,7 @@ Below are some of the other core features and benefits of Elastos DIDs:
 
 ## Elastos DID Framework
 
-**Elastos DID (Decentralized Identifier) framework** is a set of APIs for Elastos DID that is compatible with W3C DIDs specs.
+The **Elastos DID framework** is a set of APIs that's compatible with W3C DIDs specs.
 
 ## Language support
 
@@ -23,7 +25,7 @@ Elastos DID SDK可提供多种语言支持：java，swift c，c/c++和javascript
 
 ## EID Sidechain
 
-Elastos DID runs on the Elastos Identity Chain (EID), which is based on the Ethereum blockchain and issues identities to any device or individual that needs a trust-based system.
+Elastos DID runs on the Elastos Identity Chain (EID) and is based on Ethereum chain. It issues DIDs to any device or individual that needs a trust-based system, which is exactly what the SmartWeb is designed for.
 
 ## EID RPC Service for DID SDK
 
