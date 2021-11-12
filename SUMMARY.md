@@ -1,6 +1,22 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Technical Deep Dive](technical-deep-dive/README.md)
+  * [DID Method](technical-deep-dive/did-method.md)
+  * [DID Resolver](technical-deep-dive/did-resolver.md)
+  * [Verifiable Claims](technical-deep-dive/verifiable-claims.md)
+* [Hello World App](hello-world-app/README.md)
+  * [Get Started](hello-world-app/get-started.md)
+  * [Deploy the App](hello-world-app/deploy-the-app.md)
+  * [Run the App](hello-world-app/run-the-app.md)
+* [SDKs](sdks/README.md)
+  * [Features Guide](sdks/features-guide.md)
+  * [API References](sdks/api-references/README.md)
+    * [Java SDK](sdks/api-references/java-sdk.md)
+    * [Swift SDK](sdks/api-references/swift-sdk.md)
+    * [Javascript SDK](sdks/api-references/javascript-sdk.md)
+    * [Cordova](sdks/api-references/cordova.md)
+    * [Native](sdks/api-references/native.md)
 
 ## Concepts
 
