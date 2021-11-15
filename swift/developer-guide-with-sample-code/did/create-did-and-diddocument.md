@@ -1,7 +1,9 @@
 ---
 description: >-
+DID 和 DIDDocument 是同一个对象的两个不同表现，并且同时被创建。普通 DID 都是通过 RootIdentity 创建，从 RootIdentity 创建 DID的方法参见 //TODO:。
   DID确定DID主体，并解析为对应的DID文档，DIDDocument不是可以和DID主体分开的资源，DIDDocument是由DIDController控制的DID解读信息，用于描述DID主体。DID文档中有一个必须属性ID：用于定义
   DID 主体的标识符。
+  
 ---
 
 # Create DID and DIDDocument

@@ -1,10 +1,8 @@
----
-description: 创建RootIdenenty
----
-
 # Create RootIdenenty
+RootIdentity 是用户的根身份，要使用 DID 就需要先创建一个 RootIdentity 对象。
 
-通过给定的Mnemonic创建RootIdentity：
+
+## 使用Mnemonic创建
 
 ```
 let store = try DIDStore.open(atPath: "STORE-ROOT-PATH")
