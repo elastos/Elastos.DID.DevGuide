@@ -1,6 +1,6 @@
 # Create DID and DIDDocument
 
-DID体系里最基本的对象就是DID object，是DID标识对象；DID Document是DID的详细内容对象。这章节讲解这两部分的创建和修改。
+DID内容分为DID标识和DID详细内容DID Document，该部分就从这两个部分来说明：
 
 {% content-ref url="create-did.md" %}
 [create-did.md](create-did.md)

@@ -103,12 +103,14 @@ This method is to add the specified key to be an Authorization key. This specifi
 int DIDDocumentBuilder_RemoveAuthorizationKey(DIDDocumentBuilder *builder,
         DIDURL *keyid);
 ```
+
 该方法移除指定的Authorization Key。若该Key不存在或者非Authorization Key，则报错。
 
 ```c
 int DIDDocumentBuilder_AddCredential(DIDDocumentBuilder *builder,
         Credential *credential);
 ```
+
 该方法用于添加用户提供的Verifiable Credential。若该Credential的Id在DID Document 中已经存在，则报错。
 
 ```c
@@ -121,6 +123,7 @@ int DIDDocumentBuilder_AddSelfProclaimedCredential(DIDDocumentBuilder *builder,
         DIDURL *credid, const char **types, size_t typesize,
         Property *properties, int propsize, time_t expires, DIDURL *signkey, const char *storepass);
 ```
+
 该方法用于直接生成并添加自声明凭证。
 
 `types`为type数组，`typesize`为type数量；`properties`为凭证主题的数组，是凭证最主要的内容，`propsize`是凭证主题数量。
@@ -133,6 +136,7 @@ int DIDDocumentBuilder_AddSelfProclaimedCredential(DIDDocumentBuilder *builder,
 int DIDDocumentBuilder_RemoveCredential(DIDDocumentBuilder *builder,
         DIDURL *credid);
 ```
+
 该方法移除指定的Credential。若不存在则报错。
 
 ```c
@@ -140,6 +144,7 @@ int DIDDocumentBuilder_AddService(DIDDocumentBuilder *builder,
         DIDURL *serviceid, const char *type, const char *endpoint,
         Property *properties, int size);
 ```
+
 ```c
 int DIDDocumentBuilder_AddServiceByString(DIDDocumentBuilder *builder,
         DIDURL *serviceid, const char *type, const char *endpoint,
@@ -154,20 +159,11 @@ endpoint为Service服务点地址；properties是用户可自定义添加的内�
 int DIDDocumentBuilder_RemoveService(DIDDocumentBuilder *builder,
         DIDURL *serviceid);
 ```
+
 该方法移除指定的Service，若不存在则报错。
 
 ```c
 int DIDDocumentBuilder_SetExpires(DIDDocumentBuilder *builder, time_t expires);
 ```
+
 DID Document的有效期默认为创建之时起后推五年。如果用户也可以通过该方法自行定义有效期。该方法设置的有效期不可超过五年，否则报错。
-
-
-
-
-
-
-
-
-
-
-

@@ -1,2 +1,0 @@
-# Create DID and DIDDocument
-

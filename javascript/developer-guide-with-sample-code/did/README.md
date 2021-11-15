@@ -10,8 +10,8 @@ DID内容分为如下八个部分：
 [verify-the-integrity-of-diddocument.md](verify-the-integrity-of-diddocument.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument.md" %}
-[create-did-and-diddocument.md](../../../c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument.md)
+{% content-ref url="../../../c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument/" %}
+[create-did-and-diddocument](../../../c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument/)
 {% endcontent-ref %}
 
 {% content-ref url="../../../c-c++/developer-guide-with-sample-code/did/publish-did.md" %}

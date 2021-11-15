@@ -6,7 +6,7 @@ RootIdentity提供方法去获取根身份衍生而来的所有链上的DID，�
 
 ## Example
 
-```c 
+```c
 const char *rootPath = "root/store";
 DIDStore *store = await DIDStore.open(rootPath);
 ... ... ... ...
@@ -40,4 +40,3 @@ bool RootIdentity_SynchronizeByIndex(RootIdentity *rootidentity, int index,
 ```
 
 `index`表示根身份衍生的第几个DID；handle含义如上。
-
