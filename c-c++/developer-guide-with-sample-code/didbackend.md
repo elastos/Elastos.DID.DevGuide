@@ -1,4 +1,4 @@
-## DIDBackend
+# DIDBackend
 
 整个DID系统都需要本地与链进行交互，所以DID体系启动初期就需要先初始化DID Backend，设定好链的rpc服务端，合约地址，还有链上数据缓冲区等内容，为DID设定好与链交互接口。
 
@@ -22,6 +22,7 @@ else
 ```
 
 ## Usage
+
 ```c
 typedef bool CreateIdTransaction_Callback(
 	const char *payload,
@@ -32,6 +33,7 @@ int DIDBackend_InitializeDefault(
     const char *url,
     const char *cachedir);
 ```
+
 ```c
 typedef const char* Resolve_Callback(
 	const char *request);
@@ -41,6 +43,7 @@ int DIDBackend_Initialize(
     Resolve_Callback *resolve,
     const char *cachedir);
 ```
+
 SDK提供两种初始化DID Backend的方法。
 
 `createtransaction`是用户提供的上链回调函数，用于Publish  DID或者Declare Credential。

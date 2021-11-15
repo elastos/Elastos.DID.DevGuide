@@ -20,11 +20,13 @@ jwt = DefaultJWSParser_Parse(token);
 ... ... ... ...
 JWT_Destroy(jwt);
 ```
+
 ## Usage
 
 ```c
 JWSParser *DIDDocument_GetJwsParser(DIDDocument *document);
 ```
+
 该方法由DID Document提供，获取JWSParser object。`document`提供key用于验签token。
 
 ```c
@@ -36,6 +38,7 @@ void JWSParser_Destroy(JWSParser *parser);
 ```c
 JWT *JWTParser_Parse(const char *token);
 ```
+
 该方法解析JWT Token，即不含签名的Token。若成功，返回JWT object，否则报错。
 
 ```c
@@ -53,11 +56,13 @@ JWT *JWSParser_Parse(JWSParser *parser, const char *token);
 ```c
 void JWT_Destroy(JWT *jwt);
 ```
+
 用完JWT object，使用该方法销毁。
 
 ```c
 const char *JWT_GetHeader(JWT *jwt, const char *attr);
 ```
+
 该方法可获取JWT中header中各元素内容。SDK还提供直接获取基本属性方法，比如`JWT_GetAlgorithm`,`JWT_GetKeyId`等，具体详见API文档。
 
 ```c
