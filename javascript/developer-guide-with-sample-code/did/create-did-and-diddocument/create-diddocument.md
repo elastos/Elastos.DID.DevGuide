@@ -1,4 +1,4 @@
-# Create DIDDocument
+﻿# Create DIDDocument
 
 DID Document 分为普通DID Document和自定义DID Document，这里讲的内容都是针对普通DID Document。自定义DID Document将在后续章节详细介绍。
 
@@ -115,3 +115,108 @@ public addExistingAuthorizationKey(
 ```
 
 该方法添加已经存public key为authorization key。符合如下条件：一、已存在；二、非authentication key 和authorization key；三、controller非DID Document subject。不符合要求则报错。
+
+```typescript
+public addAuthorizationKey(
+	id: DIDURL | string,
+	controller: DID | string,
+	pk: string
+): Builder；
+```
+
+该方法为添加新authorization key，若已经存在，则报错。
+
+pk为公钥的base58字符串；controller为该key的持有者。
+
+```typescript
+public async authorizeDid(
+	id: DIDURL,
+	controller: DID,
+	key: DIDURL
+): Promise<Builder>；
+```
+
+This method is to add the specified key to be an Authorization key. This specified key is the key of specified controller. Authentication is the mechanism by which the controller(s) of a DID can cryptographically prove that they are associated with that DID. A DID Document must include authentication key.
+
+```typescript
+public removeAuthorizationKey(
+	inputId: DIDURL | string
+): Builder；
+```
+
+该方法移除指定的authorization key。若该key不存在或者非authorization key，则报错。
+
+```typescript
+public addCredential(
+	vc: VerifiableCredential
+): Builder；
+```
+
+该方法用于添加用户提供的Verifiable Credential。若该Credential的Id在DID Document 中已经存在，则报错。
+
+```typescript
+public async createAndAddCredential(
+	storepass: string,
+	id: DIDURL | string,
+	subject: JSONObject | string = null,
+	types: string[] = null,
+	expirationDate: Date = null
+): Promise<Builder>；
+```
+
+该方法用于直接添加自声明凭证，无需先创建credential在添加到DID Document中。
+
+subject为凭证的主题，是凭证最主要的内容，以json形式提供。
+
+types是Credential的类型，SDK暂支持五种type：SelfProclaimedCredential，EmailCredential，ProfileCredential，SocialCredential和WalletCredential，后续根据需求做适当调整。用户可以根据需要选择type，也可以通过相应方法添加自定义的type。
+
+expirationDate是有效期，不可以大于所属DID的Document有效期。
+
+```typescript
+public removeCredential(
+	id: DIDURL | string
+): Builder；
+```
+
+该方法移除指定的Credential。若不存在则报错。
+
+```typescript
+public addService(
+	id: DIDURL | string,
+	type: string,
+	endpoint: string,
+	properties?: JSONObject
+): Builder；
+```
+
+该方法为添加Service。若指定id已经存在，则报错。
+
+endpoint为Service服务点地址；properties是用户可自定义添加的内容。
+
+```typescript
+public removeService(
+	id: DIDURL | string
+):  Builder；
+```
+
+该方法移除指定的Service，若不存在则报错。
+
+```typescript
+public setExpires(
+	expires: Date
+): Builder；
+```
+
+DID Document的有效期默认为创建之时起后推五年。如果用户也可以通过该方法自行定义有效期。该方法设置的有效期不可超过五年，否则报错。
+
+
+
+
+
+
+
+
+
+
+
+

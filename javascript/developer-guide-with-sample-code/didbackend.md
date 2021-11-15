@@ -1,8 +1,7 @@
-# DIDBackend
+﻿# DIDBackend
 
 ## Example
 
-{% code title="" %}
 ```typescript
 let rpcEndpoint = "testnet";
 let contractAddress = "0xF654c3cBBB60D7F4ac7cDA325d51E62f47ACD436";
@@ -10,7 +9,6 @@ let contractAddress = "0xF654c3cBBB60D7F4ac7cDA325d51E62f47ACD436";
 let adapter = new Web3Adapter(rpcEndpoint, contractAddress, null, null);  
 DIDBackend.initialize(adapter);
 ```
-{% endcode %}
 
 ## Purpose
 
