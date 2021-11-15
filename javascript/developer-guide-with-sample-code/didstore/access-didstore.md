@@ -1,4 +1,4 @@
-﻿# Access DIDStore
+# Access DIDStore
 
 ## 读取DID store中的对象
 
@@ -6,7 +6,7 @@ DID store提供了一系列的load API用于store内的对象的读取，可以�
 
 但是处于安全的考虑，存储在store中的私钥是不能被直接读取的，只能通过签名或者加密的API透明的使用。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -31,7 +31,7 @@ let vc = await store.loadCredential(id);
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 public async loadRootIdentity(
@@ -69,7 +69,7 @@ DID store提供一系列api用于保存DID信息到DID store，主要有DID Docu
 
 其中，保存私钥主要用于DIDDocument添加key时，密钥对中的公钥添加到Document，私钥加密保存到DID store，用于DID的授权和委托。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -100,7 +100,7 @@ if (vc)
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 public async storeDid(
@@ -138,7 +138,7 @@ DID store是后台存储，用户需要知道DID store中保存的所有DID信�
 
 为了安全起见，私钥不可列举。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -171,7 +171,7 @@ if (remains.length > 0) {
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 public async listRootIdentities(): Promise<RootIdentity[]>;
@@ -195,7 +195,7 @@ public async listCredentials(didOrString: DID | string): Promise<DIDURL[]>;
 
 List功能可以列举DID store中所有同类型对象，select功能可以列举符合指定条件的DID和Verifiable Credential对象。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -218,7 +218,7 @@ await store.selectCredentials(did, new class implements DIDFilter {
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 export interface DIDFilter {
@@ -247,7 +247,7 @@ public async selectCredentials(
 
 DID store提供方法保存DID对象，自然也提供删除保存的DID对象的方法，先课删除RootIdentity，DID，Verifiable Credential和Private key。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -292,7 +292,7 @@ if (dids.length > 0) {
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 public deleteRootIdentity(id: string): boolean;
@@ -322,7 +322,7 @@ public deletePrivateKey(idOrString: DIDURL | string): boolean;
 
 有些时候用户只需要知道DID store中是否保存某对象，而不需要该对象实例。因此DID store提供了方法检查RootIdentity，Mnemonic，DID，Verifiable Credential和Private key的存在与否。
 
-* ### Example
+* #### Example
 
 ```typescript
 let rootPath = "root/store";
@@ -380,7 +380,7 @@ if (store.containsCredentials(did)) {
 store.close();
 ```
 
-* ### Usage
+* #### Usage
 
 ```typescript
 public containsRootIdentity(id: string): boolean;

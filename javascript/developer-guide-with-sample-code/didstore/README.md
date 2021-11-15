@@ -6,8 +6,8 @@ DIDStore内容分为如下四个部分：
 [create-or-open-didstore.md](../../../java/developer-guide/didstore/create-or-open-didstore.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../c-c++/developer-guide-with-sample-code/didstore/access-didstore.md" %}
-[access-didstore.md](../../../c-c++/developer-guide-with-sample-code/didstore/access-didstore.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="export-import/" %}

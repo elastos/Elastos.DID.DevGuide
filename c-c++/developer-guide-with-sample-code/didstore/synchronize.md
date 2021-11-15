@@ -24,4 +24,3 @@ void DIDStore_Synchronize(DIDStore *store, DIDDocument_ConflictHandle *handle);
 ```
 
 `handle`是用户提供的当本地和链上获取的DID Document发生冲突时的解决方案。SDK提供默认的解决方案是保留本地DID Document，忽略链上版本。若用户有不同的解决方案，需要设置该参数。
-

@@ -36,4 +36,3 @@ int DIDStore_ImportDID(DIDStore *store, const char *storepass,
 ```
 
 `file`是用户提供的用来导入DID内容的文件路径；`password`为导入密码，和导出密码一致，如果错误就无法正确完成导入功能；`storepass`为导入DID store的store pass，用于私钥在DID Store的加密。
-

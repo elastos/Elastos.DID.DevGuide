@@ -6,7 +6,7 @@ DID Store提供了一系列的load API用于DID Store内的对象读取，可以
 
 但是处于安全的考虑，存储在DID Store中的私钥是不能被直接读取的，只能通过签名或者加密的API透明的使用。
 
-* ### Example
+* #### Example
 
 ```c
 const char *rootPath = "root/store";
@@ -36,7 +36,7 @@ Credential_Destroy(vc);
 DIDStore_Close(store);
 ```
 
-* ### Usage
+* #### Usage
 
 ```c
 RootIdentity *DIDStore_LoadRootIdentity(DIDStore *store, const char *id);
@@ -68,7 +68,7 @@ DID Store提供一系列API用于保存DID信息到DID Store，主要有DID Docu
 
 其中，保存私钥主要用于DIDDocument添加key时，密钥对中的公钥添加到Document，私钥加密保存到DID Store，用于DID的授权和委托。
 
-* ### Example
+* #### Example
 
 ```c
 const char *rootPath = "root/store";
@@ -115,7 +115,7 @@ DID_Destroy(did);
 DIDStore_Close(store);
 ```
 
-* ### Usage
+* #### Usage
 
 ```c
 int DIDStore_StoreDID(DIDStore *store, DIDDocument *document);
@@ -142,7 +142,7 @@ DID Store是后台存储，用户需要知道DID Store中保存的所有DID信�
 
 为了安全起见，私钥不可列举。
 
-* ### Example
+* #### Example
 
 ```c
 int get_rootidentity(RootIdentity *rootidentity, void *context)
@@ -194,7 +194,7 @@ if (count > 0)
 DIDStore_Close(store);
 ```
 
-* ### Usage
+* #### Usage
 
 ```c
 typedef int DIDStore_RootIdentitiesCallback(RootIdentity *rootidentity, void *context);
@@ -232,7 +232,7 @@ int DIDStore_ListCredentials(DIDStore *store, DID *did,
 
 List功能可以列举DID Store中所有同类型对象，select功能可以列举符合指定条件的DID和Verifiable Credential对象。
 
-* ### Example
+* #### Example
 
 ```c
 const char *rootPath = "root/store";
@@ -247,7 +247,7 @@ if (DIDDocument_SelectCredentials(customized_doc, "SelfProclaimedCredential",
 DIDStore_Close(store);
 ```
 
-* ### Usage
+* #### Usage
 
 ```c
 ssize_t DIDDocument_SelectCredentials(DIDDocument *document, const char *type,
@@ -264,7 +264,7 @@ ssize_t DIDDocument_SelectCredentials(DIDDocument *document, const char *type,
 
 DID Store提供方法保存DID对象，自然也提供删除保存的DID对象的方法，先课删除RootIdentity，DID，Verifiable Credential和Private key。
 
-* ### Usage
+* #### Usage
 
 ```c
 bool DIDStore_DeleteRootIdentity(DIDStore *store, const char *id);
@@ -286,7 +286,7 @@ bool DIDStore_DeleteCredential(DIDStore *store, DID *did, DIDURL *id);
 
 `did`是Credential的所有者，`id`为Credential标识。
 
-```c 
+```c
 void DIDStore_DeletePrivateKey(DIDStore *store, DIDURL *keyid);
 ```
 
@@ -296,15 +296,21 @@ void DIDStore_DeletePrivateKey(DIDStore *store, DIDURL *keyid);
 
 有些时候用户只需要知道DID store中是否保存某对象，而不需要该对象实例。因此DID store提供了方法检查RootIdentity，Mnemonic，DID，Verifiable Credential和Private key的存在与否。
 
-* ### Usage
+* #### Usage
 
 ```c
 int DIDStore_ContainsRootIdentity(DIDStore *store, const char *id);
 ```
 
- *      return value = -1, if error occurs;
- *      return value = 0, didstore doestn't contain rootidentiy;
- *      return value = 1, didstore contains rootidentiy.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, didstore doestn't contain rootidentiy;
+  ```
+* ```
+   return value = 1, didstore contains rootidentiy.
+  ```
 
 ```c
 int DIDStore_ContainsRootIdentities(DIDStore *store);
@@ -312,9 +318,15 @@ int DIDStore_ContainsRootIdentities(DIDStore *store);
 
 检查DID Store是否含有RootIdentity。
 
- *      return value = -1, if error occurs;
- *      return value = 0, there isn't rootidentity in didstore;
- *      return value = 1, there is rootidentity in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, there isn't rootidentity in didstore;
+  ```
+* ```
+   return value = 1, there is rootidentity in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsRootIdentityMnemonic(DIDStore *store, const char *id);
@@ -322,9 +334,15 @@ int DIDStore_ContainsRootIdentityMnemonic(DIDStore *store, const char *id);
 
 检查指定RootIdentity是否含有mnemonic。
 
- *      return value = -1, if error occurs;
- *      return value = 0, there isn't rootidentity's mnemonic in didstore;
- *      return value = 1, there is rootidentity's mnemonic in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, there isn't rootidentity's mnemonic in didstore;
+  ```
+* ```
+   return value = 1, there is rootidentity's mnemonic in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsDID(DIDStore *store, DID *did);
@@ -332,9 +350,15 @@ int DIDStore_ContainsDID(DIDStore *store, DID *did);
 
 检查DID Store是否含有指定DID。
 
- *      return value = -1, if error occurs;
- *      return value = 0, did isn't in didstore;
- *      return value = 1, did is in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, did isn't in didstore;
+  ```
+* ```
+   return value = 1, did is in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsDIDs(DIDStore *store);
@@ -342,9 +366,15 @@ int DIDStore_ContainsDIDs(DIDStore *store);
 
 检查DID Store是否含有DID。
 
- *      return value = -1, if error occurs;
- *      return value = 0, no did isn't in didstore;
- *      return value = 1, did is in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, no did isn't in didstore;
+  ```
+* ```
+   return value = 1, did is in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsCredential(DIDStore *store, DID *did, DIDURL *credid);
@@ -352,9 +382,15 @@ int DIDStore_ContainsCredential(DIDStore *store, DID *did, DIDURL *credid);
 
 检查DID store是否含有指定id的Credential。
 
- *      return value = -1, if error occurs;
- *      return value = 0, credential isn't in didstore;
- *      return value = 1, credential is in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, credential isn't in didstore;
+  ```
+* ```
+   return value = 1, credential is in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsCredentials(DIDStore *store, DID *did);
@@ -362,9 +398,15 @@ int DIDStore_ContainsCredentials(DIDStore *store, DID *did);
 
 检查DID store是否含有指定DID的Credential。
 
- *      return value = -1, if error occurs;
- *      return value = 0, there isn't credential in didstore;
- *      return value = 1, there is credential in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, there isn't credential in didstore;
+  ```
+* ```
+   return value = 1, there is credential in didstore.
+  ```
 
 ```c
 int DIDStore_ContainsPrivateKey(DIDStore *store, DID *did, DIDURL *keyid);
@@ -372,9 +414,15 @@ int DIDStore_ContainsPrivateKey(DIDStore *store, DID *did, DIDURL *keyid);
 
 检查DID store是否含有指定id的Private key。
 
- *      return value = -1, if error occurs;
- *      return value = 0, there isn't private key in didstore;
- *      return value = 1, there is private key in didstore.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, there isn't private key in didstore;
+  ```
+* ```
+   return value = 1, there is private key in didstore.
+  ```
 
 ```c
 int DIDSotre_ContainsPrivateKeys(DIDStore *store, DID *did);
@@ -382,6 +430,12 @@ int DIDSotre_ContainsPrivateKeys(DIDStore *store, DID *did);
 
 检查DID store是否含有指定did的私钥。
 
- *      return value = -1, if error occurs;
- *      return value = 0, there isn't private key in didstore;
- *      return value = 1, did is deacativated.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, there isn't private key in didstore;
+  ```
+* ```
+   return value = 1, did is deacativated.
+  ```

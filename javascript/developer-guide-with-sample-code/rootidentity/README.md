@@ -6,8 +6,8 @@ RootIdentity内容分为如下三个部分：
 [create-rootidentity.md](create-rootidentity.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../java/developer-guide/rootidentity/create-dids-from-the-rootidentity.md" %}
-[create-dids-from-the-rootidentity.md](../../../java/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
+{% content-ref url="../../../c-c++/developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md" %}
+[create-dids-from-the-rootidentity.md](../../../c-c++/developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md)
 {% endcontent-ref %}
 
 {% content-ref url="synchronize.md" %}
