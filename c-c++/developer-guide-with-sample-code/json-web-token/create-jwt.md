@@ -62,7 +62,7 @@ bool JWTBuilder_SetSubject(JWTBuilder *builder, const char *subject);
 
 该方法设置"sub"属性，SDK提供一些固定属性设置，具体可见API文档。
 
-```c 
+```c
 int JWTBuilder_Sign(JWTBuilder *builder, DIDURL *keyid, const char *storepass);
 ```
 
@@ -83,4 +83,3 @@ int JWTBuilder_Reset(JWTBuilder *builder);
 ```
 
 重设header and body部分，除了“alg”，“kid” 和“iss”。
-

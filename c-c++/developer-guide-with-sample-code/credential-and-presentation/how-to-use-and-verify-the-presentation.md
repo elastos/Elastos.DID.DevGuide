@@ -9,17 +9,31 @@ Presentation同时还提供完整性和有效性检查的方法，不仅对Prese
 ```c
 int Presentation_IsGenuine(Presentation *presentation)；
 ```
+
 Presentation提供方法用于检查Presentation以及各元素的完整性，比如Presentation holder的完整性，封装的各Credential的完整性等。
 
- *      return value = -1, if error occurs;
- *      return value = 0, presentation isn't genuine;
- *      return value = 1, presentation is genuine.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, presentation isn't genuine;
+  ```
+* ```
+   return value = 1, presentation is genuine.
+  ```
 
 ```c
 int Presentation_IsValid(Presentation *presentation)；
 ```
+
 Presentation提供方法用于检查Presentation以及各元素的有效性，比如Presentation holder的有效性，封装的各Credential的有效性等。有效性包含完整性。
 
- *      return value = -1, if error occurs;
- *      return value = 0, presentation isn't valid;
- *      return value = 1, presentation is valid.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, presentation isn't valid;
+  ```
+* ```
+   return value = 1, presentation is valid.
+  ```

@@ -72,10 +72,3 @@ const char *JWT_GetClaim(JWT *jwt, const char *key);
 该方法可获取JWT中claims中各元素内容，内容以字符串返回。有些内容非字符串，SDK提供相应不同返回类型的API，`JWT_GetClaimAsJson`,`JWT_GetClaimAsInteger`,`JWT_GetClaimAsBoolean`。
 
 对于claim中一些基本属性，SDK也提供相应方法，比如`JWT_GetIssuer`,`JWT_GetSubject`等，具体详见API文档。
-
-
-
-
-
-
-

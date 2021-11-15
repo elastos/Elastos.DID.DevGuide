@@ -24,7 +24,7 @@ ssize_t size3 = Credential_List(&did, buffer, sizeof(buffer), 1024, 4);
 ```c
 ssize_t Credential_List(DID *did, DIDURL **buffer, size_t size, int skip, int limit);
 ```
+
 `did`为需要枚举所有declared凭证的所有者；`skip`为忽略前skip个credentials；`limit`表明该次list最多可接受多少个credentials。
 
 如果 limit 为默认值， 且链上实际declared凭证数量大于128，则只返回128个credential，若想获取剩下的credential，可以通过设置skip来实现；若limit > 512，且链上实际declared凭证大于512，则只返回512个credential，若想获取剩下的credential，可以通过设置skip来实现。
-

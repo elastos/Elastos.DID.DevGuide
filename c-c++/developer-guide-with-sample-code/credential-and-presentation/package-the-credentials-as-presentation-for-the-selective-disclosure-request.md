@@ -28,12 +28,14 @@ Presentation *Presentation_Create(DIDURL *id, DID *holder,
         const char **types, size_t size, const char *nonce, const char *realm,
         DIDURL *signkey, DIDStore *store, const char *storepass, int count, ...);
 ```
+
 ```c
 Presentation *Presentation_CreateByCredentials(DIDURL *id, DID *holder,
         const char **types, size_t size, const char *nonce, const char *realm,
         Credential **creds, size_t count, DIDURL *signkey, DIDStore *store,
         const char *storepass);
 ```
+
 以上两种方法都是生成Presentation，只是Credential的导入方式不同；前者是以变参形式导入，后者以数组形式导入。
 
 `id`是Presentation的id；`holder`是Presentation的持有者；`nonce`签名操作使用的随机值；`realm`表明该presentation适用的领域和地址；`signkey`是Presentation的持有者用来签名封装Presentation的Authentication Key；`count`是导入的Credential数量。
