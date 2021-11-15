@@ -1,64 +1,67 @@
----
-description: Deactivate DID 分为同步和异步2种方法，可根据自己情况使用。
----
-
 # Deactivate DID
 
-普通Document 停用：
+DID 如果不再使用，可以对 DID 进行 deactivate，之后该 DID 将处于无效的状态，不能用于身份验证和其他任何 DID 相关的操作。
+
+DID 的 deactivate 操作通常有两种情形：
+
+- DID 的持有者主动的对 DID 进行 deactivate
+- DID 持有者遗失的该 DID 的私钥，但是该 DID 声明有委托密钥（authorizationKey），可以由被委托人代为 deactivate
+
+通过这两种形式对 DID 进行 deactivate，其结果是相同的，都会直接导致该 DID 永久失效。
+
+## DID 持有者 deactivate DID
+
+DID 持有者可以以持有的该 DID 对应的默认认证密钥，并且仅能使用默认认证密钥对 DID 进行 deactivate 操作。示例如下：
 
 ```
-// *** 创建之后就停用 ***
-var doc = try identity.newDid("YOUR-STORE-PASSWORD")
-try doc.publish(using: "YOUR-STORE-PASSWORD")
-try doc.deactivate(using: "YOUR-STORE-PASSWORD")
-// 验证， 停用成功返回true，反之，false
-let resulet = doc.isDeactivated
+let store: DIDStore // an opened DIDStore instance
+let storePasswd = "secret"
+let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
+
+// Get the existing DIDDocument
+let doc = try store.loadDid(did)
+
+// Deactivate DID
+doc.deactivate(storePasswd)
 ```
 
-自定义Document 停用：
+对于自定义 DID，deactivate 可以由任何一个有效的持有人（controller）对 DID 进行 deactivate，同样，deactivate 操作需要使用持有人的默认认证密钥进行签名。示例：
 
 ```
-// *** 创建之后就停用 ***
-// Create normal DID first
-let controller = try identity.newDid("YOUR-STORE-PASSWORD")
-try controller.publish(using: "YOUR-STORE-PASSWORD")
+let store: DIDStore // an opened DIDStore instance
+let storePasswd = "secret"
+// ttech controlled by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
+// and the store has the default private key for iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
+let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
+let ttech = try DID("did:elastos:ttech")
 
-// Create customized DID
-let did = try DID("did:elastos:helloworld")
-var doc = try controller.newCustomizedDid(withId: did, "YOUR-STORE-PASSWORD")
-try doc.publish(using: "YOUR-STORE-PASSWORD")
+// Get the existing DIDDocument
+let ttechDoc = try store.loadDid(ttech)
+// iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2 on beharf of ttech
+try ttechDoc.setEffectiveController(did)
 
-// Deactivate
-try doc.deactivate(using: "YOUR-STORE-PASSWORD")
+// Deactivate ttech by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
+try ttechDoc.deactivate(storePasswd)
 ```
 
-多签文档停用：
+## 被委托人代为 deactivate DID
+
+这个方式只适用于普通 DID，自定义 DID 因为有了 controller，没有设定委托人的必要。
+
+普通 DID 出于安全的考虑，可以设定1个或者多个信任的委托人，体现形式就是指定信任的委托密钥。基于最小授权原则，该委托密钥仅能用于对 DID 进行 deactivate 操作。目标是在 DID 持有人遗失密钥后，可以由被委托人将 DID 失效，从而降低密钥遗失带来的安全隐患。
 
 ```
-// *** 创建之后就停用 ***
-// Create normal DID first
-let ctrl1 = try identity.newDid("YOUR-STORE-PASSWORD")
-try ctrl1.publish(using: "YOUR-STORE-PASSWORD")
+var store: DIDStore // an opened DIDStore instance
+let storePasswd = "secret"
+// did has a authorization key from delegatee's key #abc
+let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
+// and the store has the private key for delegatee's key #abc
+let delegatee = try DID("did:elastos:inxkMjrXt9zF1s1aoJFq1dja85C9Mm8wm6")
+let keyId = try DIDURL("did:elastos:inxkMjrXt9zF1s1aoJFq1dja85C9Mm8wm6#abc")
 
-let ctrl2 = try identity.newDid("YOUR-STORE-PASSWORD")
-try ctrl2.publish(using: "YOUR-STORE-PASSWORD")
+// Get the delegatee's DIDDocument
+let delegateeDoc = try store.loadDid(delegatee)
 
-let ctrl3 = try identity.newDid("YOUR-STORE-PASSWORD")
-try ctrl3.publish(using: "YOUR-STORE-PASSWORD")
-
-// Create customized DID
-let did = try DID("did:elastos:helloworld3")
-var doc = try ctrl1.newCustomizedDid(withId: did, [ctrl2.subject, ctrl3.subject], 2, "YOUR-STORE-PASSWORD")
-doc = try ctrl2.sign(with: doc, using: "YOUR-STORE-PASSWORD")
-try doc.setEffectiveController(ctrl1.subject)
-try doc.publish(using: "YOUR-STORE-PASSWORD")
-
-// Deactivate
-try doc.deactivate(with: ctrl1.defaultPublicKeyId()!, using: "YOUR-STORE-PASSWORD")
+// Deactivate foobar by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
+try delegateeDoc.deactivate(with: did, of: keyId, using: storePasswd)
 ```
-
-参数：Deactivate this DID using the authentication key.
-
-* signKey: the key to sign the transaction
-* storePassword: the password for the DIDStore
-* adapter: an optional DIDTransactionAdapter, if null the method will use the default adapter from the DIDBackend
