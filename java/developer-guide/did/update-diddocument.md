@@ -17,7 +17,7 @@ DIDDocument.Builder db = doc.edit();
 
 // Do some modification on the document
 db.addService("#vcr", "CredentialRepositoryService",
-				"https://example.com/credentials");
+        "https://example.com/credentials");
 // ...
 // other modifications
 

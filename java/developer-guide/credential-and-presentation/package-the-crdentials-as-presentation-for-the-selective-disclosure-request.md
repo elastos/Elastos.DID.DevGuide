@@ -15,11 +15,11 @@
  VerifiablePresentation.Builder pb = VerifiablePresentation.createFor(did);
  // create the presentation
  VerifiablePresentation vp = pb.id("#demo")
- 				.credentials(vcProfile)
- 				.credentials(vcDiploma)
- 				.realm("https://example.com/")
- 				.nonce("873172f58701a9ee686f0630204fee59")
- 				.seal(storePasswd);
+         .credentials(vcProfile)
+         .credentials(vcDiploma)
+         .realm("https://example.com/")
+         .nonce("873172f58701a9ee686f0630204fee59")
+         .seal(storePasswd);
  
  // Serialize the presentation
  String serializedVp = vp.serialize();

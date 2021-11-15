@@ -36,7 +36,7 @@ List<DID> dids = store.listDids();
 // Or list DIDs with a customized filter
 List<DID> dids = store.listDids((did) -> {
         // return true if include this DID, otherwise return false.
-  	    return true; 
+        return true;
     });
 ```
 
@@ -45,26 +45,26 @@ List<DID> dids = store.listDids((did) -> {
  ```java
  DIDStore store; // an opened store instance
  VerifiableCredential vc; // a VerifiableCredential instance
- 
+
  // Save the credential to the store
  store.storeCredential(vc);
- 
+
  // Load the credential from the store
  VerifiableCredential myVc = store.loadCredential(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2#profile");
- 
+
  // Check the store has this credential
  boolean exists = store.containsCredential(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2#profile");
- 
+
  // Check the store has any credential exists for specific DID
  boolean exists = store.containsCredentials(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
- 
+
  // Delete the specific credential
  store.deleteCredential(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2#profile");
- 
+
  // List all credentials for specific DID in the store
  List<DIDURL> vcIds = store.listCredentials(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
@@ -72,7 +72,7 @@ List<DID> dids = store.listDids((did) -> {
  List<DIDURL> vcIds = store.listCredentials(
      "did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2", (vcId) -> {
          // return true if include this credential, otherwise return false.
-   	    return true; 
+         return true;
      });
  ```
 

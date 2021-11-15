@@ -24,17 +24,17 @@ JwtBuilder builder = doc.jwtBuilder();
 
 // Create a signed token
 String token = builder.addHeader(Header.TYPE, Header.JWT_TYPE)
-				.addHeader(Header.CONTENT_TYPE, "application/json")
-				.addHeader("app", "DID Samples")
-				.setSubject("demo")
-				.setId("e3dcc871625955d01d83d9b6edf20b8a")
-				.setAudience("did:elastos:igyq8SV5RT33HVqgCTCGU48u2pfnyH4XMn")
-				.setIssuedAt(iat)
-				.setExpiration(exp)
-				.setNotBefore(nbf)
-				.claim("foo", "bar")
-				.sign(storePasswd)
-				.compact();
+        .addHeader(Header.CONTENT_TYPE, "application/json")
+        .addHeader("app", "DID Samples")
+        .setSubject("demo")
+        .setId("e3dcc871625955d01d83d9b6edf20b8a")
+        .setAudience("did:elastos:igyq8SV5RT33HVqgCTCGU48u2pfnyH4XMn")
+        .setIssuedAt(iat)
+        .setExpiration(exp)
+        .setNotBefore(nbf)
+        .claim("foo", "bar")
+        .sign(storePasswd)
+        .compact();
 ```
 
 上述示例生成的 JWT 就是由 DID `did:elastos:imxZBD88s7i7sR2RdKd6YTHB72kCyMAsFd` 进行签名并序列化的 token。

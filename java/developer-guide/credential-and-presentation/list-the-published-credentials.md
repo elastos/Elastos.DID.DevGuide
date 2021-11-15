@@ -20,13 +20,13 @@ int skip = 0;
 int limit = 256;
 List<DIDURL> ids;
 while (true) {
-	   ids = VerifiableCredential.list(did, skip, limit);
-	   if (ids == null)
-	       break;
+    ids = VerifiableCredential.list(did, skip, limit);
+    if (ids == null)
+        break;
 
      // process the list result...
-  
-		 skip += ids.size();
+
+     skip += ids.size();
 }
 ```
 

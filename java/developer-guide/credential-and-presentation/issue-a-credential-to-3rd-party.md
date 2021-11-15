@@ -16,15 +16,15 @@ VerifiableCredential.Builder cb = selfIssuer.issueFor(
         "did:elastos:igHQ6Mfp3RouLtqeiv7D3Uz5JDyVrW4W3A");
 // Create the credential
 VerifiableCredential vc = cb.id("#profile")
-		.type("https://example.com/credentials/v1#KycCredential")
-		.type("https://elastos.org/credentials/profile/v1#ProfileCredential")
-		.type("EmailCredential", "https://elastos.org/credentials/email/v1")
-		.type("SocialCredential", "https://elastos.org/credentials/social/v1")
+    .type("https://example.com/credentials/v1#KycCredential")
+    .type("https://elastos.org/credentials/profile/v1#ProfileCredential")
+    .type("EmailCredential", "https://elastos.org/credentials/email/v1")
+    .type("SocialCredential", "https://elastos.org/credentials/social/v1")
     .property("name", "John");
-		.property("gender", "Male");
-		.property("nationality", "Singapore");
-		.property("email", "john@example.com");
-		.property("twitter", "@john");
+    .property("gender", "Male");
+    .property("nationality", "Singapore");
+    .property("email", "john@example.com");
+    .property("twitter", "@john");
     .seal(storePasswd);
 
 // or serialize the credential to string, send to the 3rd party in secure way

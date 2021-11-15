@@ -14,7 +14,7 @@ String token; // the JWT token from 3rd party
 JwtParser parser = new JwtParserBuilder().build();
 // Parse and verify the token
 try {
-	  Jws<Claims> jwt = parser.parseClaimsJws(token);
+    Jws<Claims> jwt = parser.parseClaimsJws(token);
 } catch (JwtException e) {
     // Handle the parse and verify errors
 }
@@ -31,14 +31,14 @@ DID did = new DID("did:elastos:igyq8SV5RT33HVqgCTCGU48u2pfnyH4XMn"); // expected
 // resolve signer's DIDDocument
 DIDDocument signer = did.resolve();
 if （!signer.isValid()) {
-    // should report errorss  
+    // should report errorss
 }
 
 // Create a JWT parser with signer
 JwtParser parser = signer.jwtParserBuilder().build();
 // Parse and verify the token
 try {
-	  Jws<Claims> jwt = parser.parseClaimsJws(token);
+    Jws<Claims> jwt = parser.parseClaimsJws(token);
 } catch (JwtException e) {
     // Handle the parse and verify errors
 }
@@ -58,7 +58,7 @@ JwsHeader header = jwt.getHeader();
 String contentType = header.getContentType();
 String app = header.get("app")
 // ...
-  
+
 // Read the claims
 Claims claims = jwt.getBody();
 String subject = claims.getSubject();
@@ -84,7 +84,7 @@ JwtParser parser = new JwtParserBuilder()
 
 // Parse and verify the token
 try {
-	  Jws<Claims> jwt = parser.parseClaimsJws(token);
+    Jws<Claims> jwt = parser.parseClaimsJws(token);
 } catch (JwtException e) {
     // Handle the parse and verify errors
 }
