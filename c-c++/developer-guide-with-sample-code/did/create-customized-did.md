@@ -38,6 +38,7 @@ errorExit:
 	DIDStore_Close(store);
   return;
 ```
+
 ## Usage
 
 ```c

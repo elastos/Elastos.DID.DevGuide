@@ -107,6 +107,7 @@ errorExit:
 	DIDStore_Close(store);
   return;
 ```
+
 ## Usage
 
 普通DID Document的那些添加和移除元素的方法同样适合Customized DID Document，这里说明的是Customized DID Document特有的内容。
@@ -133,6 +134,7 @@ const char *DIDDocument_MergeDIDDocuments(int count, ...);
 ```c
 int DIDDocument_IsQualified(DIDDocument *document);
 ```
+
 该方法告知当前的Customized Document中signature个数是否符合多签规则。
 
  *      return value = -1, if error occurs;
@@ -146,6 +148,7 @@ int DIDDocumentBuilder_AddController(DIDDocumentBuilder *builder, DID *controlle
 ```c
 int DIDDocumentBuilder_RemoveController(DIDDocumentBuilder *builder, DID *controller);
 ```
+
 上面两个方法很明显的是Customized DID Document才有的方法，添加和移除Controller，用于普通DID Document，则报错。
 
 这里需要说明的是：假如DID Document若有需要删除的Controller签名的Credential，无法直接删除。需要renew或者remove这个凭证。若只剩最后一个controller，也会失败。
