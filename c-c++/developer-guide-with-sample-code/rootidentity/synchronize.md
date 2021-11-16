@@ -1,10 +1,30 @@
-# Synchronize
+# Backup and synchronize
 
 RootIdentity提供方法去获取根身份衍生而来的所有链上的DID，并把相应的DID Document保存到DID store中。
 
 这种方法便于用户一次性更新根身份下的多个DID，获取最新的Document，也可以初始化用户的新DID store。
 
-## Example
+### 导出助记词
+
+```c
+const char *rootPath = "root/store";
+DIDStore *store = await DIDStore.open(rootPath);
+... ... ... ...
+const char *mnemonic = "pact reject sick voyage foster fence warm luggage cabbage any subject carbon";
+RootIdentity *identity = RootIdentity_Create(mnemonic, "", store, "pwd", true);
+const char *id = RootIdentity_GetId(identity);
+
+char exportMnemonic[ELA_MAX_MNEMONIC_LEN + 1];
+if (DIDStore_ExportRootIdentityMnemonic(store, "pwd",
+            id, exportMnemonic, sizeof(exportMnemonic)) < 0)
+   //error operation
+   
+ RootIdentity_Destroy(identity);
+ ... ... ... ...
+ DIDStore_Close(store);
+```
+
+### 恢复RootIdentity
 
 ```c
 const char *rootPath = "root/store";

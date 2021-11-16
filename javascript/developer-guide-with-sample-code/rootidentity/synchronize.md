@@ -1,10 +1,27 @@
-# Synchronize
+# Backup and synchronize
 
 RootIdentity提供方法去获取根身份衍生而来的所有链上的DID，并把相应的DID Document保存到DID store中。
 
 这种方法便于用户一次性更新根身份下的多个DID，获取最新的Document，也可以初始化用户的新DID store。
 
-## Example
+RootIdentity若是基于mnemonic生成的，那么我们就可以导出该mnemonic进行备份。注意：用扩展根私钥创建的根身份，无法导出助记词。
+
+## 导出助记词
+
+```typescript
+let rootPath = "root/store";
+let store = await DIDStore.open(rootPath);
+... ... ... ...
+let mnemonic = "pact reject sick voyage foster fence warm luggage cabbage any subject carbon";
+let rootIdentity = RootIdentity.createFromMnemonic(mnemonic,
+    "", store, "pwd", true);
+    
+let exportedMnemonic = rootIdentity.exportMnemonic("pwd");
+... ... ... ...
+store.close();
+```
+
+### 恢复RootIdentity
 
 ```typescript
 let rootPath = "root/store";
