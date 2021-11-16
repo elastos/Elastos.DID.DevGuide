@@ -82,7 +82,7 @@
 * [Build and installation](swift/build-and-installation.md)
 * [Developer Guide](swift/developer-guide/README.md)
   * [DIDBackend](swift/developer-guide/didbackend/README.md)
-  * [DIDStore](swift/developer-guide-with-sample-code/didstore/README.md)
+  * [DIDStore](swift/developer-guide/didstore/README.md)
     * [Create or open DIDStore](swift/developer-guide/didstore/create-or-open-didstore.md)
     * [Access DIDStore](swift/developer-guide/didstore/access-didstore.md)
     * [Metadata of the DID objects](swift/developer-guide/didstore/metadata-for-did-objects.md)
@@ -114,10 +114,10 @@
     * [Resolve the declared credentials](swift/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
     * [List the published credentials](swift/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](swift/developer-guide/json-web-token/README.md)
-	* [Create JWT](swift/developer-guide/json-web-token/create-jwt.md)
-	* [Verify and use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
-* [Advanced](swift/developer-guide/advanced/README.md)
-	* [Logging](swift/developer-guide/advanced/logging.md)
+    * [Create JWT](swift/developer-guide/json-web-token/create-jwt.md)
+    * [Verify and use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
+* [Advanced](swift/advanced/README.md)
+  * [Logging](swift/developer-guide/advanced/logging.md)
 * [API reference(link to Swift doc)](swift/api-reference-link-to-swift-doc.md)
 
 ## JavaScript
