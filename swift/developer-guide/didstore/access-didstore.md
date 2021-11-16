@@ -12,7 +12,7 @@ DIDStore 提供了针对所存储对象的一系列读写方法，这些方法�
 
 ## DID 的相关操作
 
-####存储DIDDocument
+#### 存储DIDDocument
 
 ```
 //创建助记词
@@ -24,7 +24,7 @@ var document = try identity.newDid("YOUR-STORE-PASSWORD")
 try store.storeDid(using: document)
 ```
 
-####加载DIDDocument
+#### 加载DIDDocument
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y"
@@ -32,7 +32,7 @@ let subject = try DID("YOUR-DIDSTRING")
 let doc = try store.loadDid(subject)
 ```
 
-####查询本地是否存在指定DID的document
+#### 查询本地是否存在指定DID的document
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y"
@@ -40,7 +40,7 @@ let did = try DID("YOUR-SPECIFIC-DIDSTRING")
 let doc = try store.containsDid(did)
 ```
 
-####删除指定的DID
+#### 删除指定的DID
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y"
@@ -68,7 +68,7 @@ document = try documentBuilder.seal(using: "YOUR-STORE-PASSWORD")
 try store.storeDid(using: document)
 ```
 
-####加载Credential：
+#### 加载Credential
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y#primary"
@@ -76,7 +76,7 @@ let didUrl = try DIDURL("YOUR-DIDSTRING")
 let vc = try store.loadCredential(byId: didUrl)
 ```
 
-####删除Credential：
+#### 删除Credential
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y#primary"
@@ -105,7 +105,7 @@ let exists = store.containsPrivateKey(for: keyId)
 store.deletePrivateKey(for: keyId)
 ```
 
-##修改本地存储密码 相关操作
+## 修改本地存储密码 相关操作
 
 ```
 try store.changePassword("oldStorePassword", "newStorepasswd")
