@@ -1,8 +1,28 @@
 # Introduction
 
-## **Repository and download**
+DID Swit SDK 是 Elastos DID 针对 Swit 语言开发者提供的 SDK 版本，最低兼容 Xcode 10.0， 系统版本最低兼容 IOS 11.0。
 
-#### 代码库:[https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
+## Features
+
+DID Swift SDK 的实现符合 W3C 的 [DID 规范](https://www.w3.org/TR/did-core/)，以及[可验证凭证规范](https://www.w3.org/TR/vc-data-model/)，主要实现的功能集如下：
+
+- DID and DIDDocument
+- Verifable credential
+- Verifable presentation
+- Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
+- Secure local DID objects store
+- DID and credential publishing mechanism base on Elastos ID side chain
+
+另外，因为 [JSON Web Token(JWT)](https://jwt.io/) 被应用广泛的采用，而 DID 的密钥对可以用于 JWT 的签名和验证。所以 Elastos DID SDK 集成了 JWT 的支持，为应用提供了安全便捷的使用 JWT 的方法，而且没有密钥泄露的风险。
+
+## Repository and download
+
+DID Swift SDK 是 open source 的实现，代码仓库托管在 GitHub，仓库的地址是：
+[https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
+
+## Support
+
+Elastos DID Swift SDKs are supported by Trinity Tech and the community developers through GitHub issues. Also, we would love to get your contributions, whether they are in form of bug reports, Requests for Enhancement (RFE), documentation, or code patches.
 
 ## License
 
