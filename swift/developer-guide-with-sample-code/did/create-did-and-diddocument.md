@@ -1,6 +1,7 @@
 # Create DID and DIDDocument
+DID 和 DIDDocument 是同一个对象的两个不同表现，并且同时被创建。普通 DID 都是通过 RootIdentity 创建，从 RootIdentity 创建 DID的方法参见 [RootIdentity 的文档](../rootidentity/create-dids-from-the-rootidentity.md)。
 
-1：首次生成DID：生成DID需要通过RootIdentity
+## 通过RootIdentity
 
 ```
 // STORE-PASSWORD用于本地一些数据加密的密码
@@ -11,7 +12,7 @@ let subject = document.subject
 let contollers = document.contollers()
 ```
 
-2： 从外部导入DIDDocument：SDK对外提供了5种方法，可以从url路径、json字符串、Dictionary、Data生成DIDDocument。
+## 导入DIDDocument
 
 ```
 // 从路径加载document
@@ -20,11 +21,3 @@ let contollers = DIDDocument.convertToDIDDocument(fromFileAtPath: "YOUR-FILE-PAT
 let contollers = DIDDocument.convertToDIDDocument(fromUrl: URLPath)
 ```
 
-
-
-DID subject 和 DID Controller 有2种情况：1： DID Subject 是DID Controller ，如：当个人建立DID并进行自我识别时。2： DID Subject 不是DID Controller，如：当父母为孩子创建DID并保持控制时。DIDDocument可以有多个DIDController。
-
-DIDDocument中的每个信息都是关于DID控制人的：
-
-* 字符串，用于定义 DID 主体的标识符
-* 如何与 DID 主体进行交互

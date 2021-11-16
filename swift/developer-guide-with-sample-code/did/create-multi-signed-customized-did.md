@@ -16,7 +16,7 @@
 ## 1. Alice 先创建初始的文档
 
 ```
-var store: DIDStore // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let alice = try DID("did:elastos:iXkgy7RruwjJDP2o3pfPaxpVR65bEzzjtz")
 let bob = try DID("did:elastos:iUCXpvpNZ9B9vwWf6PMFMJ6duRPPiLSWSw")
@@ -37,7 +37,7 @@ Alice 创建了 example 的自定义 DID，controllers 是 Alice，Bob 和 Carol
 ## 2. Bob 对文档进行签名
 
 ```
-var store:DIDStore // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let bob = try DID("did:elastos:iUCXpvpNZ9B9vwWf6PMFMJ6duRPPiLSWSw")
 let serializedDoc // the serialized document got from Alice

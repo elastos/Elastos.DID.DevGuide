@@ -36,8 +36,6 @@ let doc = try did.resolve()
 let genuine = doc.isGenuine()
 ```
 
-----
-
 ## 全面验证
 
 在日常使用中，验证一个 DID 是否有效，需要对上述三个方面都进行验证，才能得知准确的结果。DID SDK 提供了一个复合的方法 isValid()，包含了所有验证，使用示例：

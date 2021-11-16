@@ -10,7 +10,7 @@ DID SDK 会自动根据 DID 的链上状态构造对应的 ID 交易。构造的
 
 
 ```
-var store: DIDStore // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let identity: RootIdentity = ... // a RootIdentity instance
 
@@ -24,7 +24,7 @@ try doc.publish(using: storePasswd)
 发布 DID 的时候，默认是使用 DID 对应的默认认证密钥进行签名，上述示例即使用默认密钥进行交易的签名。这也是大多数应用使用的模式。如果一个 DID 设定了多个认证密钥，并且需要指定特定的认证密钥进行交易的签名，那么可以在 publish 方法中指定目标密钥的 id，并且 DIDDocument 所在的 DIDStore 中需要有该密钥对应的 PrivateKey。示例：
 
 ```
-var store: DIDStore = ... // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 
 let doc: DIDDocument = ... // the DIDDocument to be publish
@@ -38,7 +38,7 @@ try doc.publish(with: signKey, using: storePasswd)
 更新 DID 时的发布操作和创新时的发布操作一致，DID SDK会根据链上的 DID 状态自动处理交易的类型，更新一个已经发布的 DID 文档对象并发布示例如下：
 
 ```
-var store: DIDStore = ... // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
 
