@@ -1,5 +1,3 @@
-
-
 # Create customized DID
 
 DIDSDK 支持自定义DID，那么也就需要有对应的DID Document。普通DID Document里的Subject和Default Key之间存在密码学可验证的关键，DID Document最后用这个Default Key来签名Document主体是有个闭环的验证过程，可以避免被篡改等恶意手段。
@@ -42,9 +40,13 @@ errorExit:
 ## Usage
 
 ```c
-DIDDocument *DIDDocument_NewCustomizedDID(DIDDocument *document,
-        const char *customizeddid, DID **controllers, size_t size, int multisig,
-        bool force, const char *storepass);
+DIDDocument *DIDDocument_NewCustomizedDID(
+        DIDDocument *document,
+        const char *customizeddid,
+        DID **controllers, size_t size,
+        int multisig,
+        bool force,
+        const char *storepass);
 ```
 
 Controller Document用该方法生成Customized DID Document。
@@ -54,7 +56,5 @@ Controller Document用该方法生成Customized DID Document。
 ```c
 int DIDDocument_IsCustomizedDID(DIDDocument *document);
 ```
+
 该方法可以用来检查DID Document是否为Customized DID Document。
-
-
-

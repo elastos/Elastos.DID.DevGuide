@@ -60,7 +60,8 @@ int Credential_ResolveRevocation(DIDURL *id, DID *issuer);
   ```
 
 ```c
-CredentialBiography *Credential_ResolveBiography(DIDURL *id, DID *issuer);
+CredentialBiography *Credential_ResolveBiography(
+        DIDURL *id, DID *issuer);
 ```
 
 该方法用来resolve凭证的所有交易内容，返回的CredentialBiography object。`issuer`为凭证的颁发者，可为NULL，若不提供issuer则回忽略issuer revoke的交易。CredentialBiography提供方法获取凭证在链上的状态，交易个数，具体交易内容等。具体方法可查阅API文档。

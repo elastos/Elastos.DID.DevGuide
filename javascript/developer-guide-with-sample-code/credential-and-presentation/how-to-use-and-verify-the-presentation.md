@@ -1,4 +1,4 @@
-﻿# How to use and verify the presentation
+# How to use and verify the presentation
 
 Presentation提供多种get方法来获取内部各元素，比如Id，holder，Credential个数，各Credential等，这些方法详细可参考API文档。
 

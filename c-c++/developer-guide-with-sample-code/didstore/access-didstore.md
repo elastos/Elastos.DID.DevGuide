@@ -55,7 +55,10 @@ DIDDocument *DIDStore_LoadDID(DIDStore *store, DID *did);
 获取结果是DID Document object（也是DID Store保存的DID内容）。注意：用完DID Document object，用`DIDDocument_Destroy`销毁。
 
 ```c
-Credential *DIDStore_LoadCredential(DIDStore *store, DID *did, DIDURL *credid);
+Credential *DIDStore_LoadCredential(
+    DIDStore *store,
+    DID *did,
+    DIDURL *credid);
 ```
 
 `did`是Credential所属的DID；`credid`是Credential的唯一标识符。如果该凭证不存在或者格式有误，则获取失败。声明：有多种方式可以获取DIDURL object，example里只是其中一种，用户根据自己需求来使用API。具体内容详见DID/Create DID and DIDDocument章节。
@@ -130,8 +133,12 @@ int DIDStore_StoreCredential(DIDStore *store, Credential *credential);
 该方法将Credential object保存在DID Store。
 
 ```c
-int DIDStore_StorePrivateKey(DIDStore *store, const char *storepass,
-        DIDURL *id, const uint8_t *privatekey, size_t size);
+int DIDStore_StorePrivateKey(
+        DIDStore *store,
+        const char *storepass,
+        DIDURL *id,
+        const uint8_t *privatekey,
+        size_t size);
 ```
 
 `storepass`用于私钥在DID Store中的加密保存；`privateKey`是82位扩展私钥；`size`为私钥的长度。
@@ -199,8 +206,10 @@ DIDStore_Close(store);
 ```c
 typedef int DIDStore_RootIdentitiesCallback(RootIdentity *rootidentity, void *context);
 
-ssize_t DIDStore_ListRootIdentities(DIDStore *store,
-        DIDStore_RootIdentitiesCallback *callback, void *context);
+ssize_t DIDStore_ListRootIdentities(
+        DIDStore *store,
+        DIDStore_RootIdentitiesCallback *callback,
+        void *context);
 ```
 
 列举DID Store中保存的RootIdentity，并将RootIdentity object传递给`callback`中传递给用户。
@@ -213,8 +222,11 @@ typedef enum {
     DIDFilter_WithoutPrivateKey = 2
 } ELA_DID_FILTER;
 
-int DIDStore_ListDIDs(DIDStore *store, ELA_DID_FILTER filer,
-        DIDStore_DIDsCallback *callback, void *context);
+int DIDStore_ListDIDs(
+        DIDStore *store,
+        ELA_DID_FILTER filer,
+        DIDStore_DIDsCallback *callback,
+        void *context);
 ```
 
 列举DID Store中保存的DID，并将DID传递给`callback`中传递给用户。`filer`是DID过滤器，用来表明选择DID的条件。
@@ -222,8 +234,11 @@ int DIDStore_ListDIDs(DIDStore *store, ELA_DID_FILTER filer,
 ```c
 typedef int DIDStore_CredentialsCallback(DIDURL *id, void *context);
 
-int DIDStore_ListCredentials(DIDStore *store, DID *did,
-        DIDStore_CredentialsCallback *callback, void *context);
+int DIDStore_ListCredentials(
+        DIDStore *store,
+        DID *did,
+        DIDStore_CredentialsCallback *callback,
+        void *context);
 ```
 
 列举指定DID的所有凭证，并将凭证ID传递给`callback`中传递给用户。
@@ -250,8 +265,12 @@ DIDStore_Close(store);
 * #### Usage
 
 ```c
-ssize_t DIDDocument_SelectCredentials(DIDDocument *document, const char *type,
-        DIDURL *credid, Credential **creds, size_t size);
+ssize_t DIDDocument_SelectCredentials(
+        DIDDocument *document,
+        const char *type,
+        DIDURL *credid,
+        Credential **creds,
+        size_t size);
 ```
 
 该方法根据`type`和`credid`来选择符合条件的Credential的方法，返回符合要求的Credential Id放在`creds`数组里。

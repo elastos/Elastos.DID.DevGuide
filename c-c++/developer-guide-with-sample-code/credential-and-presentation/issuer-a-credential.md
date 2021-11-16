@@ -87,17 +87,27 @@ typedef struct Property {
     char *value;
 } Property;
   
-Credential *Issuer_CreateCredential(Issuer *issuer, DID *holder, DIDURL *credid,
-        const char **types, size_t typesize, Property *subject, int size,
-        time_t expires, const char *storepass);
+Credential *Issuer_CreateCredential(
+        Issuer *issuer,
+        DID *holder,
+        DIDURL *credid,
+        const char **types, size_t typesize,
+        Property *subject, int size,
+        time_t expires,
+        const char *storepass);
 ```
 
 Issuer根据提供的subject object颁发凭证。该接口的所有参数均不可为空，具体使用可参考sample。
 
 ```c
-Credential *Issuer_CreateCredentialByString(Issuer *issuer, DID *holder,
-        DIDURL *credid, const char **types, size_t typesize, const char *subject,
-        time_t expires, const char *storepass);
+Credential *Issuer_CreateCredentialByString(
+        Issuer *issuer,
+        DID *holder,
+        DIDURL *credid,
+        const char **types, size_t typesize,
+        const char *subject,
+        time_t expires, 
+        const char *storepass);
 ```
 
 Issuer根据提供的subject string颁发凭证。该接口的所有参数均不可为空，具体使用可参考sample。

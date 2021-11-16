@@ -33,7 +33,9 @@ DID *DID_New(const char *method_specific_string);
 该方法根据提供的method specific string和默认的‘method’ 字符串生成新的DID object，比如ixxxxxxx。
 
 ```c
-DID *DID_NewWithMethod(const char *method, const char *method_specific_string);
+DID *DID_NewWithMethod(
+    const char *method,
+    const char *method_specific_string);
 ```
 
 该方法根据提供的method specific string和method字符串生成新的DID object，比如method specific为 ixxxxxxx，method字符串为method。

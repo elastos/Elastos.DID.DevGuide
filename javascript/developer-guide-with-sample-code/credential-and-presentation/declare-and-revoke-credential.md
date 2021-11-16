@@ -1,4 +1,4 @@
-﻿# Declare and revoke credential
+# Declare and revoke credential
 
 Elastos ID链支持Credential上链，用于需要公开声明的DID凭证信息。同时，无论凭证是否被声明过，都可以撤销凭证，以便公开告知该凭证已失效，不可再信任。
 
@@ -48,6 +48,7 @@ public async declare(
 	adapter: DIDTransactionAdapter = null
 ): Promise<void>;
 ```
+
 Credential提供将当前凭证发布到链上（即声明）的方法。这里需要说明的是：没有被声明过或者没有被凭证所有者（owner）或者颁发者（issuer）撤销过的凭证都可以被声明。同一个凭证只有一次声明操作。声明操作只能是Verifiable Credentials所有者发起。
 
 signKey为声明者即Verifiable Credential所有者的Key，用于签名被声明凭证的发布内容；storepass为声明者签名所用私钥所在的DID Store的store pass。

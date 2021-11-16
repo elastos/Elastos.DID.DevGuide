@@ -24,15 +24,21 @@ if (DIDStore_ImportStore(newStore, newStorePass, zipfile, "pwd") < 0)
 ## Usage
 
 ```c
-int DIDStore_ExportStore(DIDStore *store, const char *storepass,
-        const char *zipfile, const char *password);
+int DIDStore_ExportStore(
+        DIDStore *store,
+        const char *storepass,
+        const char *zipfile,
+        const char *password);
 ```
 
 该方法提供整个DID Store的导出方法。`store`为需要导出的DID Store；`storepass`为`store`的store pass；`zipfile`为导出的zip文件路径；`password`为导出密码，用于DID 私钥加密，导入数据时需要使用。
 
 ```c
-int DIDStore_ImportStore(DIDStore *store, const char *storepass,
-        const char *zipfile, const char *password);
+int DIDStore_ImportStore(
+        DIDStore *store,
+        const char *storepass,
+        const char *zipfile,
+        const char *password);
 ```
 
 该方法提供对整个DID Store的导入方法。`store`为导入的新DID Store；`storepass`为`store`的pass word，用于导入的私钥加密；`zipfile`为导入zip文件路径；`password`为导入密码，和导出密码一致，如果错误就无法正确完成导入功能

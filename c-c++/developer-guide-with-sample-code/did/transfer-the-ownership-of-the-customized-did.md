@@ -45,8 +45,10 @@ DIDDocument_Destroy(newDoc);
 ## Usage
 
 ```c
-TransferTicket *DIDDocument_CreateTransferTicket(DIDDocument *controllerdoc,
-        DID *owner, DID *to, const char *storepass);
+TransferTicket *DIDDocument_CreateTransferTicket(
+        DIDDocument *controllerdoc,
+        DID *owner, DID *to,
+        const char *storepass);
 ```
 
 DID Document提供生成Transfer Ticket的方法，其由修改前DID Document的一位Controller发起，Ticket也由该发起者签名封装。
@@ -54,18 +56,20 @@ DID Document提供生成Transfer Ticket的方法，其由修改前DID Document�
 `owner`是Transfer Ticket的所有者，就是Customized DID；`to`是Transfer Ticket的接受者，必须是修改后DID Document里的Controller之一，且为修改后DID Document的签名者之一。否则会导致后续Transfer DID失败。
 
 ```c
-int DIDDocument_SignTransferTicket(DIDDocument *controllerdoc,
-        TransferTicket *ticket, const char *storepass);
+int DIDDocument_SignTransferTicket(
+        DIDDocument *controllerdoc,
+        TransferTicket *ticket,
+        const char *storepass);
 ```
 
 Transfer Ticket也需要符合修改前DID Document的多签规则，当第一个Controller签名生成Transfer Ticket后，若还需要多位Controller签名则使用该方法，具体用法可参考`DIDDocument_SignDIDDocument`方法。
 
 ```c
-int DIDDocument_TransferDID(DIDDocument *document, TransferTicket *ticket,
-        DIDURL *signkey, const char *storepass);
+int DIDDocument_TransferDID(
+        DIDDocument *document,
+        TransferTicket *ticket,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 该方法用于Customized DID Document更改持有者信息后的上链，可由现`document`的Authentication Key 和其Controller 的Authentication Key来签名实现上链。
-
-
-

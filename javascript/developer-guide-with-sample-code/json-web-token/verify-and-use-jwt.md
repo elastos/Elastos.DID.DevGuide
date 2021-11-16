@@ -1,4 +1,4 @@
-﻿# Verify and use jwt
+# Verify and use jwt
 
 SDK提供方法分析JWT token类型（JWT/JWS），若是JWS会做相应的验签后解析，最后JWT和JWS token string都转换JWT。
 
@@ -28,8 +28,7 @@ console.log("get issuer: {}", c.getIssuer());
 public jwtParserBuilder(): JWTParserBuilder;
 ```
 
-该方法由DID Document提供，获取JWTParserBuilder object。
-JWTParserBuilder可供用户设置过滤选项，用于检查token是否符合要求，接口有requireSubject，requireAudience，requireIssuer，requireIssuedAt，requireAlgorithms，requireHeaderType和setAllowedClockSkewSeconds，具体使用详见API文档。
+该方法由DID Document提供，获取JWTParserBuilder object。 JWTParserBuilder可供用户设置过滤选项，用于检查token是否符合要求，接口有requireSubject，requireAudience，requireIssuer，requireIssuedAt，requireAlgorithms，requireHeaderType和setAllowedClockSkewSeconds，具体使用详见API文档。
 
 ```typescript
 public build(): JWTParser;
@@ -54,10 +53,3 @@ public getBody(): Claims；
 ```
 
 该方法由JWT提供，用于获取JWT header body（主体）内容。
-
-
-
-
-
-
-

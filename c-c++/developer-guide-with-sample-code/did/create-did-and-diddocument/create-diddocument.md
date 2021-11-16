@@ -34,7 +34,9 @@ DIDURL_Destroy(id1);
 newDid方法在RootIdentity章节介绍，这里不再多加说明了。
 
 ```c
-DIDDocumentBuilder* DIDDocument_Edit(DIDDocument *document, DIDDocument *controllerdoc);
+DIDDocumentBuilder* DIDDocument_Edit(
+    DIDDocument *document,
+    DIDDocument *controllerdoc);
 ```
 
 该方法获取DIDDocumentBuilder object用于更改文档。
@@ -48,28 +50,37 @@ void DIDDocumentBuilder_Destroy(DIDDocumentBuilder *builder);
 该方法提供销毁DIDDocumentBuilder object的方法。
 
 ```c
-DIDDocument *DIDDocumentBuilder_Seal(DIDDocumentBuilder *builder, const char *storepass);
+DIDDocument *DIDDocumentBuilder_Seal(
+    DIDDocumentBuilder *builder,
+    const char *storepass);
 ```
 
 该方法封装且得到新的DID Document。其中storepass为DID Store密码，用于对修改后DID Document主体内容通过主key私钥进行签名。
 
 ```c
-int DIDDocumentBuilder_AddPublicKey(DIDDocumentBuilder *builder,
-        DIDURL *keyid, DID *controller, const char *key);
+int DIDDocumentBuilder_AddPublicKey(
+        DIDDocumentBuilder *builder,
+        DIDURL *keyid,
+        DID *controller,
+        const char *key);
 ```
 
 该方法添加public key，若`keyid`或者`key`存在则报错。
 
 ```c
-int DIDDocumentBuilder_RemovePublicKey(DIDDocumentBuilder *builder,
-        DIDURL *keyid, bool force);
+int DIDDocumentBuilder_RemovePublicKey(
+        DIDDocumentBuilder *builder,
+        DIDURL *keyid,
+        bool force);
 ```
 
 该方法需要注意：default key无法被移除；当希望被移除的Key是Authentication key或者Authorization key时，则需要根据force参数决定是否移除，若force为true，支持移除，否则报错。
 
 ```c
-int DIDDocumentBuilder_AddAuthenticationKey(DIDDocumentBuilder *builder,
-        DIDURL *keyid, const char *key);
+int DIDDocumentBuilder_AddAuthenticationKey(
+        DIDDocumentBuilder *builder,
+        DIDURL *keyid,
+        const char *key);
 ```
 
 该方法添加Authentication Key，若Key Id不存在，则生成新Authentication Key；若该Key Id已经存在，`key`和已经存在的Key内容相同，或者该Key Id已经是Authentication Key或者Authorization Key则将该不相同，则报错。
@@ -77,22 +88,29 @@ int DIDDocumentBuilder_AddAuthenticationKey(DIDDocumentBuilder *builder,
 若想添加已知存在的Key，则只需要提供`keyid`, 不需要提供`key`。`key`为公钥的base58字符串。
 
 ```c
-int DIDDocumentBuilder_RemoveAuthenticationKey(DIDDocumentBuilder *builder,
+int DIDDocumentBuilder_RemoveAuthenticationKey(
+        DIDDocumentBuilder *builder,
         DIDURL *keyid);
 ```
 
 该方法移除已经存在的authentication key，若不存在，则报错。
 
 ```c
-int DIDDocumentBuilder_AddAuthorizationKey(DIDDocumentBuilder *builder,
-        DIDURL *keyid, DID *controller, const char *key);
+int DIDDocumentBuilder_AddAuthorizationKey(
+        DIDDocumentBuilder *builder,
+        DIDURL *keyid,
+        DID *controller,
+        const char *key);
 ```
 
 该方法根据提供的Key内容添加Authorization Key，只适用于普通DID Document。若Key Id不存在，则生成新Authorization Key；若该Key Id已经存在，`key`和已经存在的Key内容相同，或者该Key Id已经是Authentication Key或者Authorization Key则将该不相同，则报错。
 
 ```c
-int DIDDocumentBuilder_AuthorizeDid(DIDDocumentBuilder *builder,
-        DIDURL *keyid, DID *controller, DIDURL *authorkeyid);
+int DIDDocumentBuilder_AuthorizeDid(
+        DIDDocumentBuilder *builder,
+        DIDURL *keyid,
+        DID *controller,
+        DIDURL *authorkeyid);
 ```
 
 该方法根据提供的controller和controller的Key Id添加新Authorization Key，若已经存在，则报错。
@@ -100,14 +118,16 @@ int DIDDocumentBuilder_AuthorizeDid(DIDDocumentBuilder *builder,
 This method is to add the specified key to be an Authorization key. This specified key is the key of specified controller. Authentication is the mechanism by which the controller(s) of a DID can cryptographically prove that they are associated with that DID. A DID Document must include authentication key.
 
 ```c
-int DIDDocumentBuilder_RemoveAuthorizationKey(DIDDocumentBuilder *builder,
+int DIDDocumentBuilder_RemoveAuthorizationKey(
+        DIDDocumentBuilder *builder,
         DIDURL *keyid);
 ```
 
 该方法移除指定的Authorization Key。若该Key不存在或者非Authorization Key，则报错。
 
 ```c
-int DIDDocumentBuilder_AddCredential(DIDDocumentBuilder *builder,
+int DIDDocumentBuilder_AddCredential(
+        DIDDocumentBuilder *builder,
         Credential *credential);
 ```
 
@@ -119,9 +139,14 @@ typedef struct Property {
     char *value;
 } Property;
 
-int DIDDocumentBuilder_AddSelfProclaimedCredential(DIDDocumentBuilder *builder,
-        DIDURL *credid, const char **types, size_t typesize,
-        Property *properties, int propsize, time_t expires, DIDURL *signkey, const char *storepass);
+int DIDDocumentBuilder_AddSelfProclaimedCredential(
+        DIDDocumentBuilder *builder,
+        DIDURL *credid,
+        const char **types, size_t typesize,
+        Property *properties, int propsize,
+        time_t expires,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 该方法用于直接生成并添加自声明凭证。
@@ -140,14 +165,20 @@ int DIDDocumentBuilder_RemoveCredential(DIDDocumentBuilder *builder,
 该方法移除指定的Credential。若不存在则报错。
 
 ```c
-int DIDDocumentBuilder_AddService(DIDDocumentBuilder *builder,
-        DIDURL *serviceid, const char *type, const char *endpoint,
+int DIDDocumentBuilder_AddService(
+        DIDDocumentBuilder *builder,
+        DIDURL *serviceid,
+        const char *type,
+        const char *endpoint,
         Property *properties, int size);
 ```
 
 ```c
-int DIDDocumentBuilder_AddServiceByString(DIDDocumentBuilder *builder,
-        DIDURL *serviceid, const char *type, const char *endpoint,
+int DIDDocumentBuilder_AddServiceByString(
+        DIDDocumentBuilder *builder,
+        DIDURL *serviceid,
+        const char *type,
+        const char *endpoint,
         const char *properties);
 ```
 
@@ -156,14 +187,17 @@ int DIDDocumentBuilder_AddServiceByString(DIDDocumentBuilder *builder,
 endpoint为Service服务点地址；properties是用户可自定义添加的内容。
 
 ```c
-int DIDDocumentBuilder_RemoveService(DIDDocumentBuilder *builder,
+int DIDDocumentBuilder_RemoveService(
+        DIDDocumentBuilder *builder,
         DIDURL *serviceid);
 ```
 
 该方法移除指定的Service，若不存在则报错。
 
 ```c
-int DIDDocumentBuilder_SetExpires(DIDDocumentBuilder *builder, time_t expires);
+int DIDDocumentBuilder_SetExpires(
+        DIDDocumentBuilder *builder,
+        time_t expires);
 ```
 
 DID Document的有效期默认为创建之时起后推五年。如果用户也可以通过该方法自行定义有效期。该方法设置的有效期不可超过五年，否则报错。

@@ -1,5 +1,4 @@
-﻿# Package the credentials as presentation for the selective disclosure request
-
+# Package the credentials as presentation for the selective disclosure request
 
 可验证表达是指包含实体可验证凭证子集及副署签名(countersign)的数据集合，用于对第三方表明自身身份。
 

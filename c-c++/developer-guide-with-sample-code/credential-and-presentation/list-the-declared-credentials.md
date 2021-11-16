@@ -22,7 +22,11 @@ ssize_t size3 = Credential_List(&did, buffer, sizeof(buffer), 1024, 4);
 ## Usage
 
 ```c
-ssize_t Credential_List(DID *did, DIDURL **buffer, size_t size, int skip, int limit);
+ssize_t Credential_List(
+    DID *did,
+    DIDURL **buffer,
+    size_t size,
+    int skip, int limit);
 ```
 
 `did`为需要枚举所有declared凭证的所有者；`skip`为忽略前skip个credentials；`limit`表明该次list最多可接受多少个credentials。

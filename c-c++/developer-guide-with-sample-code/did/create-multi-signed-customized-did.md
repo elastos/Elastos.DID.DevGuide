@@ -1,4 +1,4 @@
-# Create multi-signed Customized DID
+# Create multi-signed customized DID
 
 本小节主要是介绍多签的Customized DID Document的生成方法和修改Customized DID Document中普通Document没有的方法。
 
@@ -113,8 +113,10 @@ errorExit:
 普通DID Document的那些添加和移除元素的方法同样适合Customized DID Document，这里说明的是Customized DID Document特有的内容。
 
 ```c
-DIDDocument *DIDDocument_SignDIDDocument(DIDDocument* controllerdoc,
-        const char *document, const char *storepass);
+DIDDocument *DIDDocument_SignDIDDocument(
+        DIDDocument* controllerdoc,
+        const char *document,
+        const char *storepass);
 ```
 
 该方法用于多签，当Customized Document的签名未达到多签规则，则需要其他controller使用该方法来对文档签名。
@@ -137,16 +139,26 @@ int DIDDocument_IsQualified(DIDDocument *document);
 
 该方法告知当前的Customized Document中signature个数是否符合多签规则。
 
- *      return value = -1, if error occurs;
- *      return value = 0, DID Document isn't qualified;
- *      return value = 1, DID Document is qualified.
+* ```
+   return value = -1, if error occurs;
+  ```
+* ```
+   return value = 0, DID Document isn't qualified;
+  ```
+* ```
+   return value = 1, DID Document is qualified.
+  ```
 
 ```c
-int DIDDocumentBuilder_AddController(DIDDocumentBuilder *builder, DID *controller);
+int DIDDocumentBuilder_AddController(
+    DIDDocumentBuilder *builder,
+    DID *controller);
 ```
 
 ```c
-int DIDDocumentBuilder_RemoveController(DIDDocumentBuilder *builder, DID *controller);
+int DIDDocumentBuilder_RemoveController(
+    DIDDocumentBuilder *builder,
+    DID *controller);
 ```
 
 上面两个方法很明显的是Customized DID Document才有的方法，添加和移除Controller，用于普通DID Document，则报错。
@@ -154,14 +166,19 @@ int DIDDocumentBuilder_RemoveController(DIDDocumentBuilder *builder, DID *contro
 这里需要说明的是：假如DID Document若有需要删除的Controller签名的Credential，无法直接删除。需要renew或者remove这个凭证。若只剩最后一个controller，也会失败。
 
 ```c
-int DIDDocumentBuilder_SetMultisig(DIDDocumentBuilder *builder, int multisig);
+int DIDDocumentBuilder_SetMultisig(
+    DIDDocumentBuilder *builder,
+    int multisig);
 ```
 
 该方法用来设置多签规则。
 
 ```c
-int DIDDocumentBuilder_RenewSelfProclaimedCredential(DIDDocumentBuilder *builder,
-        DID *controller, DIDURL *signkey, const char *storepass);
+int DIDDocumentBuilder_RenewSelfProclaimedCredential(
+        DIDDocumentBuilder *builder,
+        DID *controller,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 该方法主要换一个controller对内嵌的自声明Credential重新签名。当Customized DID Document内嵌某自声明凭证，其签名者为controller，而该controller已经被移除，过期或者被Deactivated，则需要使用该方法对该凭证重新封装。
@@ -169,14 +186,17 @@ int DIDDocumentBuilder_RenewSelfProclaimedCredential(DIDDocumentBuilder *builder
 `controller`指定为重新封装的controller，`signkey`为controller用来签名的sign key。
 
 ```c
-int DIDDocumentBuilder_RemoveSelfProclaimedCredential(DIDDocumentBuilder *builder,
+int DIDDocumentBuilder_RemoveSelfProclaimedCredential(
+        DIDDocumentBuilder *builder,
         DID *controller);
 ```
 
 该方法用来移除某个controller封装的自声明凭证。
 
 ```c
-int DIDDocumentBuilder_RemoveProof(DIDDocumentBuilder *builder, DID *controller);
+int DIDDocumentBuilder_RemoveProof(
+        DIDDocumentBuilder *builder,
+        DID *controller);
 ```
 
 该方法用来移除某个controller签名的的proof，一般用于该controller已经被移除，过期或者失效的情况下。

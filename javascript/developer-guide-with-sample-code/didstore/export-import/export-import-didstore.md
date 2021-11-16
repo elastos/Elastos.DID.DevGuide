@@ -1,10 +1,10 @@
 # Export/import DIDStore
 
-DID store 提供导出整个DIDStore的方法，导出内容有两个部分：RootIdentity和DID。
+DID Store 提供导出整个DIDStore的方法，导出内容有两个部分：RootIdentity和DID。
 
-Export输出结果是zip格式文件。获取DID store内多个RootIdentity和DID，按前两章节导出方法获取数据文件，保存在zip中。
+Export输出结果是zip格式文件。获取DID Store内多个RootIdentity和DID，按前两章节导出方法获取数据文件，保存在zip中。
 
-DID store 提供导入DID store的方法，直接导入zip文件以RootIdentity和DID对象保存在导入的DID store，完成整个DID store的迁移。
+DID Store 提供导入DID Store的方法，直接导入zip文件以RootIdentity和DID对象保存在导入的DID Store，完成整个DID Store的迁移。
 
 ## Example
 
@@ -47,4 +47,4 @@ public async importStore(
 ): Promise<void>;
 ```
 
-zipFile为zip文件路径；password为导入密码，和导出密码一致，如果错误就无法正确完成导入功能；storepass为导入DID store的store password，用于私钥在DID store的加密。
+zipFile为zip文件路径；password为导入密码，和导出密码一致，如果错误就无法正确完成导入功能；storepass为导入DID Store的store password，用于私钥在DID Store的加密。

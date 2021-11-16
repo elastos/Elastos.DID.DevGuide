@@ -60,7 +60,10 @@ await credential.revoke(signKey, null, storePass);
 ## Usage
 
 ```c
-int Credential_Declare(Credential *credential, DIDURL *signkey, const char *storepass);
+int Credential_Declare(
+        Credential *credential,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 Credential提供将当前凭证发布到链上（即声明）的方法。这里需要说明的是：没有被声明过或者没有被凭证所有者（owner）或者颁发者（issuer）撤销过的凭证都可以被声明。同一个凭证只有一次声明操作。声明操作只能是Verifiable Credential所有者发起。
@@ -78,7 +81,10 @@ Credential提供将当前凭证发布到链上（即声明）的方法。这里�
   ```
 
 ```c
-int Credential_Revoke(Credential *credential, DIDURL *signkey, const char *storepass);
+int Credential_Revoke(
+        Credential *credential,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 Credential提供撤销凭证的方法。这里需要说明的是：凭证无论是否被声明过，都可以被撤销，但是如果已经被凭证所有者或者颁发者撤销的凭证无法再次被撤销。撤销Verifiable Credential需要通过凭证所有者或者凭证颁发者发起交易来实现。
@@ -96,7 +102,11 @@ Credential提供撤销凭证的方法。这里需要说明的是：凭证无论�
   ```
 
 ```c
-int Credential_RevokeById(DIDURL *id, DIDDocument *document, DIDURL *signkey, const char *storepass);
+int Credential_RevokeById(
+        DIDURL *id,
+        DIDDocument *document,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 该方法是根据Credential Id来撤销指定凭证，而不需要获取凭证本身。

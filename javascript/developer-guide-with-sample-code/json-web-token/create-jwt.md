@@ -1,4 +1,4 @@
-﻿# Create JWT
+# Create jwt
 
 JWT内容通过JWTBuilder来编译，JWTBuilder分为JWTHeader和Claims两个部分，分别填充，最后根据是否签名封装，得到JWT或者JWS Token String。
 
@@ -89,4 +89,3 @@ public compact(): string；
 ```
 
 该方法对JWTBuilder内容封装，生成JWT字符串。
-

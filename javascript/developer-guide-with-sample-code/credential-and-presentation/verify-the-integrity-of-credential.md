@@ -1,4 +1,4 @@
-﻿# Verify the integrity of credential
+# Verify the integrity of credential
 
 为了安全，需要检查凭证内容本身是否有效，其是否过期，是否被撤销，以检查凭证的可用性。
 

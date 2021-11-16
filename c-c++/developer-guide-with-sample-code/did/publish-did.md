@@ -1,12 +1,14 @@
 # Publish DID
 
+## Publish DID
+
 上链可以分为有效上链和失效上链。失效上链就是上链是为了告知链上已有的DID已失效，不可再用（该部分内容在后续小节会介绍）；有效上链即是将有效的DID信息更新到链上，该小节介绍该部分的使用说明
 
 DID Document代表DID上链公开，其提供了Publish DID作为上链的方法。该方法适用于普通DID和非更改持有者信息（Controller和Multisig）的Customized DID有效上链。
 
 为了防止上链内容被恶意篡改，DID通过自身的Authenication Key对上链内容做签名，接收方根据提供的信息对内容验证签名，以确认上链内容的可靠性。
 
-# Example
+## Example
 
 ```c
 const char *rootPath = "root/store";
@@ -47,10 +49,13 @@ DIDDocument_Destroy(customizedDoc);
 DIDStore_Close(store);
 ```
 
-# Usage
+## Usage
 
 ```c
-int DIDDocument_PublishDID(DIDDocument *document, DIDURL *signkey, bool force,
+int DIDDocument_PublishDID(
+        DIDDocument *document,
+        DIDURL *signkey,
+        bool force,
         const char *storepass);
 ```
 
@@ -59,4 +64,3 @@ int DIDDocument_PublishDID(DIDDocument *document, DIDURL *signkey, bool force,
 `force`表明在DID Document过期或者本地DID Document未基于最新链上版本进行修改更新是否可以强制上链。一般是建议本地DID Document基于链上最新版本修改，平滑上链。当特殊情况下，设置`force`为true也可以强制上链。`force`为true还可以更新已经过期的文档。
 
 注意：对于Customized DID Document无论是更改Controller还是multisig，使用Publish DID方式都无法上链。
-

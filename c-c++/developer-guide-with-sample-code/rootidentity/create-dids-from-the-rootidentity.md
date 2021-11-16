@@ -34,8 +34,11 @@ DIDStore_Close(store);
 ## Usage
 
 ```c
-DIDDocument *RootIdentity_NewDID(RootIdentity *rootidentity,
-        const char *storepass, const char *alias, bool overwrite);
+DIDDocument *RootIdentity_NewDID(
+        RootIdentity *rootidentity,
+        const char *storepass,
+        const char *alias,
+        bool overwrite);
 ```
 
 该方法提供从RootIdentity衍生成出的新DID，并且将其DID Document保存在DID Store，并返回DID Document。
@@ -45,8 +48,12 @@ DIDDocument *RootIdentity_NewDID(RootIdentity *rootidentity,
 `overwrite`表示是否需要覆盖已经存在的DID。`overwrite`为true时，覆盖已有DID，返回新生成DID Document object；`overwrite`为false时，若已存在DID，返回NULL。
 
 ```c
-DIDDocument *RootIdentity_NewDIDByIndex(RootIdentity *rootidentity, int index,
-        const char *storepass, const char *alias, bool overwrite);
+DIDDocument *RootIdentity_NewDIDByIndex(
+        RootIdentity *rootidentity,
+        int index,
+        const char *storepass,
+        const char *alias,
+        bool overwrite);
 ```
 
 该方法衍生出`rootidentity`的第`index`个DID。其参数和`RootIdentity_NewDID`相同。
@@ -62,4 +69,3 @@ DID *RootIdentity_GetDIDByIndex(RootIdentity *rootidentity, int index);
 ```
 
 该方法用于获取DID对象，过程中不生成也不保存DID Document。主要用于用户需要获取DID对象去执行其他的DID操作。
-

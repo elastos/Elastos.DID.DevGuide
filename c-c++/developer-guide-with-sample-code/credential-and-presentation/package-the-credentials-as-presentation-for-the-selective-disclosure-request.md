@@ -24,15 +24,28 @@ Presentation_Destroy(vp);
 ## Usage
 
 ```c
-Presentation *Presentation_Create(DIDURL *id, DID *holder,
-        const char **types, size_t size, const char *nonce, const char *realm,
-        DIDURL *signkey, DIDStore *store, const char *storepass, int count, ...);
+Presentation *Presentation_Create(
+        DIDURL *id,
+        DID *holder,
+        const char **types, size_t size,
+        const char *nonce,
+        const char *realm,
+        DIDURL *signkey,
+        DIDStore *store,
+        const char *storepass,
+        int count, ...);
 ```
 
 ```c
-Presentation *Presentation_CreateByCredentials(DIDURL *id, DID *holder,
-        const char **types, size_t size, const char *nonce, const char *realm,
-        Credential **creds, size_t count, DIDURL *signkey, DIDStore *store,
+Presentation *Presentation_CreateByCredentials(
+        DIDURL *id,
+        DID *holder,
+        const char **types, size_t size,
+        const char *nonce,
+        const char *realm,
+        Credential **creds, size_t count,
+        DIDURL *signkey,
+        DIDStore *store,
         const char *storepass);
 ```
 

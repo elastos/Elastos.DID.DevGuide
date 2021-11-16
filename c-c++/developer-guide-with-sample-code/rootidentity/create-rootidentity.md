@@ -44,13 +44,22 @@ DIDStore_Close(store);
 ## Usage
 
 ```c
-RootIdentity *RootIdentity_Create(const char *mnemonic, const char *passphrase,
-        bool overwrite, DIDStore *store, const char *storepass);
+RootIdentity *RootIdentity_Create(
+        const char *mnemonic,
+        const char *passphrase,
+        bool overwrite,
+        DIDStore *store,
+        const char *storepass
+);
 ```
 
 ```c
-RootIdentity *RootIdentity_CreateFromRootKey(const char *extendedprvkey,
-        bool overwrite, DIDStore *store, const char *storepass);
+RootIdentity *RootIdentity_CreateFromRootKey(
+        const char *extendedprvkey,
+        bool overwrite,
+        DIDStore *store,
+        const char *storepass
+);
 ```
 
 SDK提供两种方法生成RootIdentity，第一种是通过`mnemonic`和`passphrase`来获取；第二种是通过扩展根私钥来获取。
@@ -70,7 +79,9 @@ void RootIdentity_Destroy(RootIdentity *rootidentity);
 使用完RootIdentity object，该方法销毁RootIdentity。
 
 ```c
-const char *RootIdentity_CreateId(const char *mnemonic, const char *passphrase);
+const char *RootIdentity_CreateId(
+    const char *mnemonic,
+    const char *passphrase);
 ```
 
 ```c

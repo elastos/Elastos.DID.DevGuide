@@ -45,13 +45,17 @@ void JWTBuilder_Destroy(JWTBuilder *builder);
 用完JWTBuilder object，需要销毁。
 
 ```c
-bool JWTBuilder_SetHeader(JWTBuilder *builder, const char *attr, const char *value);
+bool JWTBuilder_SetHeader(
+        JWTBuilder *builder,
+        const char *attr, const char *value);
 ```
 
 该方法添加JWT中header部分的元素，但是不可添加默认属性"alg"和"kid"，否则失败。
 
 ```c
-bool JWTBuilder_SetClaim(JWTBuilder *builder, const char *key, const char *value);
+bool JWTBuilder_SetClaim(
+        JWTBuilder *builder,
+        const char *key, const char *value);
 ```
 
 该方法添加JWT中Claims部分的元素，若添加元素的value类型非字符串，还可以选择`JWTBuilder_SetClaimWithJson`,`JWTBuilder_SetClaimWithIntegar`和`JWTBuilder_SetClaimWithBoolean`，具体使用方法参考API文档。
@@ -63,7 +67,10 @@ bool JWTBuilder_SetSubject(JWTBuilder *builder, const char *subject);
 该方法设置"sub"属性，SDK提供一些固定属性设置，具体可见API文档。
 
 ```c
-int JWTBuilder_Sign(JWTBuilder *builder, DIDURL *keyid, const char *storepass);
+int JWTBuilder_Sign(
+        JWTBuilder *builder,
+        DIDURL *keyid,
+        const char *storepass);
 ```
 
 该方法对JWTBuilder内容签名，生成JWS字符串。

@@ -24,15 +24,22 @@ if (DIDStore_ImportRootIdentity(newStore, newStorePass, filepath, "pwd") < 0)
 ## Usage
 
 ```c
-int DIDStore_ExportRootIdentity(DIDStore *store, const char *storepass,
-        const char *id, const char *file, const char *password);
+int DIDStore_ExportRootIdentity(
+        DIDStore *store,
+        const char *storepass,
+        const char *id,
+        const char *file,
+        const char *password);
 ```
 
 id为需要导出RootIdentity的标识符；password为导出密码，用于RootIdentity 私钥加密，导入数据时需要使用；storepass为导出DID store的store password，用户从DID store获取私钥。
 
 ```c
-int DIDStore_ImportRootIdentity(DIDStore *store, const char *storepass,
-        const char *file, const char *password);
+int DIDStore_ImportRootIdentity(
+        DIDStore *store,
+        const char *storepass,
+        const char *file,
+        const char *password);
 ```
 
 data为json格式的数据，即导出数据；password为导入密码，和导出密码一致，如果错误就无法正确完成导入功能；storepass为导入DID store的store password，用于私钥在DID store的加密。无需提供RootIdentity的id标识符信息。

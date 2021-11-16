@@ -1,4 +1,4 @@
-﻿# Issue a credential
+# Issue a credential
 
 Issuer通过owner提供的subject数据生成并颁发凭证。根据Issuer和owner的关系，凭证可以分为自声明凭证和第三方凭证，前者的Issuer就是owner，就是自己给自己颁发凭证，主要封装有个人提供的信息；后者的Issuer是除owner以外的其他DID，就是他人（如可信机构）根据owner提供给的数据封装的凭证。
 

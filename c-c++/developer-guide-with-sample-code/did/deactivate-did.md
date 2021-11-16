@@ -9,7 +9,9 @@ DID可以由自己或者委托者来停用DID，普通DID有Authentication Key�
 ## Usage
 
 ```c
-int DIDDocument_DeactivateDID(DIDDocument *document, DIDURL *signkey,
+int DIDDocument_DeactivateDID(
+        DIDDocument *document,
+        DIDURL *signkey,
         const char *storepass);
 ```
 
@@ -20,8 +22,11 @@ int DIDDocument_DeactivateDID(DIDDocument *document, DIDURL *signkey,
 其他参数同Publish DID方法。
 
 ```c
-int DIDDocument_DeactivateDIDByAuthorizor(DIDDocument *document, DID *target,
-        DIDURL *signkey, const char *storepass);
+int DIDDocument_DeactivateDIDByAuthorizor(
+        DIDDocument *document,
+        DID *target,
+        DIDURL *signkey,
+        const char *storepass);
 ```
 
 该方法是由委托者发起的停用操作。
@@ -31,4 +36,3 @@ int DIDDocument_DeactivateDIDByAuthorizor(DIDDocument *document, DID *target,
 `signkey`：普通DID的停用就由Autherizor DID Document发起，提供Autherizor Authentication Key，该Key也必须在Target的DID Document作为Authorization Key存在；自定义DID就是用Controller DID Document发起，提供Controller Default Key作为Sign Key。
 
 其他参数同Publish DID。
-

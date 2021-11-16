@@ -19,6 +19,6 @@ $ cd ..
 $ npm run build
 ```
 
-## Use maven package
+## Use npm package
 
-nodejs项目使用dist/did.js即可，浏览器项目使用dist/es/下的js文件即可。
+进入[https://www.npmjs.com/package/@elastosfoundation/did-js-sdk](https://www.npmjs.com/package/@elastosfoundation/did-js-sdk)可以了解到相关信息，可使用`npm i @elastosfoundation/did-js-sdk`安装包使用。
