@@ -6,7 +6,7 @@ DIDStore 对象提供了对 DID 导出/导入的方法，可以实现将特定 D
 
 ```java
 DIDStore store; // an opened DIDStore instance
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
+DID did = new DID("did:elastos:ibeTptCepbUFE8qjmAUmQGp1eRuNnXZosL");
 String storePasswd = "secret";
 String exportPasswd = "passwd"
 File exportFile = new File("/tmp/export-sample.json");

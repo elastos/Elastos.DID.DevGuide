@@ -27,7 +27,7 @@ DID 对象除了表示身份并对身份进行验证外，也可以用于对应�
 ```java
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
+DID did = new DID("did:elastos:iW7JgkXaaF2RKjyC1UJGToNKm5LAk3juen");
 byte[] data; // the data to be sign and verify
 
 // Get the existing DIDDocument
@@ -40,7 +40,7 @@ String signature = doc.sign(storePass, data);
 ### 第三方验证数据和签名
 
 ```java
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2"); // signer‘s DID
+DID did = new DID("did:elastos:iW7JgkXaaF2RKjyC1UJGToNKm5LAk3juen"); // signer‘s DID
 byte[] data; // the data to be verify
 String signature; // the signature signed by signer
 

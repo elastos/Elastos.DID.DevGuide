@@ -16,7 +16,7 @@ DID 持有者可以以持有的该 DID 对应的默认认证密钥，并且仅�
 ```java
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
+DID did = new DID("did:elastos:ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9");
 
 // Get the existing DIDDocument
 DIDDocument doc = store.loadDid(did);
@@ -30,18 +30,18 @@ doc.deactivate(storePasswd);
 ```java
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
-// ttech controlled by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-// and the store has the default private key for iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
-DID ttech = new DID("did:elastos:ttech");
+// foobar controlled by ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9
+// and the store has the default private key for ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9
+DID did = new DID("did:elastos:ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9");
+DID foobar = new DID("did:elastos:foobar");
 
 // Get the existing DIDDocument
-DIDDocument ttechDoc = store.loadDid(ttech);
-// iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2 on beharf of ttech
-ttechDoc.setEffectiveController(did);
+DIDDocument foobarDoc = store.loadDid(foobar);
+// ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9 on beharf of foobar
+foobarDoc.setEffectiveController(did);
 
-// Deactivate ttech by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-ttechDoc.deactivate(storePasswd);
+// Deactivate foobar by ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9
+foobarDoc.deactivate(storePasswd);
 ```
 
 ## 被委托人代为 deactivate DID
@@ -54,7 +54,7 @@ ttechDoc.deactivate(storePasswd);
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
 // did has a authorization key from delegatee's key #abc
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
+DID did = new DID("did:elastos:ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9");
 // and the store has the private key for delegatee's key #abc
 DID delegatee = new DID("did:elastos:inxkMjrXt9zF1s1aoJFq1dja85C9Mm8wm6");
 DID keyId = new DIDURL("did:elastos:inxkMjrXt9zF1s1aoJFq1dja85C9Mm8wm6#abc");
@@ -62,7 +62,7 @@ DID keyId = new DIDURL("did:elastos:inxkMjrXt9zF1s1aoJFq1dja85C9Mm8wm6#abc");
 // Get the delegatee's DIDDocument
 DIDDocument delegateeDoc = store.loadDid(delegatee);
 
-// Deactivate foobar by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
+// Deactivate foobar by ig5M4ro4JCWTdkeNE5tVntgGQAtU6o1bL9
 delegateeDoc.deactivate(did, keyId, storePasswd);
 ```
 

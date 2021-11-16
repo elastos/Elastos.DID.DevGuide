@@ -27,7 +27,7 @@ String storePasswd = "secret";
 
 DIDDocument doc; // the DIDDocument to be publish
 // The key id should defined in the document, also the private key in the store
-DIDURL signKey = new DIDURL("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2#secondary");
+DIDURL signKey = new DIDURL("did:elastos:igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn#secondary");
 
 // Publish the DID to the ID side chain using the default key
 doc.publish(signKey, storePasswd);
@@ -38,7 +38,7 @@ doc.publish(signKey, storePasswd);
 ```java
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
+DID did = new DID("did:elastos:igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn");
 
 // Get the existing DIDDocument
 DIDDocument doc = store.loadDid(did);
@@ -55,18 +55,18 @@ doc.publish(storePasswd);
 ```java
 DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
-// ttech controlled by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-// and the store has the default private key for iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-DID did = new DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2");
-DID ttech = new DID("did:elastos:ttech");
+// foobar controlled by igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn
+// and the store has the default private key for igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn
+DID did = new DID("did:elastos:igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn");
+DID foobar = new DID("did:elastos:foobar");
 
 // Get the existing DIDDocument
-DIDDocument ttechDoc = store.loadDid(ttech);
-// iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2 on beharf of ttech
-ttechDoc.setEffectiveController(did);
+DIDDocument foobarDoc = store.loadDid(foobar);
+// igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn on beharf of foobar
+foobarDoc.setEffectiveController(did);
 
-// publish ttech by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
-ttechDoc.publish(storePasswd);
+// publish foobar by igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn
+foobarDoc.publish(storePasswd);
 ```
 
 上述示例中的 publish 操作类似于普通 DID 的发布，也可以指定当前 controller 的有效的认证密钥来签名交易。
