@@ -14,7 +14,7 @@ DID 的 deactivate 操作通常有两种情形：
 DID 持有者可以以持有的该 DID 对应的默认认证密钥，并且仅能使用默认认证密钥对 DID 进行 deactivate 操作。示例如下：
 
 ```
-let store: DIDStore // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
 
@@ -28,7 +28,7 @@ doc.deactivate(storePasswd)
 对于自定义 DID，deactivate 可以由任何一个有效的持有人（controller）对 DID 进行 deactivate，同样，deactivate 操作需要使用持有人的默认认证密钥进行签名。示例：
 
 ```
-let store: DIDStore // an opened DIDStore instance
+let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 // ttech controlled by iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
 // and the store has the default private key for iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2
@@ -51,7 +51,7 @@ try ttechDoc.deactivate(storePasswd)
 普通 DID 出于安全的考虑，可以设定1个或者多个信任的委托人，体现形式就是指定信任的委托密钥。基于最小授权原则，该委托密钥仅能用于对 DID 进行 deactivate 操作。目标是在 DID 持有人遗失密钥后，可以由被委托人将 DID 失效，从而降低密钥遗失带来的安全隐患。
 
 ```
-var store: DIDStore // an opened DIDStore instance
+var store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 // did has a authorization key from delegatee's key #abc
 let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")

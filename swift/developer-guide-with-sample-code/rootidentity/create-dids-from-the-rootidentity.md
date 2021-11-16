@@ -3,14 +3,6 @@
 
 从 RootIdentity 创建 DID 时，新创建的 DID 对应的 DIDDocument 和 PrivateKey 默认会保存到 RootIdentity 所在的 DIDStore 中。新创建的 DID 不会自动进行发布，仅仅是一个本地的 DID 对象，如果需要发布，那么需要显式的进行发布操作，参见[发布 DID](../did/publish-did.md)。
 
-## 使用RootIdentity创建DID
-
-```
-let alias = "my first did"
-let document = try identity.newDid("STORE-PASSWORD")
-document.getMetadata().setAlias(alias)
-```
-
 ## 使用默认索引创建DID
 
 ```
@@ -20,6 +12,8 @@ let identity = try RootIdentity.create(mnemonic, "PASSPHRASE", true, store, "STO
 let did = try identity.getDid(0)
 let document = try identity.newDid("STORE-PASSWORD")
 ```
+使用默认索引创建 DID 时，不需要指定索引值，RootIdentity 会使用当前记录的下一个可用索引创建，并且自动更新下一个可用索引。**推荐使用这种方式创建新的 DID**。
+
 ## 使用指定Index索引创建DID
 
 ```
@@ -30,6 +24,14 @@ let did = try identity.getDid(0)
 let document = try identity.newDid(0, "STORE-PASSWORD")
 ```
 在指定索引创建 DID 时，指定的索引值不被 RootIdentity 管理，所以需要开发者或者应用来管理可用的索引，并避免重复使用索引引起的冲突。
+
+## 使用RootIdentity创建DID
+
+```
+let alias = "my first did"
+let document = try identity.newDid("STORE-PASSWORD")
+document.getMetadata().setAlias(alias)
+```
 
 ## 从ID链同步DID（同步操作）
 

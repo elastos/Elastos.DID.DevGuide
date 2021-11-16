@@ -27,4 +27,4 @@ let newDoc = db.seal(using: storePasswd)
 
 自定义 DID 的编辑类似，但是需要 DID 的有效持有人身份才能进行编辑；多签的 DID 编辑完成后需要采用和[创建多签自定义 DID](create-multi-signed-customized-did.md) 中类似的流程对 DIDDocument 进行签名。
 
-DIDDocumentBuilder 对象提供了一系列的方法，可以对 DID 文档的内容做修改和管理。详细参见 //TODO:。
+DIDDocumentBuilder 对象提供了一系列的方法，可以对 DID 文档的内容做修改和管理。

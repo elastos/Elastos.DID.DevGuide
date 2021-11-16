@@ -48,7 +48,7 @@ do {
 
 ## 读取 JWT 的信息
 
-在解析和验证 token 后，Java SDK 会返回一个 JWT 的对象，通过这个对象接口，可以访问 JWT 中封装的属性和数据。例如：
+在解析和验证 token 后，Swift SDK 会返回一个 JWT 的对象，通过这个对象接口，可以访问 JWT 中封装的属性和数据。例如：
 
 ```
 let jwt = parser.parseClaimsJwt(token)

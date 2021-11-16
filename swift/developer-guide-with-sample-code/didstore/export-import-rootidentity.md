@@ -13,7 +13,7 @@ let exportFile = rootPath + exportName
 FileManager.default.createFile(atPath: exportFile, contents: nil, attributes: nil)
 let fileHndle: FileHandle = FileHandle(forWritingAtPath: exportFile)!
 // "password":用于加密导出数据中的私钥的密码, "storePassword":原存储密码
-try store!.exportRootIdentity(id, to: fileHndle, using: "password", storePassword: storePassword)
+try store.exportRootIdentity(id, to: fileHndle, using: "password", storePassword: storePassword)
 ```
 
 和 Store 导出一样，DIDStore import 的输入也可以是 FileHandle、OutputStream 等对象。

@@ -20,4 +20,4 @@ let ttechDoc = try doc.newCustomizedDid(withId: ttech, "YOUR-STORE-PASSWORD")
 ttechDoc.using: "YOUR-STORE-PASSWORD"
 ```
 创建并发布自定义 DID 后，就可以像普通 DID 一样使用，用于身份的表示和验证。
-创建多签的自定义 DID 过程相对要复杂，参见创建// TODO:。
+创建多签的自定义 DID 过程相对要复杂，参见创建[多签自定义 DID](create-multi-signed-customized-did.md)。

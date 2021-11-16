@@ -16,7 +16,7 @@ DIDDocument 主要是用来描述 DID 的密钥信息，以及 DID 需要公开�
 
 不同的 DID 可能使用这些属性的一个子集。其中 VeriableCredentials 是 Elastos DID 针对 W3C DID 的扩展。原则上 DID 文档中不应该包含任何个人信息，因为 DID 文档是公开的，一旦发布以后全世界都可以读取。但是对于一些公众实体，可能希望公开特定的实体信息，那么可以把包含实体信息的可验证凭证内嵌到 DID 文档中公开。
 
-DID 文档因为是 sealed 对象，由持有人的签名包含，所以 DIDDocument 是只读的，Java 的 DIDDocument 实现提供了一系列的方法用来读取 DID 文档中包含的信息，详细参见 //TODO: 。
+DID 文档因为是 sealed 对象，由持有人的签名包含，所以 DIDDocument 是只读的，Swift 的 DIDDocument 实现提供了一系列的方法用来读取 DID 文档中包含的信息.
 
 ## 使用 DID 对数据进行签名和验证
 
