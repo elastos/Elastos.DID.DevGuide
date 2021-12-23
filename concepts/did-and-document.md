@@ -2,9 +2,13 @@
 
 ## DID
 
-Elastos DID supports two DID formats. The first is primitive DID, which uses the ID sidechain address encoded by Bitcoin-style Base58 - the ID string is case-sensitive. The second is customized DID, which is also unique - this will be discussed in the next chapter.
+Elastos DID支持两种DID格式。第一种是普通DID（primitive DID），使用Bitcoin风格Base58编码的ID侧链地址，ID字符串区分大小写；第二种是自定义DID（customized DID），也具有唯一性。关于Customized DID在下一篇章会再次讲述。
 
-Primitive DID is just an identifier which can be verified by cryptography. It's important to note that DID is a string, where the most fundamental aspect is the key system associated with this string. All related contents of DID are relevant to the identifier - that is, the corresponding contents (such as document and credential) can be found through the DID identifier.
+Elastos DID supports two DID formats. The first one is primitive DID, which uses the ID side-chain address encoded by Bitcoin style Base58, and the ID string is case-sensitive; The second is customized DID, which is also unique. About customized DID will be discussed in the next chapter.
+
+普通DID仅仅只是一个标识，这个标识通过密码学可验证。其实可以理解DID是字符串，最根本的还是和这个字符串相关联的密钥体系。 DID所有的相关内容都和这个标识相关联，也就是说可以通过DID标识可以找到对应的document，credential等各种内容。
+
+Primitive DID is just an identifier, which can be verified by cryptography. It can be understood that DID is a string, and the most fundamental thing is the key system associated with this string. All the related contents of DID are relevant to the identifier, that is, the corresponding contents, such as document and credential can be found through the DID identifier.
 
 ## Document
 
