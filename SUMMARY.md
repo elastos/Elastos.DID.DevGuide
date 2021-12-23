@@ -26,7 +26,7 @@
 * [DID and Document](concepts/did-and-document.md)
 * [Verifiable Credential](concepts/verifiable-credential.md)
 * [Verifiable Presentation](concepts/verifiable-presentation.md)
-* [Integrity and expiration](concepts/integrity-and-expiration.md)
+* [Integrity and Expiration](concepts/integrity-and-expiration.md)
 * [Customized DID](concepts/customized-did.md)
 
 ## Java
