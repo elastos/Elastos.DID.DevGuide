@@ -25,7 +25,7 @@
 * [Root identity](concepts/root-identity.md)
 * [DID and Document](concepts/did-and-document.md)
 * [Verifiable Credential](concepts/verifiable-credential.md)
-* [Verifiable presentation](concepts/verifiable-presentation.md)
+* [Verifiable Presentation](concepts/verifiable-presentation.md)
 * [Integrity and expiration](concepts/integrity-and-expiration.md)
 * [Customized DID](concepts/customized-did.md)
 
