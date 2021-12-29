@@ -2,6 +2,8 @@
 
 特定的 DID 可以公开多个凭证，ID 侧链也提供了检索特定 DID 的所有公开凭证的特性，DID SDK 提供了 list 方法。示例如下：
 
+A specific DID can expose multiple credentials, and the ID side chain also provides the feature of retrieving all public credentials of a specific DID. The DID SDK provides the list method. Example:
+
 ```java
 DID did = new DID("did:elastos:ihnk95mguTQzRrRrxFmc72z3r3y5NwKSJX");
 
@@ -11,7 +13,11 @@ List<DIDURL> vcIds = VerifiableCredential.list(did);
 
 如果已经公开的凭证被撤销了，那么将不会别包含在结果列表中。
 
+If the published credential is revoked, it will not be included in the result list.
+
 如果一个 DID 公开的凭证很多，那么在默认 list 的结果中最多只包含最近的 128 个凭证。如果需要获取所有的凭证，需要使用分页支持。分页列表的示例如下：
+
+If a DID has a lot of public credentials, the default list results only contain the most recent 128 credentials. Paging support will be used if all the credentials need to be gotten. Example of paging list is as follows:
 
 ```java
 DID did = new DID("did:elastos:ihnk95mguTQzRrRrxFmc72z3r3y5NwKSJX");
@@ -32,3 +38,4 @@ while (true) {
 
 其中 skip 和 limit 是两个用于分页的参数，分别代表跳过之前多少个 id 和结果中包含多少个 id。Java SDK 的实现 limit 最大是 512 个。
 
+Skip and limit are two parameters for paging, which respectively represent how many IDs are skipped and how many IDs are included in the result. The maximum implementation limit of Java SDK is 512.
