@@ -32,7 +32,7 @@
 ## Java
 
 * [Introduction](java/introduction.md)
-* [Build and installation](java/build-and-installation.md)
+* [Build and Installation](java/build-and-installation.md)
 * [Developer Guide](java/developer-guide/README.md)
   * [DIDBackend](java/developer-guide/didbackend/README.md)
   * [DIDStore](java/developer-guide/didstore/README.md)
