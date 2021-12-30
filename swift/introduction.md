@@ -2,23 +2,30 @@
 
 DID Swit SDK 是 Elastos DID 针对 Swit 语言开发者提供的 SDK 版本，最低兼容 Xcode 10.0， 系统版本最低兼容 IOS 11.0。
 
+DID Swit SDK is the SDK version of Elastos DID provided for Swit language developers, which is compatible with Xcode 10.0 and IOS 11.0 at the minimum.
+
 ## Features
 
 DID Swift SDK 的实现符合 W3C 的 [DID 规范](https://www.w3.org/TR/did-core/)，以及[可验证凭证规范](https://www.w3.org/TR/vc-data-model/)，主要实现的功能集如下：
 
-- DID and DIDDocument
-- Verifable credential
-- Verifable presentation
-- Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
-- Secure local DID objects store
-- DID and credential publishing mechanism base on Elastos ID side chain
+The implementation of DID Swift SDK conforms to the DID specification of W3C and the specification of verifiable credentials, which mainly realizes the following sets of functions:
 
-另外，因为 [JSON Web Token(JWT)](https://jwt.io/) 被应用广泛的采用，而 DID 的密钥对可以用于 JWT 的签名和验证。所以 Elastos DID SDK 集成了 JWT 的支持，为应用提供了安全便捷的使用 JWT 的方法，而且没有密钥泄露的风险。
+* DID and DIDDocument
+* Verifable credential
+* Verifable presentation
+* Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
+* Secure local DID objects store
+* DID and credential publishing mechanism base on Elastos ID side chain
+
+另外，因为 [JSON Web Token(JWT)](https://jwt.io) 被应用广泛的采用，而 DID 的密钥对可以用于 JWT 的签名和验证。所以 Elastos DID SDK 集成了 JWT 的支持，为应用提供了安全便捷的使用 JWT 的方法，而且没有密钥泄露的风险。
+
+In addition, JSON Web Token (JWT) is widely used in applications, while the key pair of DID can be used for signing and verifying JWT. Therefore, supported by JWT, Elastos DID SDK provides applications with a safe and convenient way to use JWT, without the risk of exposing the keys.
 
 ## Repository and download
 
-DID Swift SDK 是 open source 的实现，代码仓库托管在 GitHub，仓库的地址是：
-[https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
+DID Swift SDK 是 open source 的实现，代码仓库托管在 GitHub，仓库的地址是： [https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
+
+DID Swift SDK is the implementation of open source. The source code repository is hosted in GitHub. The address of the repository is: [https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
 
 ## Support
 
