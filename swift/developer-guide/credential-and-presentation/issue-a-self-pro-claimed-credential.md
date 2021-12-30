@@ -2,6 +2,8 @@
 
 自声明凭证是自己颁发给自己的凭证，用于自我声明特定的信息。创建自声明的凭证示例如下：
 
+A self-pro-claimed credential is a credential issued by the users themselves for self-declaration of specific information. An example of creating self-pro-claimed credentials is as follows:
+
 ```
 let store: DIDStore =... // an opened DIDStore instance
 let storePasswd = "secret"
@@ -30,3 +32,5 @@ try store.storeCredential(using: vc)
 ```
 
 自定义 DID 颁发凭证和普通 DID 一致。
+
+The credential issued by the customized DID is the same as that issued by the ordinary DID.
