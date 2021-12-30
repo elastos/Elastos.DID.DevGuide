@@ -96,6 +96,7 @@ Transfer the document and publish it to the chain
 * to：接受转让的did（转让个给谁）
 * to: did that accepts the transfer (to whom)
 * storePassword：本地私钥加密密码
+* storePassword: local private key/encrypted password
 
 ```
 // create new controller
@@ -106,3 +107,5 @@ let newDoccument = try newController.newCustomizedDid(withId: did, true, storePa
 ```
 
 * > DID 文档都有有效期，有效期过期后原则上该 DID 就失效了，所以在有效期结束前需要对 DID 文档进行更新，延长有效期并发布。另外被 deactivate 的 DID 则是永久失效的 DID，不能进行任何更新和发布操作。
+  >
+  > Every DID document has a validity period. In principle, the DID will be invalid after it expires, so it is necessary to update the DID document, prolong the validity period and publish it before the expiration. Besides, the deactivated DID is a permanently invalid DID which cannot be updated or published.
