@@ -42,7 +42,7 @@
     * [Export/Import Root Identity](java/developer-guide/didstore/export-import-rootidentity.md)
     * [Export/Import DID](java/developer-guide/didstore/export-import-did.md)
     * [Export/Import DID Store](java/developer-guide/didstore/export-import-didstore.md)
-  * [RootIdentity](java/developer-guide/rootidentity/README.md)
+  * [Root Identity](java/developer-guide/rootidentity/README.md)
     * [Create RootIdentity](java/developer-guide/rootidentity/create-rootidentity.md)
     * [Create DIDs from the RootIdentity](java/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
     * [Backup and restore the RootIdentity](java/developer-guide/rootidentity/backup-restore-rootidentity.md)
