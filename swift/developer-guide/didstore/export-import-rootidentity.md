@@ -2,7 +2,11 @@
 
 DIDStore 对象提供了对 RootIdentity 导出/导入的方法，可以实现将特定 RootIdentity 相关的助记词、公私钥以及其他相关的数据导出到一个 JSON 文件中。在导出文件中的 PrivateKey 是加密保存的，密钥为导出时设定的导出文件密码。导出的 JSON 是一个没有任何依赖的自相关单一文件，应用可以方便的使用导出文件迁移 RootIdentity 的数据。
 
+DIDStore objects provides a method to export/import RootIdentity, which can export mnemonic, public and private keys as well as other data related to a specific RootIdentity to a JSON file. The PrivateKey is saved encrypted in the exported file, with the key being the password of the exported file set at the time of exporting. The exported JSON is a single autocorrelation file without any dependence, and the application can easily use the exported file to migrate the data of RootIdentity.
+
 ## 导出RootIdentity
+
+Export RootIdentity
 
 ```
 // 例："did:elastos:iXcRhYB38gMt1phi5JXJMjeXL2TL8cg58y"
@@ -18,7 +22,11 @@ try store.exportRootIdentity(id, to: fileHndle, using: "password", storePassword
 
 和 Store 导出一样，DIDStore import 的输入也可以是 FileHandle、OutputStream 等对象。
 
+Similar to the export of Store, the input of DIDStore import can also be objects such as FileHandle and OutputStream.
+
 ## 导入RootIdentity
+
+Import RootIdentity
 
 ```
 let importPath = "YOUR-IMPORT-ROOT-PATH"
@@ -31,9 +39,14 @@ readerHndle?.seek(toFileOffset: 0)
 try store.importRootIdentity(from: readerHndle!, using: "password", storePassword: storePassword)
 ```
 
-和 RootIdentity  导出一样，RootIdentity  import 的输入也可以是 FileHandle、InputStream 等对象。
+和 RootIdentity 导出一样，RootIdentity import 的输入也可以是 FileHandle、InputStream 等对象。
+
+Like the export of RootIdentity, objects such as FileHandle and InputStream can also be the input of RootIdentity import.
 
 如果 DIDStore 中已经存在导出文件对应的 RootIdentity，那么 import 操作将覆盖目标 store 中 RootIdentity 现有的数据。
 
-> RootIdentity 也可以通过助记词进行备份和恢复，详细参见 [RootIdentity 的备份和恢复](../rootidentity/backup-restore-rootidentity.md)。
+If the RootIdentity corresponding to the exported file already exists in DIDStore, then the import operation will overwrite the existing data of RootIdentity in the target store.
 
+> RootIdentity 也可以通过助记词进行备份和恢复，详细参见 [RootIdentity 的备份和恢复](../rootidentity/backup-restore-rootidentity.md)。
+>
+> RootIdentity can also be backed up and restored by mnemonic. For specifics, see “Backup and Recovery of RootIdentity”.
