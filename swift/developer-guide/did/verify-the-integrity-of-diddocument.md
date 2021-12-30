@@ -36,6 +36,8 @@ let deactivated = doc.isDeactivated
 
 在得到一个 DIDDocument 对象后，还需要测试该文档是否被恶意修改，这个是通过 DID 的持有人对 DID 文档本身进行签名来实现。测试方法如下：
 
+After obtaining a DIDDocument object, it is necessary to test whether the document has been maliciously modified, which is realized by the controller of DID signing the DID document itself. The test method is as follows:
+
 ```
 let did = try DID("did:elastos:icAGJstuDdRBRmx6NomZsdXLfZcAt1ANoV")
 let doc = try did.resolve()
@@ -44,7 +46,11 @@ let genuine = doc.isGenuine()
 
 ## 全面验证
 
+Thorough verification
+
 在日常使用中，验证一个 DID 是否有效，需要对上述三个方面都进行验证，才能得知准确的结果。DID SDK 提供了一个复合的方法 isValid()，包含了所有验证，使用示例：
+
+In daily use, to verify whether a DID is effective, it is necessary to verify the above three aspects to obtain the accurate results. DID SDK provides a composite method, isValid (), which contains all the verifications. Example:
 
 ```
 let did = try DID("did:elastos:icAGJstuDdRBRmx6NomZsdXLfZcAt1ANoV")
@@ -53,3 +59,5 @@ let valid = try doc.isValid()
 ```
 
 > 自定义 DID 的验证方法和普通 DID 一致。
+>
+> The verification method of the customized DID is the same as that of the ordinary DID.
