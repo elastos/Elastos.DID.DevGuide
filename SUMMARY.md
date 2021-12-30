@@ -61,7 +61,7 @@
     * [Issue a Self-Proclaimed Credential](java/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
     * [Issue a Credential to a 3rd Party](java/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
     * [How to Verify and Use the Credential](java/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
-    * [Package the crdentials as presentation for the selective disclosure request](java/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
+    * [Package the Credentials as Presentation for the Selective Disclosure Request](java/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to verify and use the presentation](java/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
     * [Declare or revoke credential](java/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the declared credentials](java/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
