@@ -52,7 +52,7 @@
     * [Create DID and DID Document](java/developer-guide/did/create-did-and-diddocument.md)
     * [Publish DID](java/developer-guide/did/publish-did.md)
     * [Access the DID Document](java/developer-guide/did/access-diddocument.md)
-    * [Create customized DID](java/developer-guide/did/create-customized-did.md)
+    * [Create Customized DID](java/developer-guide/did/create-customized-did.md)
     * [Create multi-signed customized DID](java/developer-guide/did/create-multi-signed-customized-did.md)
     * [Transfer the ownership of the customized DID](java/developer-guide/did/transfer-the-ownership-of-the-customized-did.md)
     * [Modify and update the DID Document](java/developer-guide/did/update-diddocument.md)
