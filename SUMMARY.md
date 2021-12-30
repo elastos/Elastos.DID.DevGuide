@@ -35,7 +35,7 @@
 * [Build and Installation](java/build-and-installation.md)
 * [Developer Guide](java/developer-guide/README.md)
   * [DID Backend](java/developer-guide/didbackend/README.md)
-  * [DIDStore](java/developer-guide/didstore/README.md)
+  * [DID Store](java/developer-guide/didstore/README.md)
     * [Create or open DIDStore](java/developer-guide/didstore/create-or-open-didstore.md)
     * [Access DIDStore](java/developer-guide/didstore/access-didstore.md)
     * [Metadata of the DID objects](java/developer-guide/didstore/metadata-for-did-objects.md)
