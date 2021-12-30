@@ -34,7 +34,7 @@
 * [Introduction](java/introduction.md)
 * [Build and Installation](java/build-and-installation.md)
 * [Developer Guide](java/developer-guide/README.md)
-  * [DIDBackend](java/developer-guide/didbackend/README.md)
+  * [DID Backend](java/developer-guide/didbackend/README.md)
   * [DIDStore](java/developer-guide/didstore/README.md)
     * [Create or open DIDStore](java/developer-guide/didstore/create-or-open-didstore.md)
     * [Access DIDStore](java/developer-guide/didstore/access-didstore.md)
