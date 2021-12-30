@@ -65,7 +65,7 @@
     * [How to Verify and Use the Presentation](java/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
     * [Declare or Revoke Credential](java/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the Declared Credentials](java/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
-    * [List the published credentials](java/developer-guide/credential-and-presentation/list-the-published-credentials.md)
+    * [List the Published Credentials](java/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](java/developer-guide/json-web-token/README.md)
     * [Create JWT](java/developer-guide/json-web-token/create-jwt.md)
     * [Verify and use JWT](java/developer-guide/json-web-token/verify-and-use-jwt.md)
