@@ -39,7 +39,7 @@
     * [Create or Open DID Store](java/developer-guide/didstore/create-or-open-didstore.md)
     * [Access DIDStore](java/developer-guide/didstore/access-didstore.md)
     * [Metadata of the DID objects](java/developer-guide/didstore/metadata-for-did-objects.md)
-    * [Export/Import RootIdentity](java/developer-guide/didstore/export-import-rootidentity.md)
+    * [Export/Import Root Identity](java/developer-guide/didstore/export-import-rootidentity.md)
     * [Export/Import DID](java/developer-guide/didstore/export-import-did.md)
     * [Export/import DIDStore](java/developer-guide/didstore/export-import-didstore.md)
   * [RootIdentity](java/developer-guide/rootidentity/README.md)
