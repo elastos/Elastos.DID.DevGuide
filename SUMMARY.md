@@ -45,7 +45,7 @@
   * [Root Identity](java/developer-guide/rootidentity/README.md)
     * [Create Root Identity](java/developer-guide/rootidentity/create-rootidentity.md)
     * [Create DIDs from the Root Identity](java/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
-    * [Backup and restore the RootIdentity](java/developer-guide/rootidentity/backup-restore-rootidentity.md)
+    * [Backup and Restore the Root Identity](java/developer-guide/rootidentity/backup-restore-rootidentity.md)
   * [DID](java/developer-guide/did/README.md)
     * [Resolve DIDs](java/developer-guide/did/resolve-dids.md)
     * [Verify the integrity of DIDDocument](java/developer-guide/did/verify-the-integrity-of-diddocument.md)
