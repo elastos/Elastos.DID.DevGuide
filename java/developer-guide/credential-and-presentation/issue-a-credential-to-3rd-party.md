@@ -1,6 +1,8 @@
-# Issue a Credential to a 3rd Party
+# Issue a credential to 3rd party
 
-Issuing credentials to third parties is mainly used for application services to issue credentials to users, or KYC institutions to issue credentials of certified personal information to third entities. An example is as follows:
+给第三方颁发凭证的场景主要用于应用服务给用户颁发凭证，或者 KYC 机构给第三个实体颁发经过认证的个人信息的凭证。示例如下：
+
+The scenario of issuing credentials to third parties is mainly used for application services to issue credentials to users, or KYC institutions to issue credentials of certified personal information to third entities. Example is as follows:
 
 ```java
 DIDStore store; // an opened DIDStore instance
@@ -31,6 +33,10 @@ VerifiableCredential vc = cb.id("#profile")
 String serializedVc = vc.serialize();
 ```
 
+为了保证凭证可验证，颁发凭证的实体的 DID 需要发布上链。
+
 To ensure that the credential can be verified, the DID of the entity issuing the credential needs to be published and uploaded to the chain.
 
-A credential issued by customized DID, or one issued to customized DID, is consistent with primitive DID.
+自定义 DID 颁发凭证，或者给自定义 DID 颁发凭证和普通 DID 一致。
+
+Credential issued by customized DID, or credential issued to customized DID is consistent with primitive DID.
