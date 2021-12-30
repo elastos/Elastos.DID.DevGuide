@@ -55,7 +55,7 @@
     * [Create Customized DID](java/developer-guide/did/create-customized-did.md)
     * [Create Multi-signed Customized DID](java/developer-guide/did/create-multi-signed-customized-did.md)
     * [Transfer Ownership of the Customized DID](java/developer-guide/did/transfer-the-ownership-of-the-customized-did.md)
-    * [Modify and update the DID Document](java/developer-guide/did/update-diddocument.md)
+    * [Modify and Update the DID Document](java/developer-guide/did/update-diddocument.md)
     * [Deactivate DID](java/developer-guide/did/deactivate-did.md)
   * [Credential and presentation](java/developer-guide/credential-and-presentation/README.md)
     * [Issue a self-pro-claimed credential](java/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
