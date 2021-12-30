@@ -58,7 +58,7 @@
     * [Modify and Update the DID Document](java/developer-guide/did/update-diddocument.md)
     * [Deactivate DID](java/developer-guide/did/deactivate-did.md)
   * [Credential and Presentation](java/developer-guide/credential-and-presentation/README.md)
-    * [Issue a self-pro-claimed credential](java/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
+    * [Issue a Self-Proclaimed Credential](java/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
     * [Issue a credential to 3rd party](java/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
     * [How to verify and use the credential](java/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
     * [Package the crdentials as presentation for the selective disclosure request](java/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
