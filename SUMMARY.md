@@ -49,7 +49,7 @@
   * [DID](java/developer-guide/did/README.md)
     * [Resolve DIDs](java/developer-guide/did/resolve-dids.md)
     * [Verify the Integrity of DID Document](java/developer-guide/did/verify-the-integrity-of-diddocument.md)
-    * [Create DID and DIDDocument](java/developer-guide/did/create-did-and-diddocument.md)
+    * [Create DID and DID Document](java/developer-guide/did/create-did-and-diddocument.md)
     * [Publish DID](java/developer-guide/did/publish-did.md)
     * [Access the DID Document](java/developer-guide/did/access-diddocument.md)
     * [Create customized DID](java/developer-guide/did/create-customized-did.md)
