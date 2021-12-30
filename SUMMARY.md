@@ -63,7 +63,7 @@
     * [How to Verify and Use the Credential](java/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
     * [Package the Credentials as Presentation for the Selective Disclosure Request](java/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to Verify and Use the Presentation](java/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
-    * [Declare or revoke credential](java/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
+    * [Declare or Revoke Credential](java/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the declared credentials](java/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
     * [List the published credentials](java/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](java/developer-guide/json-web-token/README.md)
