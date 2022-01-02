@@ -1,14 +1,8 @@
-# didutils command line tool
-
-在 DID 的源代码仓库中除了 SDK 和示例代码，还包含一个 DID 相关的命令行工具，这个工具提供了日常 DID 使用中常用的命令集。
+# Didutils Command Line Tool
 
 In addition to SDK and sample code, DID’s source code repository also contains a command line tool related to DID, which provides a command set commonly utilized in daily use of DID.
 
-DID SDK 的 release 中已经包含了预编译好的 jar 包，可以从[最新的 release](https://github.com/elastos/Elastos.DID.Java.SDK/releases/latest) 页面的 Assets 中下载 didutils.jar 使用。
-
-The release of DID SDK already contains the pre-compiled jar package, the didutils.jar, which can be downloaded from the Assets of the latest release page.
-
-下载后可以通过以下命令使用该工具：
+The release of the DID SDK already contains the pre-compiled jar package (the didutils.jar) which can be downloaded from the [Assets of the latest release page](https://github.com/elastos/Elastos.DID.Java.SDK/releases/latest).
 
 After downloading, the tool can be used through the following command:
 
@@ -16,17 +10,13 @@ After downloading, the tool can be used through the following command:
 java -jar didutils.jar [COMMAND] <ARGS>
 ```
 
-可以通过以下命令获得支持的命令列表：
-
-A command list which can be supported through the following commands:
+A command list can be supported through the following commands:
 
 ```bash
 java -jar didutils.jar --help
 ```
 
-## 支持的命令列表
-
-Supported command list        &#x20;
+## Supported Command List       &#x20;
 
 | 命令 Command     | 描述Description                          |
 | -------------- | -------------------------------------- |
@@ -48,13 +38,9 @@ Supported command list        &#x20;
 | jsonld         | JSON-LD tools.                         |
 | shell          | Interactive shell.                     |
 
-## 获取具体命令的帮助
+## Get Help from Specific Commands
 
-Get help from specific commands
-
-上述每个命令都可以支持 `--help` 命令行参数获取命令的帮助，比如获取 resolvedid 命令的帮助：
-
-Each of the above commands can support the --help command line parameter to get help from the command, such as getting help from the resolvedid command:
+Each of the above commands can support the --help command line parameter to receive help from the command, such as getting help from the resolvedid command:
 
 ```bash
 java -jar didutils.jar resolvedid --help

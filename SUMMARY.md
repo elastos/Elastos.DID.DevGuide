@@ -71,7 +71,7 @@
     * [Verify and Use JWT](java/developer-guide/json-web-token/verify-and-use-jwt.md)
   * [Advanced](java/developer-guide/advanced/README.md)
     * [Logging](java/developer-guide/advanced/logging.md)
-    * [didutils command line tool](java/developer-guide/advanced/didutils-command-line-tool.md)
+    * [Didutils Command Line Tool](java/developer-guide/advanced/didutils-command-line-tool.md)
     * [Simulated ID chain](java/developer-guide/advanced/simulated-id-chain.md)
   * [Full sample code](java/developer-guide/full-sample-code.md)
 * [API reference](java/api-reference.md)
