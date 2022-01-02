@@ -68,7 +68,7 @@
     * [List the Published Credentials](java/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](java/developer-guide/json-web-token/README.md)
     * [Create JWT](java/developer-guide/json-web-token/create-jwt.md)
-    * [Verify and use JWT](java/developer-guide/json-web-token/verify-and-use-jwt.md)
+    * [Verify and Use JWT](java/developer-guide/json-web-token/verify-and-use-jwt.md)
   * [Advanced](java/developer-guide/advanced/README.md)
     * [Logging](java/developer-guide/advanced/logging.md)
     * [didutils command line tool](java/developer-guide/advanced/didutils-command-line-tool.md)
