@@ -79,7 +79,7 @@
 ## Swift
 
 * [Introduction](swift/introduction.md)
-* [Build and installation](swift/build-and-installation.md)
+* [Build and Installation](swift/build-and-installation.md)
 * [Developer Guide](swift/developer-guide/README.md)
   * [DIDBackend](swift/developer-guide/didbackend/README.md)
   * [DIDStore](swift/developer-guide/didstore/README.md)
