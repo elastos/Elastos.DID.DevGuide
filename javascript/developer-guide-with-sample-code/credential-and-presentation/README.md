@@ -2,6 +2,8 @@
 
 Credential和Presentation将分七个部分说明：
 
+Credential and presentation will be explained in seven parts:
+
 {% content-ref url="issue-a-credential.md" %}
 [issue-a-credential.md](issue-a-credential.md)
 {% endcontent-ref %}
