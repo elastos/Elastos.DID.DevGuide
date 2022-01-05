@@ -2,6 +2,8 @@
 
 DID内容分为如下十个部分：
 
+The content of DID is divided into the following ten parts:
+
 {% content-ref url="access-the-did-document.md" %}
 [access-the-did-document.md](access-the-did-document.md)
 {% endcontent-ref %}
