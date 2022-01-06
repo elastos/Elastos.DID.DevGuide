@@ -251,3 +251,5 @@ int DIDDocumentBuilder_SetExpires(
 ```
 
 DID Document的有效期默认为创建之时起后推五年。如果用户也可以通过该方法自行定义有效期。该方法设置的有效期不可超过五年，否则报错。
+
+The effective period of DID Document defaults to five years after its creation. The user can define the effective period through this method. The effective period of this method setting cannot exceed five years, otherwise an error will be reported.
