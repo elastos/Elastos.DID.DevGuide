@@ -155,6 +155,8 @@ int DIDDocumentBuilder_RemoveAuthorizationKey(
 
 该方法移除指定的Authorization Key。若该Key不存在或者非Authorization Key，则报错。
 
+This method removes the specified Authorization Key. If the Key does not exist or is not an Authorization Key, an error will be reported.
+
 ```c
 int DIDDocumentBuilder_AddCredential(
         DIDDocumentBuilder *builder,
@@ -162,6 +164,8 @@ int DIDDocumentBuilder_AddCredential(
 ```
 
 该方法用于添加用户提供的Verifiable Credential。若该Credential的Id在DID Document 中已经存在，则报错。
+
+This method is used to add the Verifiable Credential provided by the user. If the Credential Id already exists in DID Document, an error will be reported.
 
 ```c
 typedef struct Property {
@@ -181,11 +185,19 @@ int DIDDocumentBuilder_AddSelfProclaimedCredential(
 
 该方法用于直接生成并添加自声明凭证。
 
+This method is used to directly generate and add self-declared credentials.
+
 `types`为type数组，`typesize`为type数量；`properties`为凭证主题的数组，是凭证最主要的内容，`propsize`是凭证主题数量。
+
+_types_ are arrays of type, and _typesize_ is the number of types; _properties_ are arrays of credential subjects, which is the most important content of the credential, and _propsize_ is the number of credential subjects.
 
 目前SDK支持五种type：SelfProclaimedCredential，EmailCredential，ProfileCredential，SocialCredential和WalletCredential，后续根据需求做适当调整。用户可以根据需要选择type，也可以通过相应方法添加自定义的type。
 
+At present, SDK supports five types：Self-Proclaimed Credential, Email Credential, Profile Credential, Social Credential and Wallet Credential, which will be adjusted as required. Users can choose the type according to their needs, or they can add customized types by corresponding methods.
+
 `expires`为有效期，不可以大于所属DID的Document有效期。
+
+_expires_ is the effective period and cannot be greater than the effective period of the Document of the DID.
 
 ```c
 int DIDDocumentBuilder_RemoveCredential(DIDDocumentBuilder *builder,
@@ -193,6 +205,8 @@ int DIDDocumentBuilder_RemoveCredential(DIDDocumentBuilder *builder,
 ```
 
 该方法移除指定的Credential。若不存在则报错。
+
+This method removes the specified Credential. If it does not exist, an error will be reported.
 
 ```c
 int DIDDocumentBuilder_AddService(
@@ -214,7 +228,11 @@ int DIDDocumentBuilder_AddServiceByString(
 
 以上两个方法都是为了添加Service，但是导入属性的方式不同。若指定id已经存在，则报错。
 
+The above two methods are used to add Service, but the ways of importing attributes are different. If the specified id already exists, an error will be reported.
+
 endpoint为Service服务点地址；properties是用户可自定义添加的内容。
+
+_endpoint_ is the Service point address; _properties_ are the content that users can add as their needs.
 
 ```c
 int DIDDocumentBuilder_RemoveService(
@@ -223,6 +241,8 @@ int DIDDocumentBuilder_RemoveService(
 ```
 
 该方法移除指定的Service，若不存在则报错。
+
+This method removes the specified Service, and if it does not exist, an error will be reported.
 
 ```c
 int DIDDocumentBuilder_SetExpires(
