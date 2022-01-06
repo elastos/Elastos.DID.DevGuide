@@ -2,6 +2,8 @@
 
 DID Store提供方法用来一次性更新store中所有的DID对象，获取并保存最合适的DID Document对象。
 
+DID Store provides a method to update all DID objects in the store at one time, as well as obtain and save the most suitable DID Document object.
+
 该方法不仅会同步DID Store里所有的RootIdentity，还会同步保存在DID Store里的自定义的DID，实现DID Store全DID全同步。
 
 ## Example
