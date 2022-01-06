@@ -110,6 +110,8 @@ cd linux/outputs/lib
 
 静态连接就打包该文件夹下的a文件，动态连接就打包文件夹下的dylib文件即可。
 
+Package the file _a_ under the folder for static connection and package the file _dylib_ under the folder for dynamic connection.
+
 ## Build on macOS Host
 
 ### 1. Brief introduction
@@ -180,7 +182,7 @@ cmake ../..
 
 {% hint style="info" %}
 Optional (Generate the Makefile): To be able to build a distribution with a specific build type **Debug/Release**, as well as with customized install location of distributions, run the following commands:\
-** cmake -DCMAKE\_BUILD\_TYPE=Release -DCMAKE\_INSTALL\_PREFIX=YOUR-INSTALL-PATH ../..**
+&#x20;**cmake -DCMAKE\_BUILD\_TYPE=Release -DCMAKE\_INSTALL\_PREFIX=YOUR-INSTALL-PATH ../..**
 {% endhint %}
 
 Build the program:
@@ -281,6 +283,8 @@ cd macos/outputs/lib
 
 静态连接就打包该文件夹下的a文件，动态连接就打包文件夹下的dylib文件即可。
 
+Package the file _a_ under the folder for static connection and package the file _dylib_ under the folder for dynamic connection.
+
 ## Build on Windows Host
 
 ### 1. Brief introduction
@@ -372,3 +376,5 @@ cd win/outputs/lib
 ```
 
 静态连接就打包该文件夹下的a文件，动态连接就打包文件夹下的dylib文件即可。
+
+Package the file _a_ under the folder for static connection and package the file _dylib_ under the folder for dynamic connection.
