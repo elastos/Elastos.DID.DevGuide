@@ -36,6 +36,8 @@ DID *DID_New(const char *method_specific_string);
 
 该方法根据提供的method specific string和默认的‘method’ 字符串生成新的DID object，比如ixxxxxxx。
 
+The method generates a new DID object according to the provided method specific string and the default “method” string, such as ixxxxxxx.
+
 ```c
 DID *DID_NewWithMethod(
     const char *method,
@@ -44,8 +46,12 @@ DID *DID_NewWithMethod(
 
 该方法根据提供的method specific string和method字符串生成新的DID object，比如method specific为 ixxxxxxx，method字符串为method。
 
+The method generates a new DID object according to the provided method specific string and method string, for example, method specific is ixxxxxxx and method string is method.
+
 ```c
 void DID_Destroy(DID *did);
 ```
 
 用以上三种方法得到的DID object，用完后需要销毁对象。
+
+DID object obtained by the above three methods needs to be destroyed after use.
