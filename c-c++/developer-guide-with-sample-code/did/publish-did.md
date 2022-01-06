@@ -4,9 +4,15 @@
 
 上链可以分为有效上链和失效上链。失效上链就是上链是为了告知链上已有的DID已失效，不可再用（该部分内容在后续小节会介绍）；有效上链即是将有效的DID信息更新到链上，该小节介绍该部分的使用说明
 
+Cochain can be divided into effective cochain and ineffective cochain. The ineffective cochain means that the cochain is inform that the existing DID has failed and cannot be used (this part will be introduced in the following section); Effective cochain means updating the effective DID information to the chain. This section introduces the instructions of this part.
+
 DID Document代表DID上链公开，其提供了Publish DID作为上链的方法。该方法适用于普通DID和非更改持有者信息（Controller和Multisig）的Customized DID有效上链。
 
+DID Document stands for DID cochain exposure, which provides Publish DID as a method of cochain. This method is suitable for effective cochain of primitive DID and customized DID without changing the controllers’ information (Controller and Multisig).
+
 为了防止上链内容被恶意篡改，DID通过自身的Authenication Key对上链内容做签名，接收方根据提供的信息对内容验证签名，以确认上链内容的可靠性。
+
+In order to prevent the cochain content from being maliciously tampered with, DID signs the cochian content through its own Authentication Key, and the receiver verifies the signature of the content according to the provided information to confirm the reliability of the content.
 
 ## Example
 
