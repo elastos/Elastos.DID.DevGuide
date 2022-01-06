@@ -61,6 +61,12 @@ int DIDDocument_PublishDID(
 
 `signkey`是被指定用来签名上链内容的Authentication Key。这里需要说明：普通DID上链只需要任意的Authentication Key皆可；Customized DID的sign key只能是自身的Authentication Key或者是Controller的Default Key。当`signkey`为NULL，使用DID Document的Default Key签名上链，普通DID必定有Default Key，但是对于Customized DID只有单签的Customized DID才有Default Key，多签的Customized DID没有。因此多签Customized DID使用默认值NULL则报错，请务必指定Sign Key。
 
+_signkey_ is the Authentication Key designated to sign the cochain content. Here, it should be noted that any Authentication Key can be used to the primitive DID cochain; The sign key of Customized DID can only be its own Authentication Key or the Default Key of the Controller. When signkey is NULL, the Default Key signature of DID Document is used for cochain. Primitive DID must have a Default Key, but for Customized DID, only the Customized DID with single signature has a Default Key, and the Customized DID with multiple signatures does not. Therefore, if multi-signed Customized DID uses the default value NULL, an error will be reported. Please be sure to specify Sign Key.
+
 `force`表明在DID Document过期或者本地DID Document未基于最新链上版本进行修改更新是否可以强制上链。一般是建议本地DID Document基于链上最新版本修改，平滑上链。当特殊情况下，设置`force`为true也可以强制上链。`force`为true还可以更新已经过期的文档。
 
+_force_ indicates whether the action of cochain can be done forcedly when DID Document expires or the local DID Document is not modified and updated based on the latest version on the chain. Generally, it is recommended that local DID Document be modified based on the latest version on the chain, so as to be on chain smoothly. Under special circumstances, setting force to true can also complete the action of cochain forcedly. When _force_ is true, the documents expired can be updated.
+
 注意：对于Customized DID Document无论是更改Controller还是multisig，使用Publish DID方式都无法上链。
+
+Attention: For Customized DID Document, whether it is to change the Controller or multisig, the action of cochain cannot be completed by Publish DID.
