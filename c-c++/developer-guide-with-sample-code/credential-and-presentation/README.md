@@ -2,6 +2,8 @@
 
 关于Credential和Presentation的内容分为七个部分来说明：
 
+The contents of Credential and Presentation are divided into seven parts to explain:
+
 {% content-ref url="declare-and-revoke-credential.md" %}
 [declare-and-revoke-credential.md](declare-and-revoke-credential.md)
 {% endcontent-ref %}
