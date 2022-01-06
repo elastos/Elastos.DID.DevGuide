@@ -4,9 +4,13 @@ description: DID Native SDK 是 Elastos DID 针对 C 语言开发者提供的 SD
 
 # Introduction
 
+DID Native SDK is the SDK version provided by Elastos DID for C language developers.
+
 ## Features
 
 DID Native SDK 的实现符合 W3C 的 [DID 规范](https://www.w3.org/TR/did-core/)，以及[可验证凭证规范](https://www.w3.org/TR/vc-data-model/)，主要实现的功能集如下：
+
+The implementation of DID Native SDK conforms to W3C’s DID specification and verifiable credential specification, and the main function set is as follows:
 
 * DID and DIDDocument
 * Verifable credential
@@ -16,6 +20,8 @@ DID Native SDK 的实现符合 W3C 的 [DID 规范](https://www.w3.org/TR/did-co
 * DID and credential publishing mechanism base on Elastos ID side chain
 
 另外，因为 [JSON Web Token(JWT)](https://jwt.io) 被应用广泛的采用，而 DID 的密钥对可以用于 JWT 的签名和验证。所以 Elastos DID SDK 集成了 JWT 的支持，为应用提供了安全便捷的使用 JWT 的方法，而且没有密钥泄露的风险。Native DID SDK 集成的 JWT 提供了如下的支持：
+
+In addition, because JSON Web Token (JWT) is widely used, the key of DID can be used for signing and verifying JWT. Therefore, Elastos DID SDK integrates the support of JWT, which provides a safe and convenient way to use JWT for applications, and there is no risk of key leakage. The JWT integrated by Native DID SDK provides the following support:
 
 * JWT
 * JWS (algorithm: ECDSA using P-256 and SHA-256)
@@ -27,6 +33,10 @@ DID Native SDK 的实现符合 W3C 的 [DID 规范](https://www.w3.org/TR/did-co
 c/c++代码位于github仓库。
 
 具体下载链接：https://github.com/elastos/Elastos.DID.Native.SDK.git
+
+c/c++ code is in github repository.
+
+Download link: https://github.com/elastos/Elastos.DID.Native.SDK.git
 
 ## License
 
