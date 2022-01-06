@@ -2,6 +2,8 @@
 
 DID提供三种方法根据DID字符串来构造DID对象，使用完后销毁DID对象。DID字串大致分为三个部分：schema，method和methodSpecificId，每个部分用 ：隔开，比如did:elastos:icJ4z2DULrHEzYSvjKNJpKyhqFDxvYV7pN。
 
+DID provides three methods to construct the DID object according to the DID string and destroy the DID object after use. The DID string is roughly divided into three parts: schema, method and methodSpecificId. Each part is separated by “:”, for example, did:elastos:ICJ4Z2Dulrhezysvjknjpkyhqfdxyv7pn.
+
 ## Example
 
 ```c
@@ -25,6 +27,8 @@ DID *DID_FromString(const char *idstring)；
 ```
 
 该方法根据idstring生成DID object。其中`idstring`是包含id信息的字符串，比如did:elastos:ixxxxxxx。
+
+The method generates DID object according to idstring. In which _idstring_ is a string containing id information, such as did:elastos:ixxxxxxx.
 
 ```c
 DID *DID_New(const char *method_specific_string);
