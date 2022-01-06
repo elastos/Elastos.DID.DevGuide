@@ -501,6 +501,8 @@ int DIDStore_ContainsCredentials(DIDStore *store, DID *did);
 
 检查DID store是否含有指定DID的Credential。
 
+Check whether DID store contains Credential with the specified DID.
+
 * ```
    return value = -1, if error occurs;
   ```
@@ -517,6 +519,8 @@ int DIDStore_ContainsPrivateKey(DIDStore *store, DID *did, DIDURL *keyid);
 
 检查DID store是否含有指定id的Private key。
 
+Check whether DID store contains the Private key with the specified id.
+
 * ```
    return value = -1, if error occurs;
   ```
@@ -532,6 +536,8 @@ int DIDSotre_ContainsPrivateKeys(DIDStore *store, DID *did);
 ```
 
 检查DID store是否含有指定did的私钥。
+
+Check whether the DID store contains the private key with the specified did.
 
 * ```
    return value = -1, if error occurs;
