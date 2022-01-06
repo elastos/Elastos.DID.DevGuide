@@ -2,9 +2,15 @@
 
 DID Document 分为普通DID Document和自定义DID Document，这里讲的内容都是针对普通DID Document。自定义DID Document将在后续章节详细介绍。
 
+DID Document is divided into primitive DID Document and customized DID Document, and the contents here are all aimed at the primitive DID Document. Customized DID Document will be described in the following chapters.
+
 通过newDid来生成DID Document，该DID Document是只含有default key的最基础DID Document。用户可以用过DID Document Builder来修改DID Document 内容，完成修改，通过seal方法终止修改，得到新DID Document。
 
+Generate DID Document by newDid, which is the most basic DID Document containing only the default key. Users can use DID Document Builder to modify DID Document content, complete the modification, and terminate the modification by seal method to get a new DID Document.
+
 DID Document 有public key，authentication key，authorization key，verifiable credential和service五种元素，通过相应的添加或者移除方法来修改文档。具体的方法请参考API doc。
+
+DID Document has five elements: public key, authentication key, authorization key, verifiable credential and service. You can modify the document by adding or removing them accordingly. Refer to API doc for specific methods.
 
 ## Example
 
@@ -33,6 +39,8 @@ DIDURL_Destroy(id1);
 
 newDid方法在RootIdentity章节介绍，这里不再多加说明了。
 
+The newDid method is introduced in the chapter of Root Identity, which will not be explained here.
+
 ```c
 DIDDocumentBuilder* DIDDocument_Edit(
     DIDDocument *document,
@@ -41,13 +49,19 @@ DIDDocumentBuilder* DIDDocument_Edit(
 
 该方法获取DIDDocumentBuilder object用于更改文档。
 
+The method gets DIDDocumentBuilder object for changing documents.
+
 `controllerdoc`参数是针对自定义 DID Document修改，指定用于第一次签名的controller，对于普通DID Document，无须给`controllerdoc`。
+
+The controllerdoc parameter is used to modify the customized DID Document and specify the controller for the first signature. For primitive DID Document, it is not necessary to give the controllerdoc.
 
 ```c
 void DIDDocumentBuilder_Destroy(DIDDocumentBuilder *builder);
 ```
 
 该方法提供销毁DIDDocumentBuilder object的方法。
+
+This method provides a method to destroy DIDDocumentBuilder object.
 
 ```c
 DIDDocument *DIDDocumentBuilder_Seal(
@@ -56,6 +70,8 @@ DIDDocument *DIDDocumentBuilder_Seal(
 ```
 
 该方法封装且得到新的DID Document。其中storepass为DID Store密码，用于对修改后DID Document主体内容通过主key私钥进行签名。
+
+The method encapsulates and gets a new DID Document. storepass is the password of DID Store, which is used to sign the main content of the modified DID Document by the master key and private key.
 
 ```c
 int DIDDocumentBuilder_AddPublicKey(
@@ -67,6 +83,8 @@ int DIDDocumentBuilder_AddPublicKey(
 
 该方法添加public key，若`keyid`或者`key`存在则报错。
 
+The method adds a public key, and an error will be reported if the keyid or key exists.
+
 ```c
 int DIDDocumentBuilder_RemovePublicKey(
         DIDDocumentBuilder *builder,
@@ -75,6 +93,8 @@ int DIDDocumentBuilder_RemovePublicKey(
 ```
 
 该方法需要注意：default key无法被移除；当希望被移除的Key是Authentication key或者Authorization key时，则需要根据force参数决定是否移除，若force为true，支持移除，否则报错。
+
+Attention: the default key cannot be removed; When the Key to be removed is Authentication key or Authorization key, it is necessary to decide whether to remove it according to the force parameter. If force is true, removal is supported; otherwise, an error will be reported.
 
 ```c
 int DIDDocumentBuilder_AddAuthenticationKey(
@@ -85,7 +105,11 @@ int DIDDocumentBuilder_AddAuthenticationKey(
 
 该方法添加Authentication Key，若Key Id不存在，则生成新Authentication Key；若该Key Id已经存在，`key`和已经存在的Key内容相同，或者该Key Id已经是Authentication Key或者Authorization Key则将该不相同，则报错。
 
+The method adds an Authentication Key, and if the Key Id does not exist, a new Authentication Key will be generated; If the Key Id already exists, the content of the Key is the same as that of the existing key, or if the Key Id is already an Authentication Key or an Authorization Key, it will be different, then an error will be reported.
+
 若想添加已知存在的Key，则只需要提供`keyid`, 不需要提供`key`。`key`为公钥的base58字符串。
+
+If you want to add a known Key, you only need to provide a keyid, rather than a key. Key is the base58 string of the public key.
 
 ```c
 int DIDDocumentBuilder_RemoveAuthenticationKey(
@@ -94,6 +118,8 @@ int DIDDocumentBuilder_RemoveAuthenticationKey(
 ```
 
 该方法移除已经存在的authentication key，若不存在，则报错。
+
+This method removes the authentication key that already exists. If it does not exist, an error will be reported.
 
 ```c
 int DIDDocumentBuilder_AddAuthorizationKey(
@@ -105,6 +131,8 @@ int DIDDocumentBuilder_AddAuthorizationKey(
 
 该方法根据提供的Key内容添加Authorization Key，只适用于普通DID Document。若Key Id不存在，则生成新Authorization Key；若该Key Id已经存在，`key`和已经存在的Key内容相同，或者该Key Id已经是Authentication Key或者Authorization Key则将该不相同，则报错。
 
+This method adds authorization Key according to the provided key content, which is only applicable to primitive DID Document. Generate a new Authorization Key, if the Key Id does not exist; If the Key Id already exists, the content of the Key is the same as that of the existing key, or if the Key Id is already an Authentication Key or an Authorization Key, it will be different, then an error will be reported.
+
 ```c
 int DIDDocumentBuilder_AuthorizeDid(
         DIDDocumentBuilder *builder,
@@ -115,7 +143,9 @@ int DIDDocumentBuilder_AuthorizeDid(
 
 该方法根据提供的controller和controller的Key Id添加新Authorization Key，若已经存在，则报错。
 
-This method is to add the specified key to be an Authorization key. This specified key is the key of specified controller. Authentication is the mechanism by which the controller(s) of a DID can cryptographically prove that they are associated with that DID. A DID Document must include authentication key.
+This method adds a new Authorization Key according to the provided controller and Key Id of controller, and if it already exists, an error will be reported.
+
+
 
 ```c
 int DIDDocumentBuilder_RemoveAuthorizationKey(
