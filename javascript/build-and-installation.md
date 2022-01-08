@@ -4,9 +4,9 @@ description: >-
   project.
 ---
 
-# Build and installation
+# Build & Installation
 
-## Build from source
+## Build from Source
 
 ```
 $ git clone https://github.com/elastos/Elastos.DID.JS.SDK.git

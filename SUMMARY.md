@@ -123,7 +123,7 @@
 ## JavaScript
 
 * [Introduction](javascript/introduction.md)
-* [Build and installation](javascript/build-and-installation.md)
+* [Build & Installation](javascript/build-and-installation.md)
 * [Developer Guide(with sample code)](javascript/developer-guide-with-sample-code/README.md)
   * [DIDBackend](javascript/developer-guide-with-sample-code/didbackend.md)
   * [DIDStore](javascript/developer-guide-with-sample-code/didstore/README.md)
