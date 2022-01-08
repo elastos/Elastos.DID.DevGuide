@@ -1,6 +1,4 @@
-# Export/import
-
-DID Store支持对象的export和import，主要有如下三个对象：
+# Export/Import
 
 DID Store supports the export and import of the following three objects:
 
