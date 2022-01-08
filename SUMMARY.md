@@ -104,7 +104,7 @@
     * [Transfer Ownership of the Customized DID](swift/developer-guide/did/transfer-the-ownership-of-the-customized-did.md)
     * [Modify and update the DID Document](swift/developer-guide/did/update-diddocument.md)
     * [Deactivate DID](swift/developer-guide/did/deactivate-did.md)
-  * [Credential and presentation](swift/developer-guide/credential-and-presentation/README.md)
+  * [Credential and Presentation](swift/developer-guide/credential-and-presentation/README.md)
     * [Issue a self-pro-claimed credential](swift/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
     * [Issue a credential to 3rd party](swift/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
     * [How to verify and use the credential](swift/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
