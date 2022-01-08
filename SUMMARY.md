@@ -91,7 +91,7 @@
     * [Export/Import DIDStore](swift/developer-guide/didstore/export-import-didstore.md)
   * [RootIdentity](swift/developer-guide/rootidentity/README.md)
     * [Create RootIdentity](swift/developer-guide/rootidentity/create-rootidentity.md)
-    * [Create DIDs from the RootIdentity](swift/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
+    * [Create DIDs from RootIdentity](swift/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
     * [Backup and restore the RootIdentity](swift/developer-guide/rootidentity/backup-restore-rootidentity.md)
   * [DID](swift/developer-guide/did/README.md)
     * [Resolve DIDs](swift/developer-guide/did/resolve-dids.md)
