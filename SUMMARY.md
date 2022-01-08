@@ -148,7 +148,7 @@
     * [Sign and Verify Data by DID Document](javascript/developer-guide-with-sample-code/did/sign-and-verify-data-by-did-document.md)
     * [Verify the Integrity of DIDDocument](javascript/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
     * [Publish DID](javascript/developer-guide-with-sample-code/did/publish-did.md)
-    * [Transfer the ownership of the customized DID](javascript/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
+    * [Transfer Ownership of the Customized DID](javascript/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
     * [Deactivate DID](javascript/developer-guide-with-sample-code/did/deactivate-did.md)
     * [Resolve DIDs](javascript/developer-guide-with-sample-code/did/resolve-dids.md)
   * [Json Web Token](javascript/developer-guide-with-sample-code/json-web-token/README.md)
