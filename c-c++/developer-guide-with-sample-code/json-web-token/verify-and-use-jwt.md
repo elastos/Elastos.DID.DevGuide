@@ -1,8 +1,12 @@
-# Verify and Use JWT
+# Verify and use jwt
 
-The SDK provides a method to analyze the type of JWT token (JWT/JWS). If JWS will do the corresponding post-verification parsing, both the JWT and JWS token strings will finally convert to JWT.
+SDK提供方法分析JWT token类型（JWT/JWS），若是JWS会做相应的验签后解析，最后JWT和JWS token string都转换JWT。
 
-JWT provides a variety of methods to obtain JWT elements for user reference.
+SDK provides a method to analyze the type of JWT token (JWT/JWS), if JWS will do the corresponding post-verification parsing, both JWT and JWS token string will finally convert to JWT.
+
+JWT提供多种方法获取JWT 元素供用户使用和参考。
+
+JWT provides a variety of methods to obtain JWT elements for users’ use and reference.
 
 ## Example
 
@@ -27,11 +31,15 @@ JWT_Destroy(jwt);
 JWSParser *DIDDocument_GetJwsParser(DIDDocument *document);
 ```
 
+该方法由DID Document提供，获取JWSParser object。`document`提供key用于验签token。
+
 The method is provided by DID Document and gets JWSParser object. document provides key to verify the token.
 
 ```c
 void JWSParser_Destroy(JWSParser *parser);
 ```
+
+用完JWSParser object，使用该方法销毁。
 
 Use this method to destroy the JWSParser object after using it.
 
@@ -39,11 +47,15 @@ Use this method to destroy the JWSParser object after using it.
 JWT *JWTParser_Parse(const char *token);
 ```
 
-This method parses JWT Token, or a token without a signature. If it's successful, the JWT object will be returned; otherwise, an error will be reported.
+该方法解析JWT Token，即不含签名的Token。若成功，返回JWT object，否则报错。
+
+This method parses JWT Token, that is, a Token without signature. If it is successful, the JWT object will be returned; otherwise, an error will be reported.
 
 ```c
 JWT *DefaultJWSParser_Parse(const char *token);
 ```
+
+该方法根据token只自带的Key的所有者生成解析器去解析`token`，获得JWT object。
 
 This method generates a parser to parse the token according to the owner of the Key that comes with the token and obtains JWT object.
 
@@ -51,11 +63,15 @@ This method generates a parser to parse the token according to the owner of the 
 JWT *JWSParser_Parse(JWSParser *parser, const char *token);
 ```
 
+该方法根据用户提供的`parser`来解析token，获得JWT object。
+
 This method parses the token according to the parser provided by the user to obtain JWT object.
 
 ```c
 void JWT_Destroy(JWT *jwt);
 ```
+
+用完JWT object，使用该方法销毁。
 
 Use this method to destroy JWT object after using it.
 
@@ -63,12 +79,18 @@ Use this method to destroy JWT object after using it.
 const char *JWT_GetHeader(JWT *jwt, const char *attr);
 ```
 
+该方法可获取JWT中header中各元素内容。SDK还提供直接获取基本属性方法，比如`JWT_GetAlgorithm`,`JWT_GetKeyId`等，具体详见API文档。
+
 This method can get the contents of each element in the header in JWT. SDK also provide methods to directly obtain basic attribute, such as JWT\_GetAlgorithm,JWT\_GetKeyId. See API documentation for details.
 
 ```c
 const char *JWT_GetClaim(JWT *jwt, const char *key);
 ```
 
+该方法可获取JWT中claims中各元素内容，内容以字符串返回。有些内容非字符串，SDK提供相应不同返回类型的API，`JWT_GetClaimAsJson`,`JWT_GetClaimAsInteger`,`JWT_GetClaimAsBoolean`。
+
 This method can get the content of each element in claims in JWT, and the content is returned as a string. Some contents are not strings, and SDK provides APIs of different return types, JWT\_ GetClaimAsJson, JWT\_ GetClaimAsInteger, JWT\_ GetClaimAsBoolean.
+
+对于claim中一些基本属性，SDK也提供相应方法，比如`JWT_GetIssuer`,`JWT_GetSubject`等，具体详见API文档。
 
 For some basic attributes in claim, SDK also provides corresponding methods, such as JWT\_GetIssuer and JWT\_GetSubject. See API documentation for details.
