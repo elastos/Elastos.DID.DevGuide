@@ -205,7 +205,7 @@
     * [Issue a Credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/issuer-a-credential.md)
     * [List the Declared Credentials](c-c++/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
     * [Package the Credentials as Presentation for the Selective Disclosure Request](c-c++/developer-guide-with-sample-code/credential-and-presentation/package-the-credentials-as-presentation-for-the-selective-disclosure-request.md)
-    * [Resolve the declared credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/resolve-the-declared-credential.md)
+    * [Resolve the Declared Credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/resolve-the-declared-credential.md)
     * [verify the integrity of credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
   * [Json Web Token](c-c++/developer-guide-with-sample-code/json-web-token/README.md)
     * [Create JWT](c-c++/developer-guide-with-sample-code/json-web-token/create-jwt.md)
