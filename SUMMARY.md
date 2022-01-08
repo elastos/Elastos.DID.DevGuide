@@ -166,7 +166,7 @@
     * [DID Metadata](javascript/developer-guide-with-sample-code/metadata/did-metadata.md)
     * [Credential Metadata](javascript/developer-guide-with-sample-code/metadata/credential-metadata.md)
   * [Full Sample Code](javascript/developer-guide-with-sample-code/full-sample-code.md)
-* [API reference](javascript/api-reference-link-to-javadoc.md)
+* [API Reference](javascript/api-reference-link-to-javadoc.md)
 
 ## C/C++
 
