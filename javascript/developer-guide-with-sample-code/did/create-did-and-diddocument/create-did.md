@@ -1,6 +1,8 @@
 # Create DID
 
-DID provides three methods to create DID objects based on DID strings. The DID string is roughly divided into three parts: schema, method, and methodSpecificId, which are separated by “:”, e.g. did:elastos:icJ4z2DULrHEzYSvjKNJpKyhqFDxvYV7pN。
+DID提供三种方法根据DID字符串来构造DID对象。DID字串大致分为三个部分：schema，method和methodSpecificId，每个部分用 ：隔开，比如did:elastos:icJ4z2DULrHEzYSvjKNJpKyhqFDxvYV7pN。
+
+DID provides three methods to create DID objects based on DID strings. The DID string is roughly divided into three parts, schema, method and methodSpecificId, which are separated by “:”, e.g. did:elastos:icJ4z2DULrHEzYSvjKNJpKyhqFDxvYV7pN。
 
 ## Example
 
