@@ -1,10 +1,16 @@
-# Issue a Credential
+# Issuer a credential
 
-The Issuer generates credentials through the subject and type data provided by the owner. According to the relationship between the issuer and owner, credentials can be divided into self-declared credentials and third-party credentials. The Issuer of the former is the owner, that is, the credential issued by itself is mainly packaged with the information provided by individuals. The Issuer of the latter is the other DIDs except for the owner, or the data encapsulation credential provided by others (such as a trusted agency) according to the owner.
+Issuer通过owner提供的subject，type数据生成凭证。根据Issuer和owner的关系，凭证可以分为自声明凭证和第三方凭证，前者的Issuer就是owner，就是自己给自己颁发凭证，主要封装有个人提供的信息；后者的Issuer是除owner以外的其他DID，就是他人（如可信机构）根据owner提供给的数据封装凭证。
+
+Issuer generates credentials through the subject and type data provided by the owner. According to the relationship between issuer and owner, credentials can be divided into self-declared credentials and third-party credentials. The Issuer of the former is the owner, that is, the credential issued by itself is mainly packaged with information provided by individuals; The Issuer of the latter is the other DIDs except the owner, that is, the data encapsulation credential provided by others (such as a trusted agency) according to the owner.
+
+凭证是一次生成，不可修改。
 
 Credential is generated at one time and cannot be modified.
 
 ## Example
+
+自声明凭证示例：
 
 Example of self-declaration credential:
 
@@ -44,6 +50,8 @@ DIDURL_Destroy(credid);
 Credential_Destroy(vc);
 ```
 
+第三方凭证示例：
+
 Example of third-party credential:
 
 ```c
@@ -73,13 +81,17 @@ Credential_Destroy(vc);
 Issuer *Issuer_Create(DID *did, DIDURL *signkey, DIDStore *store);
 ```
 
-This method is used to generate Issuer object. did is the DID designated as the Issuer; signkey is the Authentication Key used by did as the Issuer to sign. If signkey is NULL, the Default Key is used by default.
+该方法用来生成Issuer object。`did`就是指定作为Issuer的DID，`signkey`是did作为Issuer用来签名的Authentication Key，若signkey为NULL，则默认使用Default Key。
+
+This method is used to generate Issuer object. _did_ is the DID designated as the Issuer, _signkey_ is the Authentication Key used by did as the Issuer to sign. If signkey is NULL, the Default Key is used by default.
 
 ```c
 void Issuer_Destroy(Issuer *issuer);
 ```
 
-The Issuer object needs to be destroyed after being used.
+用完Issuer object，需要销毁对象。
+
+The Issuer object needs to be destroyed after using.
 
 ```c
 typedef struct Property {
@@ -97,7 +109,9 @@ Credential *Issuer_CreateCredential(
         const char *storepass);
 ```
 
-The Issuer issues credentials according to the provided subject object. All parameters of this interface cannot be null - refer to sample for specific use.
+Issuer根据提供的subject object颁发凭证。该接口的所有参数均不可为空，具体使用可参考sample。
+
+Issuer issues credentials according to the provided subject object. All parameters of this interface cannot be null. Refer to sample for specific use.
 
 ```c
 Credential *Issuer_CreateCredentialByString(
@@ -110,4 +124,6 @@ Credential *Issuer_CreateCredentialByString(
         const char *storepass);
 ```
 
-The Issuer issues credentials according to the provided subject string. All parameters of this interface cannot be null - refer to sample for specific use.
+Issuer根据提供的subject string颁发凭证。该接口的所有参数均不可为空，具体使用可参考sample。
+
+Issuer issues credentials according to the provided subject string. All parameters of this interface cannot be null. Refer to sample for specific use.

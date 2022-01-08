@@ -203,7 +203,7 @@
     * [Declare and Revoke Credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/declare-and-revoke-credential.md)
     * [How to Use and Verify Presentation](c-c++/developer-guide-with-sample-code/credential-and-presentation/how-to-use-and-verify-the-presentation.md)
     * [Issue a Credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/issuer-a-credential.md)
-    * [List the declared credentials](c-c++/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
+    * [List the Declared Credentials](c-c++/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
     * [Package the credentials as presentation for the selective disclosure request](c-c++/developer-guide-with-sample-code/credential-and-presentation/package-the-credentials-as-presentation-for-the-selective-disclosure-request.md)
     * [Resolve the declared credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/resolve-the-declared-credential.md)
     * [verify the integrity of credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
