@@ -6,7 +6,6 @@ The DID SDK provides a method to parse DIDs, and the corresponding DID documents
 
 ```
 let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
-
 let doc = try did.resolve()
 ```
 
@@ -19,6 +18,5 @@ If the application needs to ignore the results of the local cache and force a sp
 ```
 let did = try DID("did:elastos:iXyYFboFAd2d9VmfqSvppqg1XQxBtX9ea2")
 let force = true
-
 let doc = try did.resolve(force)
 ```
