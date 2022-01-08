@@ -1,10 +1,6 @@
-# Package the credentials as presentation for the selective disclosure request
-
-可验证表达是指包含实体可验证凭证子集及副署签名(countersign)的数据集合，用于对第三方表明自身身份。
+# Package the Credentials as Presentation for the Selective Disclosure Request
 
 Verifiable expression refers to a data set containing a subset of verifiable credentials and countersign of an entity, which is used to show its identity to a third party.
-
-可验证表达也可不含可验证凭证，为一个空的表达实体。
 
 Verifiable expression can also be an empty expression entity without verifiable credential.
 
@@ -53,10 +49,6 @@ Presentation *Presentation_CreateByCredentials(
         const char *storepass);
 ```
 
-以上两种方法都是生成Presentation，只是Credential的导入方式不同；前者是以变参形式导入，后者以数组形式导入。
-
 Presentation can be generated through the above two methods, with different ways of Credential importing. The former is imported as a variable parameter, while the latter is imported as an array.
 
-`id`是Presentation的id；`holder`是Presentation的持有者；`nonce`签名操作使用的随机值；`realm`表明该presentation适用的领域和地址；`signkey`是Presentation的持有者用来签名封装Presentation的Authentication Key；`count`是导入的Credential数量。
-
-_id_ is the id of Presentation; _holder_ is the holder of Presentation; _nonce_ is a random value used by the signing; _realm_ indicates the applicable domain and address of the presentation; _signkey_ is the Authentication Key used by the holder of the Presentation to sign and encapsulate the Presentation; _count_ is the number of imported Credentials.
+id is the ID of Presentation; holder is the holder of Presentation; nonce is a random value used by the signing; realm indicates the applicable domain and address of the presentation; signkey is the Authentication Key used by the holder of the Presentation to sign and encapsulate the Presentation; count is the number of imported Credentials.
