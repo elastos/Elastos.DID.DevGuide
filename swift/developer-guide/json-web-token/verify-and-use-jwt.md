@@ -1,21 +1,14 @@
-# Verify and use JWT
+# Verify and Use JWT
 
-在验证方收到 JWT 以后需要对 JWT 进行验证，从而保证 JWT 的有效性。JWT 的验证可以有两种形式。
+Upon receiving the JWT, the verifier needs to validate it. The JWT can be verified in the following two ways.
 
-Upon receiving the JWT, the verifier needs to validate the JWT to guarantee its validity. The JWT can be verified in the following two ways.
-
-* 验证 JWT 是一个有效 DID 签名的有效 token （通用验证）
 * Validate whether the JWT is a valid token of a valid DID signature (generic validation)
-* 验证 JWT 是一个特定 DID 签名的有效 token （特定验证）
 * Validate whether the JWT is a valid token of a specified DID signature (specified validation)
 
-## 通用验证
-
-Generic validation
+## Generic Validation
 
 ```
 let token: String = ... // the JWT token from 3rd party
-
 // Create a JWT parser
 let parser = try JwtParserBuilder().build()
 // Parse and verify the token
@@ -26,24 +19,17 @@ do {
 }
 ```
 
-在这种情况下，JWT parser 会解析 JWT 中的签名人，并尝试解析其 DID 后基于签名人的 DID 对 JWT 进行验证。
+Under such circumstances, the JWT parser will resolve the signer in the JWT and try verifying the JWT based on the signer’s DID after resolving its DID.
 
-Under such circumstances, JWT parser will resolve the signer in the JWT and try verifying the JWT based on the signer’s DID after resolving its DID.
-
-## 特定验证
-
-Specified validation
+## Specified Validation
 
 ```
 let token: DIDStore = ...  // the JWT token from 3rd party
 let did = try DID("did:elastos:igyq8SV5RT33HVqgCTCGU48u2pfnyH4XMn") // expected signer
-
 // resolve signer's DIDDocument
 let signer = try did.resolve()
 if try !signer.isValid() {
     // should report errorss  
-}
-
 // Create a JWT parser with signer
 let parser = signer.jwtParserBuilder().build()
 // Parse and verify the token
@@ -51,30 +37,21 @@ do {
 	  let jwt = try parser.parseClaimsJwt(token)
 } catch {
     // Handle the parse and verify errors
-}
 ```
-
-这种验证方式，会假定该 token 是有指定的 DID 签名，如果 JWT 的签名 DID 和 signer 的 DID 不一致，会得到验证错误
 
 In this case, this token is assumed to have a specified DID signature. If the signed DID of JWT is inconsistent with the signer’s DID, the verification will fail.
 
-## 读取 JWT 的信息
+## Read JWT Information
 
-Read JWT information
-
-在解析和验证 token 后，Swift SDK 会返回一个 JWT 的对象，通过这个对象接口，可以访问 JWT 中封装的属性和数据。例如：
-
-After resolving and validating the token, Swift SDK will return a JWT object, through the interface of which the attributes and data encapsulated in the JWT can be accessed. Example:
+After resolving and validating the token, Swift SDK will return a JWT object through the interface of which the attributes and data encapsulated in the JWT can be accessed. For example:
 
 ```
 let jwt = parser.parseClaimsJwt(token)
-
 // Read the JWT header
 let header = jwt.header
 let contentType = header.getContentType()
 let version = header.get("version")
 // ...
-  
 // Read the claims
 let claims = jwt.claims
 let subject = claims.getSubject()

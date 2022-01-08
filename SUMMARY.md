@@ -115,7 +115,7 @@
     * [List the Published Credentials](swift/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](swift/developer-guide/json-web-token/README.md)
     * [Create JWT](swift/developer-guide/json-web-token/create-jwt.md)
-    * [Verify and use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
+    * [Verify and Use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
 * [Advanced](swift/advanced/README.md)
   * [Logging](swift/developer-guide/advanced/logging.md)
 * [API reference(link to Swift doc)](swift/api-reference-link-to-swift-doc.md)
