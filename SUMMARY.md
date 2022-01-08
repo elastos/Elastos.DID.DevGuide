@@ -95,7 +95,7 @@
     * [Backup and Restore RootIdentity](swift/developer-guide/rootidentity/backup-restore-rootidentity.md)
   * [DID](swift/developer-guide/did/README.md)
     * [Resolve DIDs](swift/developer-guide/did/resolve-dids.md)
-    * [Verify the integrity of DIDDocument](swift/developer-guide/did/verify-the-integrity-of-diddocument.md)
+    * [Verify the Integrity of DIDDocument](swift/developer-guide/did/verify-the-integrity-of-diddocument.md)
     * [Create DID and DIDDocument](swift/developer-guide/did/create-did-and-diddocument.md)
     * [Publish DID](swift/developer-guide/did/publish-did.md)
     * [Access the DID Document](swift/developer-guide/did/access-diddocument.md)
