@@ -145,7 +145,7 @@
       * [Create DIDDocument](javascript/developer-guide-with-sample-code/did/create-did-and-diddocument/create-diddocument.md)
     * [Create Customized DID](javascript/developer-guide-with-sample-code/did/create-customized-did.md)
     * [Create Multi-signed Customized DID](javascript/developer-guide-with-sample-code/did/create-multi-signed-customized-did.md)
-    * [Sign and verify data by DID Document](javascript/developer-guide-with-sample-code/did/sign-and-verify-data-by-did-document.md)
+    * [Sign and Verify Data by DID Document](javascript/developer-guide-with-sample-code/did/sign-and-verify-data-by-did-document.md)
     * [Verify the integrity of DIDDocument](javascript/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
     * [Publish DID](javascript/developer-guide-with-sample-code/did/publish-did.md)
     * [Transfer the ownership of the customized DID](javascript/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
