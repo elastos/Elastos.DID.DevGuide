@@ -158,7 +158,7 @@
     * [Issue a Credential](javascript/developer-guide-with-sample-code/credential-and-presentation/issue-a-credential.md)
     * [Verify the Integrity of Credential](javascript/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
     * [Declare and revoke credential](javascript/developer-guide-with-sample-code/credential-and-presentation/declare-and-revoke-credential.md)
-    * [List the declared credentials](javascript/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
+    * [List the Declared Credentials](javascript/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
     * [Resolve the declared credential](javascript/developer-guide-with-sample-code/credential-and-presentation/resolve-the-declared-credential.md)
     * [Package the credentials as presentation for the selective disclosure request](javascript/developer-guide-with-sample-code/credential-and-presentation/package-the-credentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to use and verify the presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/how-to-use-and-verify-the-presentation.md)
