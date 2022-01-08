@@ -1,6 +1,6 @@
 # Create DID and DIDDocument
 
-The most basic object in the DID system is the DID object, which is the object identified by DID; DID document is the detailed content object of DID. This section explains the creation and modification of these two parts.
+DID体系里最基本的对象就是DID object，是DID标识对象；DID Document是DID的详细内容对象。这章节讲解这两部分的创建和修改。
 
 {% content-ref url="create-did.md" %}
 [create-did.md](create-did.md)
