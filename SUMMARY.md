@@ -106,7 +106,7 @@
     * [Deactivate DID](swift/developer-guide/did/deactivate-did.md)
   * [Credential and Presentation](swift/developer-guide/credential-and-presentation/README.md)
     * [Issue a Self-proclaimed Credential](swift/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
-    * [Issue a credential to 3rd party](swift/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
+    * [Issue a Credential to a Third Party](swift/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
     * [How to verify and use the credential](swift/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
     * [Package the crdentials as presentation for the selective disclosure request](swift/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to verify and use the presentation](swift/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
