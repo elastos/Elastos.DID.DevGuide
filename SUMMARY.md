@@ -83,7 +83,7 @@
 * [Developer Guide](swift/developer-guide/README.md)
   * [DIDBackend](swift/developer-guide/didbackend/README.md)
   * [DIDStore](swift/developer-guide/didstore/README.md)
-    * [Create or open DIDStore](swift/developer-guide/didstore/create-or-open-didstore.md)
+    * [Create or Open DIDStore](swift/developer-guide/didstore/create-or-open-didstore.md)
     * [Access DIDStore](swift/developer-guide/didstore/access-didstore.md)
     * [Metadata of the DID objects](swift/developer-guide/didstore/metadata-for-did-objects.md)
     * [Export/import RootIdentity](swift/developer-guide/didstore/export-import-rootidentity.md)
