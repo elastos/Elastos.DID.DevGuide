@@ -195,7 +195,7 @@
     * [Publish DID](c-c++/developer-guide-with-sample-code/did/publish-did.md)
     * [Create Customized DID](c-c++/developer-guide-with-sample-code/did/create-customized-did.md)
     * [Create a Multi-signed Customized DID](c-c++/developer-guide-with-sample-code/did/create-multi-signed-customized-did.md)
-    * [Transfer the ownership of the customized DID](c-c++/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
+    * [Transfer Ownership of the Customized DID](c-c++/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
     * [Deactivate DID](c-c++/developer-guide-with-sample-code/did/deactivate-did.md)
     * [Access the DID Document](c-c++/developer-guide-with-sample-code/did/access-the-did-document.md)
     * [sign and verify data by diddocument](c-c++/developer-guide-with-sample-code/did/sign-and-verify-data-by-diddocument.md)
