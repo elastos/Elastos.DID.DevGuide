@@ -137,7 +137,7 @@
   * [RootIdentity](javascript/developer-guide-with-sample-code/rootidentity/README.md)
     * [Create RootIdentity](javascript/developer-guide-with-sample-code/rootidentity/create-rootidentity.md)
     * [Create DIDs from the RootIdentity](javascript/developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md)
-    * [Backup and synchronize](javascript/developer-guide-with-sample-code/rootidentity/synchronize.md)
+    * [Backup and Synchronize](javascript/developer-guide-with-sample-code/rootidentity/synchronize.md)
   * [DID](javascript/developer-guide-with-sample-code/did/README.md)
     * [Access the DID Document](javascript/developer-guide-with-sample-code/did/access-the-did-document.md)
     * [Create DID and DIDDocument](javascript/developer-guide-with-sample-code/did/create-did-and-diddocument/README.md)
