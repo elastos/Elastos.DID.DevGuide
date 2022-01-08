@@ -108,7 +108,7 @@
     * [Issue a Self-proclaimed Credential](swift/developer-guide/credential-and-presentation/issue-a-self-pro-claimed-credential.md)
     * [Issue a Credential to a Third Party](swift/developer-guide/credential-and-presentation/issue-a-credential-to-3rd-party.md)
     * [How to Verify and Use the credential](swift/developer-guide/credential-and-presentation/verify-and-use-the-credential.md)
-    * [Package the crdentials as presentation for the selective disclosure request](swift/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
+    * [Package Credentials as Presentation for the Selective Disclosure Request](swift/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to verify and use the presentation](swift/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
     * [Declare or revoke credential](swift/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the declared credentials](swift/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
