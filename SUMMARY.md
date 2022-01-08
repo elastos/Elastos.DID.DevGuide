@@ -198,7 +198,7 @@
     * [Transfer Ownership of the Customized DID](c-c++/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
     * [Deactivate DID](c-c++/developer-guide-with-sample-code/did/deactivate-did.md)
     * [Access the DID Document](c-c++/developer-guide-with-sample-code/did/access-the-did-document.md)
-    * [sign and verify data by diddocument](c-c++/developer-guide-with-sample-code/did/sign-and-verify-data-by-diddocument.md)
+    * [Sign and Verify Data by DID Document](c-c++/developer-guide-with-sample-code/did/sign-and-verify-data-by-diddocument.md)
   * [Credential and presentation](c-c++/developer-guide-with-sample-code/credential-and-presentation/README.md)
     * [Declare and revoke credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/declare-and-revoke-credential.md)
     * [How to use and verify the presentation](c-c++/developer-guide-with-sample-code/credential-and-presentation/how-to-use-and-verify-the-presentation.md)
