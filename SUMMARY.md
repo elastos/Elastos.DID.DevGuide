@@ -127,7 +127,7 @@
 * [Developer Guide(with sample code)](javascript/developer-guide-with-sample-code/README.md)
   * [DIDBackend](javascript/developer-guide-with-sample-code/didbackend.md)
   * [DIDStore](javascript/developer-guide-with-sample-code/didstore/README.md)
-    * [Create and open DIDStore](javascript/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)
+    * [Create and Open DIDStore](javascript/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)
     * [Access DIDStore](javascript/developer-guide-with-sample-code/didstore/access-didstore.md)
     * [Export/import](javascript/developer-guide-with-sample-code/didstore/export-import/README.md)
       * [Export/import RootIdentity](javascript/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
