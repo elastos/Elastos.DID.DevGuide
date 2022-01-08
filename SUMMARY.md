@@ -111,7 +111,7 @@
     * [Package Credentials as Presentation for the Selective Disclosure Request](swift/developer-guide/credential-and-presentation/package-the-crdentials-as-presentation-for-the-selective-disclosure-request.md)
     * [How to Verify and Use the Presentation](swift/developer-guide/credential-and-presentation/verify-and-use-the-presentation.md)
     * [Declare or Revoke Credential](swift/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
-    * [Resolve the declared credentials](swift/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
+    * [Resolve the Declared Credentials](swift/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
     * [List the published credentials](swift/developer-guide/credential-and-presentation/list-the-published-credentials.md)
   * [Json Web Token](swift/developer-guide/json-web-token/README.md)
     * [Create JWT](swift/developer-guide/json-web-token/create-jwt.md)
