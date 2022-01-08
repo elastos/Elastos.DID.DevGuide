@@ -130,7 +130,7 @@
     * [Create and Open DIDStore](javascript/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)
     * [Access DIDStore](javascript/developer-guide-with-sample-code/didstore/access-didstore.md)
     * [Export/Import](javascript/developer-guide-with-sample-code/didstore/export-import/README.md)
-      * [Export/import RootIdentity](javascript/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
+      * [Export/Import RootIdentity](javascript/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
       * [Export/import DID](javascript/developer-guide-with-sample-code/didstore/export-import/export-import-did.md)
       * [Export/import DIDStore](javascript/developer-guide-with-sample-code/didstore/export-import/export-import-didstore.md)
     * [Synchronize](javascript/developer-guide-with-sample-code/didstore/synchronize.md)
