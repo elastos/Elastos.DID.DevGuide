@@ -100,7 +100,7 @@
     * [Publish DID](swift/developer-guide/did/publish-did.md)
     * [Access the DID Document](swift/developer-guide/did/access-diddocument.md)
     * [Create Customized DID](swift/developer-guide/did/create-customized-did.md)
-    * [Create multi-signed customized DID](swift/developer-guide/did/create-multi-signed-customized-did.md)
+    * [Create Multi-signed Customized DID](swift/developer-guide/did/create-multi-signed-customized-did.md)
     * [Transfer the ownership of the customized DID](swift/developer-guide/did/transfer-the-ownership-of-the-customized-did.md)
     * [Modify and update the DID Document](swift/developer-guide/did/update-diddocument.md)
     * [Deactivate DID](swift/developer-guide/did/deactivate-did.md)
