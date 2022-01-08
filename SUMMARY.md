@@ -213,7 +213,7 @@
   * [Metadata](c-c++/developer-guide-with-sample-code/metadata/README.md)
     * [DID Metadata](c-c++/developer-guide-with-sample-code/metadata/did-metadata.md)
     * [Credential Metadata](c-c++/developer-guide-with-sample-code/metadata/credential-metadata.md)
-  * [Full sample code](c-c++/developer-guide-with-sample-code/full-sample-code.md)
+  * [Full Sample Code](c-c++/developer-guide-with-sample-code/full-sample-code.md)
 * [API reference](c-c++/api-reference-link-to-javadoc.md)
 
 ## Advanced
