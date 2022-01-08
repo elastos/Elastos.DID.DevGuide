@@ -1,6 +1,8 @@
-# Verify the Integrity of Credential
+# verify the integrity of credential
 
-For security, it's necessary to check whether the content of the credential itself is valid, expired, or revoked so as to check the availability of the credential.
+## Verify the integrity of credential
+
+为了安全，需要检查凭证内容本身是否有效，其是否过期，是否被撤销，以检查凭证的可用性。
 
 ## Usage
 
@@ -8,22 +10,22 @@ For security, it's necessary to check whether the content of the credential itse
 int Credential_IsGenuine(Credential *credential);
 ```
 
-This method checks whether the credential is complete, each element meets the requirements, can be verified and signed, and has been tampered with.
+该方法检查凭证是否完整，凭证各元素是否符合要求，凭证是否可验签，未被篡改的方法。
 
 ```c
 int Credential_WasDeclared(DIDURL *id);
 ```
 
-This method is used to check whether Credential has been declared.
+该方法用于检查Credential是否被declare过。
 
 ```c
 int Credential_IsRevoked(Credential *credential);
 ```
 
-This method checks whether the credential has been revoked.
+该方法检查凭证是否被撤销。
 
 ```c
 int Credential_IsValid(Credential *credential);
 ```
 
-This method comprehensively checks whether the credential is valid.
+该方法全面检查凭证是否有效。

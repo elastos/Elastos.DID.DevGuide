@@ -209,7 +209,7 @@
     * [Verify the Integrity of Credential](c-c++/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
   * [Json Web Token](c-c++/developer-guide-with-sample-code/json-web-token/README.md)
     * [Create JWT](c-c++/developer-guide-with-sample-code/json-web-token/create-jwt.md)
-    * [Verify and use jwt](c-c++/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
+    * [Verify and Use JWT](c-c++/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
   * [Metadata](c-c++/developer-guide-with-sample-code/metadata/README.md)
     * [DID Metadata](c-c++/developer-guide-with-sample-code/metadata/did-metadata.md)
     * [Credential Metadata](c-c++/developer-guide-with-sample-code/metadata/credential-metadata.md)

@@ -1,6 +1,6 @@
 # Json Web Token
 
-The contents of JWT are described in the following two parts:
+关于JWT内容分以下两部分来说明：
 
 {% content-ref url="create-jwt.md" %}
 [create-jwt.md](create-jwt.md)
