@@ -1,6 +1,4 @@
-# Credential and presentation
-
-Credential和Presentation将分七个部分说明：
+# Credential and Presentation
 
 Credential and presentation will be explained in seven parts:
 
