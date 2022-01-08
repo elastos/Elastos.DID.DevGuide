@@ -1,6 +1,4 @@
-# Issue a self-pro-claimed credential
-
-自声明凭证是自己颁发给自己的凭证，用于自我声明特定的信息。创建自声明的凭证示例如下：
+# Issue a Self-proclaimed Credential
 
 A self-pro-claimed credential is a credential issued by the users themselves for self-declaration of specific information. An example of creating self-pro-claimed credentials is as follows:
 
@@ -8,10 +6,8 @@ A self-pro-claimed credential is a credential issued by the users themselves for
 let store: DIDStore =... // an opened DIDStore instance
 let storePasswd = "secret"
 let did = try DID("did:elastos:iaurnSo71QStq2vXdJCWiqXYZWmR499pjn")
-
 let doc = try store.loadDid(doc)
 let selfIssuer = try VerifiableCredentialIssuer(doc)
-
 // Create a credential builder for self-proclaimed credential
 let cb = try selfIssuer.editingVerifiableCredentialFor(did: did)
 // Create the credential
@@ -26,11 +22,8 @@ let vc = cb.withId("#profile")
     .withProperties("email", "john@example.com")
     .withProperties("twitter", "@john")
     .seal(using: storePasswd)
-
 // Save the credential to the store for later usage
 try store.storeCredential(using: vc)
 ```
-
-自定义 DID 颁发凭证和普通 DID 一致。
 
 The credential issued by the customized DID is the same as that issued by the ordinary DID.
