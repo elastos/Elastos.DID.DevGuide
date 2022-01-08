@@ -1,8 +1,10 @@
 # Synchronize
 
-DID Store provides a method to update all DID objects within at once, as well as obtain and save the most suitable DID Document object.
+DID Store提供方法用来一次性更新store中所有的DID对象，获取并保存最合适的DID Document对象。
 
-This method will not only synchronize all the Root Identity in the DID Store, but also synchronize the customized DID saved in the DID Store so as to realize full DID synchronization within.
+DID Store provides a method to update all DID objects in the store at one time, as well as obtain and save the most suitable DID Document object.
+
+该方法不仅会同步DID Store里所有的RootIdentity，还会同步保存在DID Store里的自定义的DID，实现DID Store全DID全同步。
 
 ## Example
 
@@ -25,4 +27,4 @@ void DIDStore_Synchronize(
     DIDDocument_ConflictHandle *handle);
 ```
 
-handle is a solution provided by users when local and chain-acquired DID Document conflict. The default solution provided by the SDK is to keep the local DID Document and ignore the version of the chain. If users have different solutions, this parameter needs to be set.
+`handle`是用户提供的当本地和链上获取的DID Document发生冲突时的解决方案。SDK提供默认的解决方案是保留本地DID Document，忽略链上版本。若用户有不同的解决方案，需要设置该参数。
