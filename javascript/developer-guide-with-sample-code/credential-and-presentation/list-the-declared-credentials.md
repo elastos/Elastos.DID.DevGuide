@@ -1,4 +1,6 @@
-# List the Declared Credentials
+# List the declared credentials
+
+Credential List 是用来获取指定DID所有声明过的凭证的方法。
 
 Credential list is a method to obtain all the credentials declared by the specified DID.
 
@@ -28,6 +30,10 @@ public static list(
 ): Promise<DIDURL[]>;
 ```
 
-did is the owner who needs to list all the declared credentials; skip is to ignore the first skip-the credentials; limit indicates the maximum number of credentials that can be listed.
+did为需要枚举所有declared凭证的所有者；skip为忽略前skip个credentials；limit表明该次list最多可接受多少个credentials。
+
+Did is the owner who needs to list all the declared credentials; skip is to ignore the first skip-th credentials; limit indicates the maximum number of credentials that can be listed.
+
+如果 limit 为默认值， 且链上实际declared凭证数量大于128，则只返回128个credential，若想获取剩下的credential，可以通过设置skip来实现；若limit > 512，且链上实际declared凭证大于512，则只返回512个credential，若想获取剩下的credential，可以通过设置skip来实现。
 
 If limit is the default value and the actual number of declared credentials in the chain surpasses 128, only 128 credentials will be returned. Set skip to get the remaining credentials. If limit > 512 and there are more than 512 declared credentials in the chain, only 512 credentials will be returned. Set skip to get the remaining credentials.
