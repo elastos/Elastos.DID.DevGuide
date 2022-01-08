@@ -153,7 +153,7 @@
     * [Resolve DIDs](javascript/developer-guide-with-sample-code/did/resolve-dids.md)
   * [Json Web Token](javascript/developer-guide-with-sample-code/json-web-token/README.md)
     * [Create JWT](javascript/developer-guide-with-sample-code/json-web-token/create-jwt.md)
-    * [Verify and use jwt](javascript/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
+    * [Verify and Use JWT](javascript/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
   * [Credential and presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/README.md)
     * [Issue a credential](javascript/developer-guide-with-sample-code/credential-and-presentation/issue-a-credential.md)
     * [Verify the integrity of credential](javascript/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
