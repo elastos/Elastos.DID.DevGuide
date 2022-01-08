@@ -1,5 +1,7 @@
 # DID
 
+DID内容分为如下十个部分：
+
 The DID content is divided into the following ten parts:
 
 {% content-ref url="access-the-did-document.md" %}
