@@ -1,3 +1,3 @@
-# API reference
+# API Reference
 
-Native Doc for Elastos DID Native SDK.
+Native Doc for the Elastos DID Native SDK.
