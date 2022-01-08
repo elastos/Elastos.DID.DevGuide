@@ -180,7 +180,7 @@
     * [Export/Import](c-c++/developer-guide-with-sample-code/didstore/export-import/README.md)
       * [Export/Import DID](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-did.md)
       * [Export/Import DIDStore](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-didstore.md)
-      * [Export/import RootIdentity](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
+      * [Export/Import RootIdentity](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
     * [Synchronize](c-c++/developer-guide-with-sample-code/didstore/synchronize.md)
   * [RootIdentity](c-c++/developer-guide-with-sample-code/rootidentity/README.md)
     * [Create DIDs from the RootIdentity](c-c++/developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md)
