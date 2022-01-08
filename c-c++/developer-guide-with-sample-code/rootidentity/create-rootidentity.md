@@ -1,6 +1,8 @@
 # Create RootIdentity
 
-Root Identity is the foundation of the DID system, which provides three generation methods. Firstly, generate Root Identity object according to mnemonic and passphrase. Secondly, generate Root Identity object according to the extended root private key/ Thirdly, generate a Root Identity object according to that derive root public key.
+RootIdentity是DID体系的基础，提供三种生成方法：一、根据mnemonic和passphrase生成RootIdentity object；二、根据扩展根私钥生成RootIdentity object；三、根据衍生根公钥生成RootIdentity object。
+
+Root Identity is the foundation of DID system, which provides three generation methods: firstly, generate Root Identity object according to mnemonic and passphrase; Secondly, generate Root Identity object according to the extended root private key; Thirdly, generate a Root Identity object according to that derive root public key.
 
 ## Example
 
@@ -62,19 +64,31 @@ RootIdentity *RootIdentity_CreateFromRootKey(
 );
 ```
 
-The SDK provides two methods to generate Root Identity - the first is to obtain it through mnemonic and passphrase, and the second is to get it by expanding the root private key.
+SDK提供两种方法生成RootIdentity，第一种是通过`mnemonic`和`passphrase`来获取；第二种是通过扩展根私钥来获取。
 
-mnemonic currently supports mnemonics in nine languages: Simplified Chinese, Traditional Chinese, English, French, Italian, Korean, Japanese, Spanish, and Czech.
+SDK provides two methods to generate Root Identity, the first is to obtain it through mnemonic and passphrase; The second is to get it by expanding the root private key.
 
-passphrase may not be provided, or it can be an empty string.
+`mnemonic`目前支持九种语言的助记词，分别是简体中文，繁体中文，英文，法文，意大利文，韩文，日文，西班牙文，捷克文。
 
-extendedprvkey is the base58 string of the 82-bit extended root private key, which is convenient to handle and does not need to expose the naked private key.
+_mnemonic_ currently supports mnemonics in nine languages, namely Simplified Chinese, Traditional Chinese, English, French, Italian, Korean, Japanese, Spanish and Czech.
 
-overwrite indicates whether it is necessary to overwrite the existing Root Identity locally. When overwrite is true, the existing Root Identity needs to be overwritten and the newly generated Root Identity object is returned. When overwrite is false, if Root Identity already exists, an exception will be thrown, and NULL will be returned.
+`passphrase`可以不提供，也可以为空字符串。
+
+_passphrase_ may not be provided, or it can be an empty string.
+
+`extendedprvkey`是82位扩展根私钥的base58字符串，这样便于处理也不需要暴露裸私钥。
+
+_extendedprvkey_ is the base58 string of the 82-bit extended root private key, which is convenient to handle and does not need to expose the naked private key.
+
+`overwrite`表示是否需要覆盖本地已经存在的RootIdentity。`overwrite`为true时，覆盖已有RootIdentity，返回新生成RootIdentity object；`overwrite`为false时，若已存在RootIdentity，抛异常，返回NULL。
+
+_overwrite_ indicates whether it is necessary to overwrite the existing Root Identity locally. When overwrite is true, the existing Root Identity needs to be overwritten and the newly generated Root Identity object is returned; When overwrite is false, if Root Identity already exists, an exception will be thrown, and NULL will be returned.
 
 ```c
 void RootIdentity_Destroy(RootIdentity *rootidentity);
 ```
+
+使用完RootIdentity object，该方法销毁RootIdentity。
 
 After using the Root Identity object, it needs to be destroyed with this method.
 
@@ -88,6 +102,10 @@ const char *RootIdentity_CreateId(
 const char *RootIdentity_CreateIdFromRootKey(const char *extendedprvkey);
 ```
 
-The SDK provides two methods to obtain the Root Identity ID, but it's not to generate and save a new Root Identity.
+SDK提供两种方法用来获取RootIdentity标识ID，但是并不是生成且保存新RootIdentity。
 
-**Attention:** When the return value is used up, it needs to be released.
+SDK provides two methods to obtain the Root Identity ID, but it is not to generate and save a new Root Identity.
+
+注意：用完返回值，需要释放。
+
+Attention: When the return value is used up, it needs to be released.

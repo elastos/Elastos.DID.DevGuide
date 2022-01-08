@@ -185,7 +185,7 @@
   * [RootIdentity](c-c++/developer-guide-with-sample-code/rootidentity/README.md)
     * [Create DIDs from the RootIdentity](c-c++/developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md)
     * [Create RootIdentity](c-c++/developer-guide-with-sample-code/rootidentity/create-rootidentity.md)
-    * [Backup and synchronize](c-c++/developer-guide-with-sample-code/rootidentity/synchronize.md)
+    * [Backup and Synchronize](c-c++/developer-guide-with-sample-code/rootidentity/synchronize.md)
   * [DID](c-c++/developer-guide-with-sample-code/did/README.md)
     * [Resolve DIDs](c-c++/developer-guide-with-sample-code/did/resolve-dids.md)
     * [Verify the integrity of DIDDocument](c-c++/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
