@@ -188,7 +188,7 @@
     * [Backup and Synchronize](c-c++/developer-guide-with-sample-code/rootidentity/synchronize.md)
   * [DID](c-c++/developer-guide-with-sample-code/did/README.md)
     * [Resolve DIDs](c-c++/developer-guide-with-sample-code/did/resolve-dids.md)
-    * [Verify the integrity of DIDDocument](c-c++/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
+    * [Verify the Integrity of DIDDocument](c-c++/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
     * [Create DID and DIDDocument](c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument/README.md)
       * [Create DID](c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument/create-did.md)
       * [Create DIDDocument](c-c++/developer-guide-with-sample-code/did/create-did-and-diddocument/create-diddocument.md)
