@@ -177,7 +177,7 @@
   * [DIDStore](c-c++/developer-guide-with-sample-code/didstore/README.md)
     * [Create and Open DIDStore](c-c++/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)
     * [Access DIDStore](c-c++/developer-guide-with-sample-code/didstore/access-didstore.md)
-    * [Export/import](c-c++/developer-guide-with-sample-code/didstore/export-import/README.md)
+    * [Export/Import](c-c++/developer-guide-with-sample-code/didstore/export-import/README.md)
       * [Export/import DID](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-did.md)
       * [Export/import DIDStore](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-didstore.md)
       * [Export/import RootIdentity](c-c++/developer-guide-with-sample-code/didstore/export-import/export-import-rootidentity.md)
