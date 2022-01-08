@@ -161,7 +161,7 @@
     * [List the Declared Credentials](javascript/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
     * [Resolve the Declared Credential](javascript/developer-guide-with-sample-code/credential-and-presentation/resolve-the-declared-credential.md)
     * [Package the Credentials as Presentation for the Selective Disclosure Request](javascript/developer-guide-with-sample-code/credential-and-presentation/package-the-credentials-as-presentation-for-the-selective-disclosure-request.md)
-    * [How to use and verify the presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/how-to-use-and-verify-the-presentation.md)
+    * [How to Use and Verify Presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/how-to-use-and-verify-the-presentation.md)
   * [Metadata](javascript/developer-guide-with-sample-code/metadata/README.md)
     * [DID Metadata](javascript/developer-guide-with-sample-code/metadata/did-metadata.md)
     * [Credential Metadata](javascript/developer-guide-with-sample-code/metadata/credential-metadata.md)
