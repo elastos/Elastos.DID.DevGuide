@@ -143,7 +143,7 @@
     * [Create DID and DIDDocument](javascript/developer-guide-with-sample-code/did/create-did-and-diddocument/README.md)
       * [Create DID](javascript/developer-guide-with-sample-code/did/create-did-and-diddocument/create-did.md)
       * [Create DIDDocument](javascript/developer-guide-with-sample-code/did/create-did-and-diddocument/create-diddocument.md)
-    * [Create customized DID](javascript/developer-guide-with-sample-code/did/create-customized-did.md)
+    * [Create Customized DID](javascript/developer-guide-with-sample-code/did/create-customized-did.md)
     * [Create multi-signed Customized DID](javascript/developer-guide-with-sample-code/did/create-multi-signed-customized-did.md)
     * [Sign and verify data by DID Document](javascript/developer-guide-with-sample-code/did/sign-and-verify-data-by-did-document.md)
     * [Verify the integrity of DIDDocument](javascript/developer-guide-with-sample-code/did/verify-the-integrity-of-diddocument.md)
