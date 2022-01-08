@@ -155,7 +155,7 @@
     * [Create JWT](javascript/developer-guide-with-sample-code/json-web-token/create-jwt.md)
     * [Verify and Use JWT](javascript/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
   * [Credential and Presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/README.md)
-    * [Issue a credential](javascript/developer-guide-with-sample-code/credential-and-presentation/issue-a-credential.md)
+    * [Issue a Credential](javascript/developer-guide-with-sample-code/credential-and-presentation/issue-a-credential.md)
     * [Verify the integrity of credential](javascript/developer-guide-with-sample-code/credential-and-presentation/verify-the-integrity-of-credential.md)
     * [Declare and revoke credential](javascript/developer-guide-with-sample-code/credential-and-presentation/declare-and-revoke-credential.md)
     * [List the declared credentials](javascript/developer-guide-with-sample-code/credential-and-presentation/list-the-declared-credentials.md)
