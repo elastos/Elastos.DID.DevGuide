@@ -1,7 +1,5 @@
 # RootIdentity
 
-RootIdentity内容分为如下三个部分：
-
 The content of Root Identity is divided into the following three parts:
 
 {% content-ref url="create-rootidentity.md" %}

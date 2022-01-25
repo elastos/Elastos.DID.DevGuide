@@ -1,23 +1,14 @@
 # Simulated ID chain
 
-因为开发的需要，Java SDK 内置了一个仿真的 ID 侧链。仿真 ID 侧链的后端逻辑和 Elastos ID side chain 的实现完全一致，并基于 HTTP 提供了一组 REST API，特别方便开发期间的测试和验证。
+Because of the need for development, Java SDK has a built-in simulated ID sidechain. The back-end logic of the simulated ID sidechain is completely consistent with the implementation of Elastos ID sidechain, and provides a set of REST API based on HTTP, which is especially convenient for testing and verification during development.
 
-Because of the need of development, Java SDK has a built-in simulated ID side chain. The back-end logic of the simulated ID side chain is completely consistent with the implementation of Elastos ID side chain, and provides a set of REST API based on HTTP, which is especially convenient for testing and verification during development.
+In addition, there are important differences between Simulated ID chain and Elastos ID sidechain:
 
-另外 Simulated ID chain 和 Elastos ID side chain 有很重要的区别
+* The Simulated ID chain is implemented based on local memory structure - there's no need for the confirmation time of the ID sidechain, so the ID transaction will take effect immediately.
+* The Simulated ID chain uses HTTP API to provide external services without a wallet, gas fees, etc.
+* The Simulated ID chain has no data persistence and is only meant for development.
 
-In addition, there are important differences between Simulated ID chain and Elastos ID side chain.
-
-* Simulated ID chain 是基于本地内存结构实现，没有 ID side chain 的确认时间，ID 交易立即生效
-* Simulated ID chain is implemented based on local memory structure. No need for the confirmation time of ID side chain, ID transaction will take effect immediately.
-* Simulated ID chain 使用 HTTP API 对外提供服务，不需要钱包、gas 费等
-* Simulated ID chain uses HTTP API to provide external services without wallet, gas fee, etc.
-* Simulated ID chain 没有数据持久化，仅面向开发时
-* Simulated ID chain has no data persistence and is only for development.
-
-## 在程序中启动和使用 Simulated ID chain
-
-Start and use the Simulated ID chain in the program.
+## Start and Use the Simulated ID Chain in the Program
 
 ```java
 SimulatedIDChain simChain = new SimulatedIDChain();
@@ -27,11 +18,9 @@ DIDAdapter adapter = simChain.getAdapter();
 DIDBackend.initialize(adapter);
 ```
 
-按照上述示例启动 Simulated ID chain 并初始化 DIDBackend，那么 DID SDK 将会使用仿真 ID 侧链对 DID 进行解析和发布。Simulated ID chain 默认工作再 localhost 的 9123 端口，应用可以通过 `SimulatedIDChain(String host, int port)` 构造对象，并指定需要的侦听接口和端口。
+According to the above example, if the Simulated ID chain is started and the DID Backend is initialized, the former will be used to parse and publish DID by the DID SDK. By default, the Simulated ID chain works at port 9123 of localhost. Applications can construct objects through the Simulated ID chain (String host, int port) and specify the required listening interface and port.
 
-According to the above example, if the Simulated ID chain is started and the DID Backend is initialized, the former will be used to parse and publish DID by DID SDK. By default, the Simulated ID chain works at port 9123 of localhost. Applications can construct objects through simulated ID chain (String host, int port) and specify the required listening interface and port.
-
-## Simulated ID chain 的 API
+## Simulated ID Chain API
 
 ### Create ID transaction
 
@@ -51,7 +40,7 @@ According to the above example, if the Simulated ID chain is started and the DID
 * Response Body: Resolved result.
 * Success Status: 200
 
-### Reset data
+### Reset Data
 
 * Endpoint: /reset
 * Parameters(optional): idtxsonly, vctxsonly

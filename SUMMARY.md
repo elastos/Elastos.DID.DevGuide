@@ -1,28 +1,12 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Technical Deep Dive](technical-deep-dive/README.md)
-  * [DID Method](technical-deep-dive/did-method.md)
-  * [DID Resolver](technical-deep-dive/did-resolver.md)
-  * [Verifiable Claims](technical-deep-dive/verifiable-claims.md)
-* [Hello World App](hello-world-app/README.md)
-  * [Get Started](hello-world-app/get-started.md)
-  * [Deploy the App](hello-world-app/deploy-the-app.md)
-  * [Run the App](hello-world-app/run-the-app.md)
-* [SDKs](sdks/README.md)
-  * [Features Guide](sdks/features-guide.md)
-  * [API References](sdks/api-references/README.md)
-    * [Java SDK](sdks/api-references/java-sdk.md)
-    * [Swift SDK](sdks/api-references/swift-sdk.md)
-    * [Javascript SDK](sdks/api-references/javascript-sdk.md)
-    * [Cordova](sdks/api-references/cordova.md)
-    * [Native](sdks/api-references/native.md)
 
 ## Concepts
 
 * [DIDBackend](concepts/didbackend.md)
 * [DID Store](concepts/did-store.md)
-* [Root identity](concepts/root-identity.md)
+* [Root Identity](concepts/root-identity.md)
 * [DID and Document](concepts/did-and-document.md)
 * [Verifiable Credential](concepts/verifiable-credential.md)
 * [Verifiable Presentation](concepts/verifiable-presentation.md)
@@ -118,7 +102,6 @@
     * [Verify and Use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
 * [Advanced](swift/advanced/README.md)
   * [Logging](swift/developer-guide/advanced/logging.md)
-* [API reference(link to Swift doc)](swift/api-reference-link-to-swift-doc.md)
 
 ## JavaScript
 
@@ -215,8 +198,3 @@
     * [Credential Metadata](c-c++/developer-guide-with-sample-code/metadata/credential-metadata.md)
   * [Full Sample Code](c-c++/developer-guide-with-sample-code/full-sample-code.md)
 * [API Reference](c-c++/api-reference-link-to-javadoc.md)
-
-## Advanced
-
-* [Networks](advanced/networks.md)
-* [Deploy private RPC service](advanced/deploy-private-rpc-service.md)

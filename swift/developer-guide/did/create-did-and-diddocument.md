@@ -1,12 +1,8 @@
 # Create DID and DIDDocument
 
-DID 和 DIDDocument 是同一个对象的两个不同表现，并且同时被创建。普通 DID 都是通过 RootIdentity 创建，从 RootIdentity 创建 DID的方法参见 [RootIdentity 的文档](../../developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md)。
+As two different representations of the same object, DID and DIDDocument are created at the same time - ordinary DIDs are created from RootIdentity. See the [RootIdentity document](../../developer-guide-with-sample-code/rootidentity/create-dids-from-the-rootidentity.md) for the method of creating DIDs from RootIdentity.
 
-As two different representations of the same object, DID and DIDDocument are created at the same time. Ordinary DIDs are created from RootIdentity. See the RootIdentity document for the method of creating DIDs from RootIdentity.
-
-## 通过RootIdentity
-
-From RootIdentity
+## From RootIdentity
 
 ```
 // STORE-PASSWORD用于本地一些数据加密的密码
@@ -17,9 +13,7 @@ let subject = document.subject
 let contollers = document.contollers()
 ```
 
-## 导入DIDDocument
-
-Import DIDDocument
+## Import DIDDocument
 
 ```
 // 从路径加载document

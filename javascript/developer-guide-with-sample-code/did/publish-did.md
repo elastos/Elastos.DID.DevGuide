@@ -57,4 +57,4 @@ Force indicates whether it's possible to force the publishing of data to the cha
 
 The adapter provides an interface for publishing the data to the chain. Users can implement it on their own or use the default interface provided by Publish DID.
 
-N**ote:** Whether by modifying the controller or multisig, the customized DID document cannot publish the data to the chain by means of Publish DID.
+**Note:** Whether by modifying the controller or multisig, the customized DID document cannot publish the data to the chain by means of Publish DID.

@@ -1,17 +1,13 @@
-# Issue a credential to 3rd party
+# Issue a Credential to a Third Party
 
-给第三方颁发凭证的场景主要用于应用服务给用户颁发凭证，或者 KYC 机构给第三个实体颁发经过认证的个人信息的凭证。示例如下：
-
-The scenario of issuing a credential to a third party is mainly used for applications to issue credentials to users, or for KYC institutions to issue credentials of certified personal information to third entities. The following are some examples:
+The scenario of issuing a credential to a third party is mainly used for applications to issue credentials to users, or for KYC institutions to issue credentials of certified personal information to third entities. The following contain some examples:
 
 ```
 let store: DIDStore = ... // an opened DIDStore instance
 let storePasswd = "secret"
 let example = try DID("did:elastos:examplekyc")
-
 let doc = try store.loadDid(example)
 let kycIssuer = try VerifiableCredentialIssuer(doc)
-
 // Create a credential builder for 3rd party: 
 //        did:elastos:igHQ6Mfp3RouLtqeiv7D3Uz5JDyVrW4W3A
 let cb = kycIssuer.editingVerifiableCredentialFor(did:
@@ -28,15 +24,10 @@ let vc = cb.withId("#profile")
            .withProperties("email", "john@example.com")
            .withProperties("twitter", "@john")
    			 .seal(using: storePasswd)
-
 // or serialize the credential to string, send to the 3rd party in secure way
 let serializedVc = vc.description
 ```
 
-为了保证凭证可验证，颁发凭证的实体的 DID 需要发布上链。
-
 To ensure that the credential is verifiable, the DID of the entity issuing the certificate needs to be published and uploaded.
-
-自定义 DID 颁发凭证，或者给自定义 DID 颁发凭证和普通 DID 一致。
 
 The credential issued by the customized DID is the same as that issued by the ordinary DID, and the process of issuing the credential for the customized DID is the same as that for the ordinary DID.
