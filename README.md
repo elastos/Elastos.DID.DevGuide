@@ -29,6 +29,4 @@ Elastos DID runs on the Elastos Identity Chain (EID) and is based on Ethereum ch
 
 ## EID RPC Service for DID SDK
 
-Elastos采用[JSON-RPC](https://www.jsonrpc.org/specification)接口提供DID和Verifiable Credentials解析方法。Elastos定义了在EID side chain上对DID和credential进行解析或者查询的接口规范。
-
 JSON-RPC interface is utilized by Elastos to provide parsing methods of DID and verifiable credentials. Elastos defines the interface specification for parsing or querying DID and credential on EID side chain.
