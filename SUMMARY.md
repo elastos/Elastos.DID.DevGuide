@@ -198,3 +198,7 @@
     * [Credential Metadata](c-c++/developer-guide-with-sample-code/metadata/credential-metadata.md)
   * [Full Sample Code](c-c++/developer-guide-with-sample-code/full-sample-code.md)
 * [API Reference](c-c++/api-reference-link-to-javadoc.md)
+
+***
+
+* [Constants And Defaults](constants-and-defaults.md)
