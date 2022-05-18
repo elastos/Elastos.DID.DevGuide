@@ -1,6 +1,6 @@
 # Export/Import RootIdentity
 
-DIDStore objects provides a method to export/import RootIdentity, which can export mnemonic, public, and private keys, as well as other data related to a specific RootIdentity to a JSON file. The PrivateKey is saved encrypted in the exported file, with the key being the password of the exported file set at the time of exporting. The exported JSON is a single autocorrelation file without any dependence, and the application can easily use the exported file to migrate the data of RootIdentity.
+DIDStore objects provide a method to export/import RootIdentity, which can export mnemonic, public, and private keys, as well as other data related to a specific RootIdentity to a JSON file. The PrivateKey is saved encrypted in the exported file, with the key being the password of the exported file set at the time of exporting. The exported JSON is a single autocorrelation file without any dependence, and the application can easily use the exported file to migrate the data of RootIdentity.
 
 ## Export RootIdentity
 
