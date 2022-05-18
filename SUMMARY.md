@@ -134,7 +134,7 @@
     * [Transfer Ownership of the Customized DID](javascript/developer-guide-with-sample-code/did/transfer-the-ownership-of-the-customized-did.md)
     * [Deactivate DID](javascript/developer-guide-with-sample-code/did/deactivate-did.md)
     * [Resolve DIDs](javascript/developer-guide-with-sample-code/did/resolve-dids.md)
-  * [Json Web Token](javascript/developer-guide-with-sample-code/json-web-token/README.md)
+  * [JSON Web Token](javascript/developer-guide-with-sample-code/json-web-token/README.md)
     * [Create JWT](javascript/developer-guide-with-sample-code/json-web-token/create-jwt.md)
     * [Verify and Use JWT](javascript/developer-guide-with-sample-code/json-web-token/verify-and-use-jwt.md)
   * [Credential and Presentation](javascript/developer-guide-with-sample-code/credential-and-presentation/README.md)
