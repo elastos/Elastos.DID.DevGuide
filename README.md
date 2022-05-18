@@ -19,9 +19,9 @@ The **Elastos DID framework** is a set of APIs that's compatible with W3C DIDs s
 
 ## Language support
 
-Elastos DID SDK可提供多种语言支持：Java，Swift C，C/C++和JavaScript。
+Elastos DID SDK可提供多种语言支持：java，swift c，c/c++和javascript。
 
-Many kinds of languages will be supported by Elastos DID SDK: Java, Swift C, C/C++ and JavaScript.
+Many kinds of languages will be supported by Elastos DID SDK: Java, swift c, c/c++ and JavaScript.
 
 ## EID Sidechain
 
