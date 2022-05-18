@@ -40,7 +40,7 @@ public static async resolve(
 
 The SDK offers a method to resolve credentials, and only declared credentials can be resolved.
 
-id refers to the ID of the credential to be resolved; issuer represents the issuer of the credential, which is mainly used for the third-party KYC credential to inquire whether there is a valid transaction revoked by the issuer. Without this field, the analysis result will not include the transaction revoked by the issuer.
+id refers to the ID of the credential to be resolved; issuer represents the issuer of the credential, which is mainly used for the third-party kyc credential to inquire whether there is a valid transaction revoked by the issuer. Without this field, the analysis result will not include the transaction revoked by the issuer.
 
 Force denotes whether to resolve the credential on the chain or get the credential from the cache within its validity period.
 

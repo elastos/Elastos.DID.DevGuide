@@ -78,7 +78,7 @@ public async sign(
 ): Promise<string>；
 ```
 
-This method signs the content of JWTBuilder and generates JWT string.
+This method signs the content of JWTBuilder and generates JWS string.
 
 Keyid is the authentication key in the DID document that creates JWTBuilder.
 
