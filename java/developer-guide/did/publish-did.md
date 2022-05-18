@@ -30,7 +30,7 @@ DIDStore store; // an opened DIDStore instance
 String storePasswd = "secret";
 
 DIDDocument doc; // the DIDDocument to be publish
-// The key id should defined in the document, also the private key in the store
+// The key id should be defined in the document, also the private key in the store
 DIDURL signKey = new DIDURL("did:elastos:igeMDX9wRHJBL72ymp3JrS3WE7jXTAs7kn#secondary");
 
 // Publish the DID to the ID side chain using the default key
@@ -79,7 +79,7 @@ The publish operation in the above example is like the publishing of primitive D
 
 ### Inside publish
 
-The publish process of DID is to update the DID document to the EID side chain through the transaction of the EID side chain. The DID SDK does not have a built-in function for creating EID sidechain transactions. This function is completed by the DID Adapter interface provided by the developer when the DID Backend is initialized. When the developer calls publish, the DID SDK will package the DID document to be published as the payload of the EID transaction, and then hand it over to the DID Adapter when the DID Backend is initialized to complete the transaction creation and on-chain. DID Adapter can choose different implementation options given the needs of the application. The two different options are included in the sample code of the SDK:
+The publishing process of DID is to update the DID document to the EID side chain through the transaction of the EID side chain. The DID SDK does not have a built-in function for creating EID sidechain transactions. This function is completed by the DID Adapter interface provided by the developer when the DID Backend is initialized. When the developer calls publish, the DID SDK will package the DID document to be published as the payload of the EID transaction, and then hand it over to the DID Adapter when the DID Backend is initialized to complete the transaction creation and on-chain. DID Adapter can choose different implementation options given the needs of the application. The two different options are included in the sample code of the SDK:
 
 * AssistDIDAdapter.java- reference implementation of DID Adapter based on Assist API
 * Web3Adapter.java- reference implementation of DID Adapter based on Web3 API

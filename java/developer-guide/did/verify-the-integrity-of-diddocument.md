@@ -18,7 +18,7 @@ boolean expired = doc.isExpired();
 
 ## Deactivate
 
-The DID can be revoked, and when this happen, it's an identity that cannot be used and accepted by a third party. You can test whether DID is revoked by the following methods:
+The DID can be revoked, and when this happens, it's an identity that cannot be used and accepted by a third party. You can test whether DID is revoked by the following methods:
 
 ```java
 DID did = new DID("did:elastos:icAGJstuDdRBRmx6NomZsdXLfZcAt1ANoV");
