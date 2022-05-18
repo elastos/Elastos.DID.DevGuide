@@ -1,6 +1,6 @@
 # Didutils Command Line Tool
 
-In addition to SDK and sample code, DID’s source code repository also contains a command-line tool related to DID, which provides a command set commonly utilized in the daily use of DID.
+In addition to SDK and sample code, DID’s source code repository also contains a command line tool related to DID, which provides a command set commonly utilized in daily use of DID.
 
 The release of the DID SDK already contains the pre-compiled jar package (the didutils.jar) which can be downloaded from the [Assets of the latest release page](https://github.com/elastos/Elastos.DID.Java.SDK/releases/latest).
 
@@ -18,7 +18,7 @@ java -jar didutils.jar --help
 
 ## Supported Command List       &#x20;
 
-| Command        | Description                            |
+| 命令 Command     | 描述Description                          |
 | -------------- | -------------------------------------- |
 | resolvedid     | Resolve DID from the ID side chain.    |
 | verifydoc      | Verify the DID document.               |
