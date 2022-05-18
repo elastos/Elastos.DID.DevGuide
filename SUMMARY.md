@@ -97,7 +97,7 @@
     * [Declare or Revoke Credential](swift/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the Declared Credentials](swift/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
     * [List the Published Credentials](swift/developer-guide/credential-and-presentation/list-the-published-credentials.md)
-  * [Json Web Token](swift/developer-guide/json-web-token/README.md)
+  * [JSON Web Token](swift/developer-guide/json-web-token/README.md)
     * [Create JWT](swift/developer-guide/json-web-token/create-jwt.md)
     * [Verify and Use JWT](swift/developer-guide/json-web-token/verify-and-use-jwt.md)
 * [Advanced](swift/advanced/README.md)
