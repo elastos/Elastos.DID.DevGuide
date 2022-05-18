@@ -1,8 +1,8 @@
-# Root Identity
+# Root identity
 
 Each of us has multiple accounts and IDs that we need to handle or manage differently - while engaging in the decentralized world, we can meet this demand through ownership of multiple DIDs.
 
-So how can the same person simultaneously and conveniently own and manage multiple DIDs? The Elastos DID SDK uses the HD wallet to generate multiple addresses, allowing for the generation and management of multiple DIDs.
+So how can the same person simultaneously and conveniently own and manage multiple DIDs ? The Elastos DID SDK uses the HD wallet to generate multiple addresses, allowing for the generation and management of multiple DIDs.
 
 The HD wallet uses mnemonics as seeds or roots that can generate multiple addresses. Correspondingly, the Elastos DID SDK utilizes root identity to correspond to seeds - the Elastos DID SDK then obtains root identity by providing mnemonic and pass phases, or provided an expanded key.
 

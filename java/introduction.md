@@ -15,7 +15,7 @@ The implementation of DID Java SDK conforms to W3C’s DID specification and ver
 * Verifable presentation
 * Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
 * Secure local DID objects store
-* DID and credential publishing mechanism base on Elastos ID side chain
+* DID and credential publishing mechanism based on Elastos ID side chain
 
 Additionally, because JSON Web Token (JWT) is widely used, the key of DID can be used for signing and verifying JWT. Elastos DID SDK integrates the support of JWT, which provides a safe and convenient way to use JWT for applications, and there is no risk of key leakage. JWT integrated with Java DID SDK provides the following support:
 
@@ -26,7 +26,7 @@ Additionally, because JSON Web Token (JWT) is widely used, the key of DID can be
 
 ## Repository and download
 
-DID Java SDK is the implementation of open source. The code warehouse is hosted in GitHub. The address of the warehouse is:
+DID Java SDK is the implementation of open source. The code warehouse is hosted on GitHub. The address of the warehouse is:
 
 https://github.com/elastos/Elastos.DID.Java.SDK
 
