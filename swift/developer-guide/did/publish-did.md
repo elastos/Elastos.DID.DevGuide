@@ -80,4 +80,4 @@ let ticket = try controller.createTransferTicket(withId: did, to: newController.
 let newDoccument = try newController.newCustomizedDid(withId: did, true, storePassword)
 ```
 
-* > Every DID document has a validity period. In principle, the DID will be invalid after it expires, so it 's necessary to update the DID document, prolong the validity period, and publish it before the expiration. Besides, the deactivated DID is permanently invalid, which cannot be updated or published.
+* > Every DID document has a validity period. In principle, the DID will be invalid after it expires, so it's necessary to update the DID document, prolong the validity period, and publish it before the expiration. Besides, the deactivated DID is permanently invalid, which cannot be updated or published.
