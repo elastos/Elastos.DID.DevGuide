@@ -1,6 +1,6 @@
 # Modify and Update the DID Document
 
-DID Document is a sealed object and cannot be directly modified. The DID SDK provides a mechanism to modify it, which can create a modifiable copy based on the original document, and meanwhile, re-sign the document and generate a new document instance. The DID controller can publish this DID document in the updated mode, thus realizing the update of DID Document. See DID publishment for publishing process.
+DID Document is a sealed object and cannot be directly modified. The DID SDK provides a mechanism to modify it, which can create a modifiable copy based on the original document, and meanwhile, re-sign the document and generate a new document instance. The DID controller can publish this DID document in the updated mode, thus realizing the update of DID Document. See DID publishment for the publishing process.
 
 In the implementation of Java SDK, DID document edit is realized by DIDDocument.Builder object. Example:
 
