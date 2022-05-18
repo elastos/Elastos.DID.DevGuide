@@ -50,7 +50,7 @@
     * [Declare or Revoke Credential](java/developer-guide/credential-and-presentation/declare-or-revoke-credential.md)
     * [Resolve the Declared Credentials](java/developer-guide/credential-and-presentation/resolve-the-declared-credentials.md)
     * [List the Published Credentials](java/developer-guide/credential-and-presentation/list-the-published-credentials.md)
-  * [Json Web Token](java/developer-guide/json-web-token/README.md)
+  * [JSON Web Token](java/developer-guide/json-web-token/README.md)
     * [Create JWT](java/developer-guide/json-web-token/create-jwt.md)
     * [Verify and Use JWT](java/developer-guide/json-web-token/verify-and-use-jwt.md)
   * [Advanced](java/developer-guide/advanced/README.md)
