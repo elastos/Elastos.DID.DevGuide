@@ -2,9 +2,9 @@
 
 DID Store provides a method to export the specified DID, with the exported content mainly including DID, DID document, verifiable credentials (if any), and private keys (if any).
 
-The exported result is a string in json format, and the exported content of DID is orderly stored in json by json field. For security reasons, the private key is stored encrypted.
+The exported result is a string in JSON format, and the exported content of DID is orderly stored in JSON by JSON field. For security reasons, the private key is stored encrypted.
 
-DID Store provides the method of importing DID by directly saving json data as a DID object in the imported DIDstore, thereby completing the migration of DID.
+DID Store provides the method of importing DID by directly saving JSON data as a DID object in the imported DIDstore, thereby completing the migration of DID.
 
 ## Example
 
@@ -56,4 +56,4 @@ public importDid(
 ): void;
 ```
 
-Data refers to information in json format, that is, the exported data; password is the import password, which is consistent with the export password. If it is incorrect, the import function cannot be completed correctly. Storepass is the store password imported into the DID Store, which is used for the encryption of private key in the DID Store.
+Data refers to information in JSON format, that is, the exported data; password is the import password, which is consistent with the export password. If it is incorrect, the import function cannot be completed correctly. Storepass is the store password imported into the DID Store, which is used for the encryption of private key in the DID Store.

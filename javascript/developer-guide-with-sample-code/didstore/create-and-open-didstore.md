@@ -35,4 +35,4 @@ MaxCacheCapacity is the maximum cache capacity, and the default value of the SDK
 public close():void;
 ```
 
-SDK will clear the cache.
+SDK will clear the chache.
