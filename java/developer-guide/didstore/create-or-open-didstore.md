@@ -23,4 +23,4 @@ DIDStore open(File location,
         int maxCacheCapacity) throws DIDStoreException;
 ```
 
-The initial Cache Capacity parameter specifies the initial size of the store cache, and max Cache Capacity specifies the maximum size of the store cache. During the use of DID Store, if the cache runs out, the old cache objects will be discarded according to LRU policy and filled with new cache objects.
+The initialCacheCapacity parameter specifies the initial size of the store cache, and maxCacheCapacity specifies the maximum size of the store cache. During the use of DID Store, if the cache runs out, the old cache objects will be discarded according to LRU policy and filled with new cache objects.
