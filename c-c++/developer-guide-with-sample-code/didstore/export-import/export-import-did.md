@@ -2,9 +2,9 @@
 
 DID store provides a method to export the specified DID, which mainly includes DID, DID Document, Verifiable Credentials (if any). and private keys (if any).
 
-The Export result is a string in json format, and the related export contents of DID are saved in json in the form of json fields successively. For security reasons, the private key is encrypted and saved.
+The Export result is a string in JSON format, and the related export contents of DID are saved in JSON in the form of JSON fields successively. For security reasons, the private key is encrypted and saved.
 
-DID store provides the method of importing DID and directly saves json data in the imported DID store as a DID object to complete the migration of DID.
+DID store provides the method of importing DID and directly saves JSON data in the imported DID store as a DID object to complete the migration of DID.
 
 ## Example
 
