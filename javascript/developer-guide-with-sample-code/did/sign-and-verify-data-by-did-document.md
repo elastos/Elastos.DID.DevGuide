@@ -49,6 +49,6 @@ public verify(
 ): boolean;
 ```
 
-This method verifies the signature. If the key, signature, and data don't match, the verification fails, which mainly prevents data from being tampered.
+This method verifies the signature. If the key, signature, and data don't match, the verification fails, which mainly prevents data from being tampered with.
 
 id is the ID of the key; the signature denotes the string of the results containing a signature; data refers to the original signed data.

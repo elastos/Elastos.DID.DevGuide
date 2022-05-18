@@ -4,7 +4,7 @@ DID documents are divided into ordinary and customized DIDs, and everything expl
 
 Generate the DID document by newDid. This DID document is the most basic, containing only the default key. Users can modify the content of DID document via DID document Builder, and can terminate the modification by the seal method to get a new DID document.
 
-The DID document contains five elements: public key, authentication key, authorization key, verifiable credential, and service. The document can be correspondingly modified by adding or removing methods. Please refer to API doc for specific methods.
+The DID document contains five elements: public key, authentication key, authorization key, verifiable credential, and service. The document can be correspondingly modified by the adding or removing methods. Please refer to API doc for specific methods.
 
 ## Example
 
