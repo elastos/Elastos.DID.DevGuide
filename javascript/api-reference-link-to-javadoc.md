@@ -1,3 +1,3 @@
 # API Reference
 
-JavaScript Doc for the Elastos DID JS SDK.
+Javascript Doc for the Elastos DID JS SDK.

@@ -11,13 +11,13 @@ description: >-
 The implementation of DID Native SDK conforms to [W3C’s DID](https://www.w3.org/TR/vc-data-model/) specification and verifiable credential specification - the main function set is as follows:
 
 * DID and DIDDocument
-* Verifable credential
-* Verifable presentation
+* Verifiable credential
+* Verifiable presentation
 * Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
 * Secure local DID objects store
 * DID and credential publishing mechanism base on Elastos ID side chain
 
-In addition, because [JSON Web Token (JWT)](https://jwt.io) is widely used, the key of DID can be used for signing and verifying JWT. Therefore, the Elastos DID SDK integrates the support of JWT, which provides a safe and convenient way to use JWT for applications, and there is no risk of key leakage. The JWT integrated by Native DID SDK provides the following support:
+In addition, because [JSON Web Token (JWT)](https://jwt.io/) is widely used, the key of DID can be used for signing and verifying JWT. Therefore, the Elastos DID SDK integrates the support of JWT, which provides a safe and convenient way to use JWT for applications, and there is no risk of key leakage. The JWT integrated by Native DID SDK provides the following support:
 
 * JWT
 * JWS (algorithm: ECDSA using P-256 and SHA-256)
@@ -26,7 +26,7 @@ In addition, because [JSON Web Token (JWT)](https://jwt.io) is widely used, the 
 
 ## Repository and download
 
-c/c++ code is in github repository.
+C/C++ code is in GitHub repository.
 
 Download link: [https://github.com/elastos/Elastos.DID.Native.SDK.git](https://github.com/elastos/Elastos.DID.Native.SDK.git)
 
