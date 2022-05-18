@@ -4,7 +4,7 @@ DIDBackend object is the abstraction of the EID sidechain of the DID SDK at the 
 
 During initialization, DIDBackend needs to provide methods of how to publish DID transactions and how to parse DID objects. Developers can implement these two methods according to the requirements and context of the application, and provide them for DIDBackend through the DIDAdapter interface. The DID SDK realizes the implementation of DefaultDIDAdapter which will use elastos.io or trinity-tech.io services to parse DID and achieve an empty implementation to publish DID transactions. DefaultDIDAdapter satisfies the applications’ demands, such as reading and verifying DID.
 
-For instance, DefaultDIDAdapter is used to initialize read only DIDBackend objects:
+For instance, DefaultDIDAdapter is used to initialize read-only DIDBackend objects:
 
 ```
 try DIDBackend.initialize(DefaultDIDAdapter(resolver: "mainnet"))
@@ -38,7 +38,7 @@ The sample code in the [DID SDK GitHub repository](https://github.com/elastos/El
 
 ## Initialization and Local Cache of DIDBackend <a href="#didbackend-cache" id="didbackend-cache"></a>
 
-The DID parse is an operation widely used by the DID SDK and applications. In order to optimize the efficiency of DID parsing, the DIDBackend implementation of Swift SDK internally uses a DID parsing cache to cache the parsed DID, and accelerates the DID parsing using local cache objects during their validity period. By default, DIDBackend will use the cache of the default size and TTL of the cached object. The default setting can meet the needs of most desktop or mobile applications. If there is a special demand on the server side, it can be realized by specifying the cache size or TTL.
+The DID parse is an operation widely used by the DID SDK and applications. In order to optimize the efficiency of DID parsing, the DIDBackend implementation of Swift SDK internally uses a DID parsing cache to cache the parsed DID, and accelerates the DID parsing using local cache objects during their validity period. By default, DIDBackend will use the cache of the default size and TTL of the cached object. The default setting can meet the needs of most desktop or mobile applications. If there is a special demand on the server-side, it can be realized by specifying the cache size or TTL.
 
 ```
 class DIDExampleAdapter: DefaultDIDAdapter {

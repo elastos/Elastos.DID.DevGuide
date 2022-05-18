@@ -1,12 +1,6 @@
----
-description: >-
-  此文档可以帮助开发人员快速了解DID的使用，主要面向Swift开发。以下步骤说明是为xcode10及以上版本编写的，使用IOS11
-  SDK，如果您使用是旧版本的xcode，可能在使用之前需要更新xcode。
----
-
 # Build and Installation
 
-This document, which helps developers quickly understand how to use DID, is mainly focused on Swift. The following instructions are written for versions Xcode10.0 and above, with IOS11 SDK bring utilized. If you're using the old version of Xcode, you may need to update it before usage.
+This document, which helps developers quickly understand how to use DID, is mainly focused on Swift. The following instructions are written for versions Xcode10.0 and above, with IOS11 SDK being utilized. If you're using the old version of Xcode, you may need to update it before usage.
 
 ## Build from Source
 
