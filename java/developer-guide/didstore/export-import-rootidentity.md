@@ -1,6 +1,6 @@
 # Export/Import Root Identity
 
-DID Store object provides a method to export and import Root Identity, which can export mnemonics, public/private keys, and other data related to a specific Root Identity to a JSON file. The Private Key in the export file is encrypted and saved, and the key is the passphrase of the export file set at the time of export. The exported JSON is an autocorrelation single file without any dependence, and the application can easily use the exported file to migrate the data of Root Identity.
+DID Store object provides a method to export and import Root Identity, which can export mnemonics, public/private keys, and other data related to a specific Root Identity to a JSON file. The Private Key in the export file is encrypted and saved, and the key is the passphase of the export file set at the time of export. The exported JSON is an autocorrelation single file without any dependence, and the application can easily use the exported file to migrate the data of Root Identity.
 
 ## Export Root Identity
 

@@ -1,6 +1,6 @@
 # Export/Import DID Store
 
-DID Store object provides a method to export and import the whole store, which can export all the Root Identity, DID documents, verifiable credentials, private keys, and other related data in DID Store to one file. The Private Key in the export file is encrypted and saved, and the key is the passphase of the export file set at the time of export. The exported file is an autocorrelation single ZIP file without any dependence, and the application can easily use the exported file to migrate or backup/reply to DID Store.
+DID Store object provides a method to export and import the whole store, which can export all the Root Identity, DID documents, verifiable credentials, private keys, and other related data in DID Store to one file. The Private Key in the export file is encrypted and saved, and the key is the passphrase of the export file set at the time of export. The exported file is an autocorrelation single ZIP file without any dependence, and the application can easily use the exported file to migrate or backup/reply to DID Store.
 
 ## Export Store
 
