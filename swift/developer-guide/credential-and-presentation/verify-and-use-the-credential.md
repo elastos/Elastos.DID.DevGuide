@@ -38,7 +38,7 @@ let vc = try VerifiableCredential.fromJson(serializedVc)
 let genuine = try vc.isGenuine()
 ```
 
-In daily use, the above three aspects of a credential should be tested to accurately verify its validity. The DID SDK offers a composite method isValid (), which contains all the verifications. Fpr example:
+In daily use, the above three aspects of a credential should be tested to accurately verify its validity. The DID SDK offers a composite method isValid (), which contains all the verifications. For example:
 
 ```
 let serializedVc: String = ... // a serialized credential
