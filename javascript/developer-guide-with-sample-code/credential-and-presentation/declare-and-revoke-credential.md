@@ -62,6 +62,6 @@ public async revoke(
 ): void;
 ```
 
-Credential provides a method to revoke credentials. It should be noted that whether the credential has been declared or not, it can be revoked, but if the credential has been revoked by its owner or issuer, it cannot be revoked again. To revoke the verifiable credential, the credential owner or issuer need to initiate the corresponding transaction.
+Credential provides a method to revoke credentials. It should be noted that whether the credential has been declared or not, it can be revoked, but if the credential has been revoked by its owner or issuer, it cannot be revoked again. To revoke the verifiable credential, the credential owner or issuer needs to initiate the corresponding transaction.
 
 SignKey is the key of the revoker, that is, the owner or issuer of the verifiable credential; signer denotes the DID document of the revoker who is the owner of signKey by default.

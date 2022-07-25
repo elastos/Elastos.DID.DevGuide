@@ -11,13 +11,13 @@ The implementation of DID Swift SDK conforms to the DID specification of [W3C](h
 * Verifiable presentation
 * Hierarchical Deterministic DIDs (similar with [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki))
 * Secure local DID objects store
-* DID and credential publishing mechanism base on Elastos ID side chain
+* DID and credential publishing mechanism based on Elastos ID side chain
 
-In addition, [JSON Web Token](https://jwt.io) (JWT) is widely used in applications, while the key pair of DID can be used for signing and verifying JWT. Therefore, supported by JWT, the Elastos DID SDK provides applications with a safe and convenient way to use JWT, without the risk of exposing the keys.
+In addition, [JSON Web Token](https://jwt.io/) (JWT) is widely used in applications, while the key pair of DID can be used for signing and verifying JWT. Therefore, supported by JWT, the Elastos DID SDK provides applications with a safe and convenient way to use JWT, without the risk of exposing the keys.
 
 ## Repository and Download
 
-The DID Swift SDK is the implementation of open source, where the source code repository is hosted in GitHub. The address of the repository is: [https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
+The DID Swift SDK is the implementation of open source, where the source code repository is hosted on GitHub. The address of the repository is: [https://github.com/elastos/Elastos.DID.Swift.SDK.git](https://github.com/elastos/Elastos.DID.Swift.SDK.git)
 
 ## Support
 

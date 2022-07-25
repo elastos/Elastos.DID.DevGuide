@@ -1,10 +1,10 @@
 # Backup and Synchronize
 
-RootIdentity provides a method to get DIDs on all chains derived from it, then saveingthe corresponding DID documents to the DID Store. This method enables the user to update multiple DIDs under the root identity at one time, get the latest document, and initialize the user’s new DID Store.
+RootIdentity provides a method to get DIDs on all chains derived from it, then save the corresponding DID documents to the DID Store. This method enables the user to update multiple DIDs under the root identity at one time, get the latest document, and initialize the user’s new DID Store.
 
 If the RootIdentity is generated based on mnemonic, then we can export this mnemonic for backup. **Note:** The root identity created with the extended root private key cannot export mnemonics.
 
-## Expoert Mnemonic
+## Export Mnemonic
 
 ```typescript
 let rootPath = "root/store";

@@ -11,4 +11,4 @@ Similar to the Key Store of PKI, the Private Key in DID Store is encrypted and s
 
 In addition to the standard reading and writing interface, DID Store also provides privileged import and export methods, which can realize the data export and import of the DID or this store for safe data backup or migration. The exported data will contain the Private Key related to the exported object. To ensure security, the Private Key in the exported data is also encrypted.
 
-The default implementation of DID Store is based on the file system directory. It is not recommended for developers or methods beyond DID Store to modify the data within storage directory, which may lead to the abnormity of DID Store or the loss of data.
+The default implementation of DID Store is based on the file system directory. It is not recommended for developers or methods beyond DID Store to modify the data within the storage directory, which may lead to the abnormity of DID Store or the loss of data.

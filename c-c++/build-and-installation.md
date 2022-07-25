@@ -127,7 +127,7 @@ packages must be installed on the host before compilation.
 
 The following packages related to **configure** and **cmake** must be installed on the host before compilation either by installation through the package manager **homebrew** or by building from source:
 
-Note: Homebrew can be downloaded from the [Homebrew web site](https://brew.sh).
+Note: Homebrew can be downloaded from the [Homebrew web site](https://brew.sh/).
 
 Install packages with Homebrew:
 
