@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [ℹ Introduction](README.md)
 
 ## Concepts
 
@@ -15,9 +15,9 @@
 
 ## Java
 
-* [Introduction](java/introduction.md)
-* [Build and Installation](java/build-and-installation.md)
-* [Developer Guide](java/developer-guide/README.md)
+* [ℹ Introduction](java/introduction.md)
+* [⚒ Build and Installation](java/build-and-installation.md)
+* [🖥 Developer Guide](java/developer-guide/README.md)
   * [DID Backend](java/developer-guide/didbackend/README.md)
   * [DID Store](java/developer-guide/didstore/README.md)
     * [Create or Open DID Store](java/developer-guide/didstore/create-or-open-didstore.md)
@@ -30,7 +30,7 @@
     * [Create Root Identity](java/developer-guide/rootidentity/create-rootidentity.md)
     * [Create DIDs from the Root Identity](java/developer-guide/rootidentity/create-dids-from-the-rootidentity.md)
     * [Backup and Restore the Root Identity](java/developer-guide/rootidentity/backup-restore-rootidentity.md)
-  * [DID](java/developer-guide/did/README.md)
+  * [🆔 DID](java/developer-guide/did/README.md)
     * [Resolve DIDs](java/developer-guide/did/resolve-dids.md)
     * [Verify the Integrity of DID Document](java/developer-guide/did/verify-the-integrity-of-diddocument.md)
     * [Create DID and DID Document](java/developer-guide/did/create-did-and-diddocument.md)
@@ -62,9 +62,9 @@
 
 ## Swift
 
-* [Introduction](swift/introduction.md)
-* [Build and Installation](swift/build-and-installation.md)
-* [Developer Guide](swift/developer-guide/README.md)
+* [ℹ Introduction](swift/introduction.md)
+* [🛠 Build and Installation](swift/build-and-installation.md)
+* [🖥 Developer Guide](swift/developer-guide/README.md)
   * [DIDBackend](swift/developer-guide/didbackend/README.md)
   * [DIDStore](swift/developer-guide/didstore/README.md)
     * [Create or Open DIDStore](swift/developer-guide/didstore/create-or-open-didstore.md)
@@ -105,9 +105,9 @@
 
 ## JavaScript
 
-* [Introduction](javascript/introduction.md)
-* [Build & Installation](javascript/build-and-installation.md)
-* [Developer Guide(with sample code)](javascript/developer-guide-with-sample-code/README.md)
+* [ℹ Introduction](javascript/introduction.md)
+* [⛏ Build & Installation](javascript/build-and-installation.md)
+* [⌨ Developer Guide (with sample code)](javascript/developer-guide-with-sample-code/README.md)
   * [DIDBackend](javascript/developer-guide-with-sample-code/didbackend.md)
   * [DIDStore](javascript/developer-guide-with-sample-code/didstore/README.md)
     * [Create and Open DIDStore](javascript/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)
@@ -153,9 +153,9 @@
 
 ## C/C++
 
-* [Introduction](c-c++/introduction.md)
-* [Build and installation](c-c++/build-and-installation.md)
-* [Developer Guide(with sample code)](c-c++/developer-guide-with-sample-code/README.md)
+* [ℹ Introduction](c-c++/introduction.md)
+* [⚙ Build and Installation](c-c++/build-and-installation.md)
+* [🛠 Developer Guide (with sample code)](c-c++/developer-guide-with-sample-code/README.md)
   * [DIDBackend](c-c++/developer-guide-with-sample-code/didbackend.md)
   * [DIDStore](c-c++/developer-guide-with-sample-code/didstore/README.md)
     * [Create and Open DIDStore](c-c++/developer-guide-with-sample-code/didstore/create-and-open-didstore.md)

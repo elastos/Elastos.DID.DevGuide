@@ -1,8 +1,4 @@
----
-description: DID Javascript SDK 是 Elastos DID 针对 Javascript 语言开发者提供的 SDK 版本。
----
-
-# Introduction
+# ℹ Introduction
 
 DID Javascript SDK refers to the SDK version of Javascript provided by Elastos DID for Javascript language developers.
 

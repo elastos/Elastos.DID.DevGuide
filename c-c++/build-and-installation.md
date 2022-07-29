@@ -1,11 +1,11 @@
 ---
 description: >-
-  The compilation of sources works on macOS, Linux (Ubuntu, Debian, etc.), and
+  The compilation of sources works on MacOS, Linux (Ubuntu, Debian, etc.), and
   Windows and provides the option to cross-compile for target systems of iOS,
   Android, and RaspberryPi.
 ---
 
-# Build and installation
+# ⚙ Build and Installation
 
 **CMake** is used to build, test, and package the Elastos DID project in an operating system and compiler independent manner.
 

@@ -1,6 +1,2 @@
----
-description: \
----
-
-# Developer Guide(with sample code)
+# 🖥 Developer Guide
 
